@@ -1,9 +1,5 @@
 import std;
 
-struct S {
-    long to, cost;
-}
-
 void main() {
     int N, M;
     readf("%d %d\n", N, M);
@@ -20,30 +16,28 @@ void main() {
     }
 
     auto happiness = new long[](N);
-    happiness[] = long.min;
+    happiness[] = long.min / 2;
     happiness[0] = 0;
 
-    auto heap = new BinaryHeap!(Array!S, "a.cost < b.cost")();
-    heap.insert(S(0, 0));
+    long[] heap;
+    heap ~= 0;
 
     long res;
     while (!heap.empty) {
         auto f = heap.front;
         heap.popFront;
 
-        foreach (s; slopes[f.to]) {
-            long diff = H[f.to] - H[s];
+        foreach (s; slopes[f]) {
+            long diff = H[f] - H[s];
+            long c = happiness[f] + diff;
+            if (diff < 0) c += diff;
 
-            long c = f.cost;
-            if (diff > 0) c += diff;
-            if (diff < 0) c += diff * 2;
-
-            res = max(res, c);
-
-            if (c > happiness[s]) {
+            if (happiness[s] < c) {
                 happiness[s] = c;
-                heap.insert(S(s, c));
+                heap ~= s;
             }
+
+            res = max(res, happiness[s]);
         }
     }
 
