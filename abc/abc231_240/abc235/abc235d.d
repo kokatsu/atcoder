@@ -18,7 +18,7 @@ void main() {
             if (num % a == 0) {
                 f(num/a, cnt+1);
             }
-            
+
             string s = num.to!string;
             if (s.length > 1) {
                 string t = s[1..$] ~ s[0];

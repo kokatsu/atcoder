@@ -12,7 +12,7 @@ void main() {
         heap.insert(p);
 
         if (heap.length > K) heap.popFront;
-        
+
         if (i >= K - 1) heap.front.writeln;
     }
 }

@@ -15,7 +15,7 @@ void main() {
 
         if (list[A].length > 2 || list[B].length > 2) {
             isOK = false;
-        } 
+        }
     }
 
     auto seen = new bool[](N+1);

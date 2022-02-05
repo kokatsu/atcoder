@@ -22,7 +22,7 @@ void main() {
             list ~= f;
         }
     }
-    
+
     while (!list.empty) {
         int l = list.front;
         list.popFront;

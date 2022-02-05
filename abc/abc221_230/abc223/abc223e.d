@@ -16,7 +16,7 @@ void main() {
             if (remBX > 0 && remBX >= (c + remAY - 1) / remAY) {
                 flag = true;
             }
-        } 
+        }
     }
 
     bool noOver;

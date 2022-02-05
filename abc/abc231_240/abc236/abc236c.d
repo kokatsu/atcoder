@@ -11,6 +11,6 @@ void main() {
     foreach (t; T) list[t] = true;
 
     foreach (s; S) {
-        writeln(s in list ? "Yes" : "No"); 
+        writeln(s in list ? "Yes" : "No");
     }
 }

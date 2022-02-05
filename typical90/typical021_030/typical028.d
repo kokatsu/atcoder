@@ -3,7 +3,7 @@ import std;
 void main() {
     int N;
     readf("%d\n", N);
-    
+
     int limit = 1001;
 
     auto plane = new int[][](limit, limit);

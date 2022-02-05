@@ -17,7 +17,7 @@ void main() {
     auto uf = UnionFind!int(N+1);
     foreach_reverse (i; 2 .. N+1) {
         ++cnt;
-        
+
         foreach (g; graph[i]) {
             if (uf.same(i, g)) {
                 continue;

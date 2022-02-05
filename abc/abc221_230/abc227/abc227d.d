@@ -11,7 +11,7 @@ void main() {
     long ok = 0, ng = A.sum / K + 1;
     while (ng - ok > 1) {
         long mid = (ok + ng) / 2;
-        
+
         long S;
         foreach (a; A) {
             S += min(mid, a);

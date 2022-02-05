@@ -2,7 +2,7 @@ import std;
 
 void main() {
     string S = readln.chomp;
-    
+
     uint K;
     readf("%d\n", K);
 
@@ -13,7 +13,7 @@ void main() {
     }
 
     auto T = S.group.array;
-    
+
     uint res, chg, len;
     uint[] num, cnt;
     foreach (t; T) {

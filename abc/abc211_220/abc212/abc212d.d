@@ -6,7 +6,7 @@ void main() {
 
     long S;
     auto bag = new BinaryHeap!(Array!long, "a > b")();
-    
+
     foreach (i; 0 .. Q) {
         auto query = readln.chomp.split.to!(long[]);
 

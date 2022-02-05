@@ -20,7 +20,7 @@ void main() {
             isOK = false;
         }
     }
-    
+
     if (N > 1) {
         foreach (i; 1 .. N) {
             foreach (j; 0 .. M) {

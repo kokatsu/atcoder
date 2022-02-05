@@ -5,7 +5,7 @@ void main() {
 
     ulong len = N.length;
     long res;
-    
+
     void dfs(dchar[] x, dchar[] y, ulong cnt) {
         if (cnt == len) {
             x.representation.sort;

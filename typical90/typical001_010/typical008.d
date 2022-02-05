@@ -17,7 +17,7 @@ void main() {
 
         foreach (j, t; T) {
             if (S[i] == T[j]) {
-                dp[i+1][j+1] = (dp[i+1][j+1] + dp[i][j]) % M; 
+                dp[i+1][j+1] = (dp[i+1][j+1] + dp[i][j]) % M;
             }
         }
     }

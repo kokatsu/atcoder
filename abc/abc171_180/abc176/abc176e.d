@@ -26,7 +26,7 @@ void main() {
             if (wc != Wcnts[0]) break;
 
             long num = hc + wc;
-            
+
             long pos = Hpos[i] * W + Wpos[j];
             if (pos in list) --num;
 

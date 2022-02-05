@@ -10,7 +10,7 @@ void main() {
 
         foreach (j, s; S) {
             dchar d = ((((s - 'a') + i) % 26) + 'a').to!dchar;
-            
+
             if (d != T[j]) {
                 flag = false;
                 break;

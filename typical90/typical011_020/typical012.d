@@ -3,7 +3,7 @@ import std;
 void main() {
     int H, W, Q;
     readf("%d %d\n%d\n", H, W, Q);
-    
+
     auto isRed = new bool[][](H, W);
     auto uf = UnionFind!int(H*W);
     foreach (_; 0 .. Q) {

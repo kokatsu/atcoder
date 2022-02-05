@@ -34,7 +34,7 @@ void main() {
             else if (times[p] > times[f] + 1) {
                 times[p] = times[f] + 1;
                 cnts[p] = cnts[f];
-                que ~= p; 
+                que ~= p;
             }
         }
     }

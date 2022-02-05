@@ -18,7 +18,7 @@ void main() {
     }
 
     --X, --Y;
-    
+
     auto cost = new long[](N);
     cost[] = long.max;
     cost[X] = 0;

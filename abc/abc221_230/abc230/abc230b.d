@@ -4,7 +4,7 @@ void main() {
     string S = readln.chomp;
 
     dchar[] l = ['o', 'x', 'x'];
-    
+
     ulong len = S.length;
     auto T = l.cycle.take(13).array;
 

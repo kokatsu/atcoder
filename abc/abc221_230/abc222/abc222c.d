@@ -44,7 +44,7 @@ void main() {
                 }
             }
         }
-    } 
+    }
 
     auto heap = BinaryHeap!(Array!S, "a.win == b.win ? a.number > b.number : a.win < b.win")();
     foreach (i; 0 .. 2*N) {

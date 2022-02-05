@@ -8,6 +8,6 @@ void main() {
 
     auto num = iota(1, N+1).array;
     zip(A, num).sort!"a[0] > b[0]";
-    
+
     num[1].writeln;
 }

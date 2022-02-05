@@ -8,7 +8,7 @@ void main() {
     auto A = readln.chomp.split.to!(long[]);
 
     auto B = A.cumulativeFold!"a + b".array;
-    
+
     long[long] list;
     ++list[0];
 

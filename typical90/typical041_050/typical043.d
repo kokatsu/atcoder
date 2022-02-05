@@ -65,7 +65,7 @@ void main() {
             if (C[next.r][next.c] < next.cnt) {
                 continue;
             }
-        
+
             C[next.r][next.c] = next.cnt;
             heap.insert(next);
         }

@@ -10,7 +10,7 @@ void main() {
     }
 
     S.sort!"a ~ b < b ~ a";
-    
+
     auto dp = new string[][](N+1, K+1);
     foreach (i; 0 .. N+1) {
         dp[i][] = ('z' + 1).to!dchar.to!string;

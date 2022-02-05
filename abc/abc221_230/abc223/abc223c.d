@@ -38,6 +38,6 @@ void main() {
         real rem = A[left].to!real - (lr + rr) * B[left];
         res += 0.5 * rem + lr * B[left];
     }
-    
+
     format("%0.8f", res).writeln;
 }

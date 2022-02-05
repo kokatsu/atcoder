@@ -5,9 +5,9 @@ void main() {
     readf("%d %d\n", N, Q);
 
     auto A = readln.chomp.split.to!(int[]);
-    
+
     auto B = A.sort;
-    
+
     foreach (_; 0 .. Q) {
         int x;
         readf("%d\n", x);

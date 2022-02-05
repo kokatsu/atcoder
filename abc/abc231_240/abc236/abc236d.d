@@ -12,7 +12,7 @@ void main() {
     }
 
     int res;
-    
+
     auto used = new bool[](M);
     void f(int xor, int cnt, ref bool[] list) {
         if (cnt == N) {

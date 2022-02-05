@@ -29,7 +29,7 @@ void main() {
             if (Bmod[j] == 0) {
                 continue;
             }
-            
+
             int k = (M - (i + j) % M) % M;
             res += Amod[i] * Bmod[j] * Cmod[k];
         }

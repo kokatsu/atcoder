@@ -5,7 +5,7 @@ void main() {
     readf("%d\n", N);
 
     long S = N.to!real.sqrt.floor.to!long;
-    
+
     bool[long] list;
     foreach (i; 2 .. S+1) {
         long num = i;
