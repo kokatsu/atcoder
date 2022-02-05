@@ -1,5 +1,3 @@
-module abc.abc231_240.abc235.abc235c;
-
 import std;
 
 void main() {

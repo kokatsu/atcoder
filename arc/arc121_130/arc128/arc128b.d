@@ -1,5 +1,3 @@
-module arc.arc128.arc128b;
-
 import std;
 
 void main() {
