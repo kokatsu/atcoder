@@ -19,7 +19,6 @@ void main() {
         }
     }
 
-    bool isOnly = true;
     long comb, num, cnt;
     foreach (i, g; G) {
         long nxt = cnt + g[1];
@@ -28,7 +27,7 @@ void main() {
             long diff = A - cnt, mx = min(nxt, B);
             num += g[0] * diff;
 
-            if (isOnly) {
+            if (i == 0) {
                 foreach (j; diff .. mx+1) {
                     comb += combTable[g[1]][j];
                 }
@@ -43,7 +42,6 @@ void main() {
             num += g[0] * g[1];
         }
 
-        isOnly = false;
         cnt = nxt;
     }
 
