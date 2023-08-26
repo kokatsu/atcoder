@@ -1,7 +1,5 @@
 import std;
 
-
-
 void main() {
     long N, M;
     readf("%d %d\n", N, M);
