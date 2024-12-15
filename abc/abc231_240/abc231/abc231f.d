@@ -24,12 +24,12 @@ void main() {
     long res;
     for (int i = 0; i < N; ++i) {
         long cnt = 1;
-        while (i + 1 < N && A[i] == A[i+1] && B[i] == B[i+1]) {
+        while (i + 1 < N && A[i] == A[i + 1] && B[i] == B[i + 1]) {
             ++cnt, ++i;
         }
 
-        res += (st.query(0, B[i]+1) + cnt) * cnt;
-        st.set(B[i], st.get(B[i])+cnt);
+        res += (st.query(0, B[i] + 1) + cnt) * cnt;
+        st.set(B[i], st.get(B[i]) + cnt);
     }
 
     res.writeln;
@@ -51,7 +51,7 @@ struct SegmentTree(T, alias fun, T initialValue) {
         _data[] = initialValue;
 
         foreach (i; 0 .. _n) {
-            _data[_size+i] = arr[i];
+            _data[_size + i] = arr[i];
         }
 
         foreach_reverse (i; 1 .. _size) {
@@ -63,14 +63,14 @@ struct SegmentTree(T, alias fun, T initialValue) {
     void set(long j, T x) {
         j += _size;
         _data[j] = x;
-        foreach (i; 1 .. _e+1) {
-            update(j>>i);
+        foreach (i; 1 .. _e + 1) {
+            update(j >> i);
         }
     }
 
     /// Returns _data[j].
     T get(long j) {
-        return _data[j+_size];
+        return _data[j + _size];
     }
 
     /// Returns fun(_data[l], ..., _data[r-1]).
@@ -101,6 +101,6 @@ private:
     T[] _data;
 
     void update(long j) {
-        _data[j] = F(_data[2*j], _data[2*j+1]);
+        _data[j] = F(_data[2 * j], _data[2 * j + 1]);
     }
 }

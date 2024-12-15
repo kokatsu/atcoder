@@ -5,7 +5,7 @@ void main() {
     readf("%d %d\n", N, Q);
 
     auto edge = new int[][](N);
-    foreach (_; 0 .. N-1) {
+    foreach (_; 0 .. N - 1) {
         int a, b;
         readf("%d %d\n", a, b);
 
@@ -24,7 +24,8 @@ void main() {
 
     void f(int pos, int pre = -1) {
         foreach (e; edge[pos]) {
-            if (e == pre) continue;
+            if (e == pre)
+                continue;
 
             dp[e] += dp[pos];
             f(e, pos);

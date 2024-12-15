@@ -8,8 +8,8 @@ void main() {
 
     int res = int.max, num = 753;
     foreach (i; 2 .. len) {
-        int X = S[i-2..i+1].to!int;
-        res = min(res, abs(X-num));
+        int X = S[i - 2 .. i + 1].to!int;
+        res = min(res, abs(X - num));
     }
 
     res.writeln;

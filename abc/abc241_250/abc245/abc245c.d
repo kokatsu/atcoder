@@ -9,26 +9,27 @@ void main() {
 
     bool isOK = true;
     bool isA = true, isB = true;
-    foreach (i; 0 .. N-1) {
+    foreach (i; 0 .. N - 1) {
         bool isa, isb;
 
         if (isA) {
-            long dA = abs(A[i] - A[i+1]);
+            long dA = abs(A[i] - A[i + 1]);
             isa |= (dA <= K);
 
-            long dB = abs(A[i] - B[i+1]);
+            long dB = abs(A[i] - B[i + 1]);
             isb |= (dB <= K);
         }
 
         if (isB) {
-            long dA = abs(B[i] - A[i+1]);
+            long dA = abs(B[i] - A[i + 1]);
             isa |= (dA <= K);
 
-            long dB = abs(B[i] - B[i+1]);
+            long dB = abs(B[i] - B[i + 1]);
             isb |= (dB <= K);
         }
 
-        if (!isa && !isb) isOK = false;
+        if (!isa && !isb)
+            isOK = false;
 
         isA = isa, isB = isb;
     }

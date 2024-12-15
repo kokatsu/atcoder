@@ -7,7 +7,7 @@ void main() {
 
     long d = X.maxElement - '0';
 
-    foreach (i; d+1 .. 11) {
+    foreach (i; d + 1 .. 11) {
         long M, base = 1;
         foreach_reverse (x; X) {
             M += (x - '0') * base;

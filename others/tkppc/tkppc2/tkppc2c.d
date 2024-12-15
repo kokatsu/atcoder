@@ -12,7 +12,7 @@ void main() {
             cnt += 1 - H[r++];
         }
 
-        res = max(res, r-l);
+        res = max(res, r - l);
 
         if (l < r) {
             cnt -= 1 - H[l];

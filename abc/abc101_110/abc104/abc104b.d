@@ -5,11 +5,12 @@ void main() {
     readf("%s\n", S);
 
     bool isOK = (S.front == 'A');
-    isOK &= (S[2..$-1].canFind('C'));
+    isOK &= (S[2 .. $ - 1].canFind('C'));
 
     int cnt;
     foreach (s; S) {
-        if (std.uni.isLower(s)) ++cnt;
+        if (std.uni.isLower(s))
+            ++cnt;
     }
 
     isOK &= (S.length == cnt + 2);

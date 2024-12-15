@@ -9,10 +9,11 @@ void main() {
     auto s = d.sort;
 
     int res;
-    foreach (i; 1 .. d.back+1) {
+    foreach (i; 1 .. d.back + 1) {
         auto lb = s.lowerBound(i);
 
-        if (lb.length == N / 2) ++res;
+        if (lb.length == N / 2)
+            ++res;
     }
 
     res.writeln;

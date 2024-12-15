@@ -8,11 +8,13 @@ void main() {
     auto Q = readln.chomp.split.to!(int[]);
 
     bool[int] list;
-    foreach (p; P) list[K-p] = true;
+    foreach (p; P)
+        list[K - p] = true;
 
     bool isOK;
     foreach (q; Q) {
-        if (q in list) isOK = true;
+        if (q in list)
+            isOK = true;
     }
 
     writeln(isOK ? "Yes" : "No");

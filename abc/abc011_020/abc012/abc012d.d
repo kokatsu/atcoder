@@ -30,7 +30,7 @@ void main() {
     foreach (i; 0 .. N) {
         foreach (j; 0 .. N) {
             foreach (k; 0 .. N) {
-                f(times[j][k], times[j][i]+times[i][k]);
+                f(times[j][k], times[j][i] + times[i][k]);
             }
         }
     }

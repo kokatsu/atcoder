@@ -8,7 +8,8 @@ void main() {
 
     int cnt;
     foreach (i, x; p) {
-        if (x != i + 1) ++cnt;
+        if (x != i + 1)
+            ++cnt;
     }
 
     writeln(cnt <= 2 ? "YES" : "NO");

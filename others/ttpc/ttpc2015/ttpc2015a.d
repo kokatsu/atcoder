@@ -6,5 +6,5 @@ void main() {
 
     string[char] courses = ['B': "Bachelor", 'M': "Master", 'D': "Doctor"];
 
-    writeln(courses[S[2]], " ", S[0..2]);
+    writeln(courses[S[2]], " ", S[0 .. 2]);
 }

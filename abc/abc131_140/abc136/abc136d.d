@@ -13,7 +13,7 @@ void main() {
             ++cnt;
         }
         else {
-            res[i-1] += cnt / 2 + cnt % 2;
+            res[i - 1] += cnt / 2 + cnt % 2;
             res[i] += cnt / 2;
             cnt = 0;
         }
@@ -25,7 +25,7 @@ void main() {
         }
         else {
             res[i] += cnt / 2;
-            res[i+1] += cnt / 2 + cnt % 2;
+            res[i + 1] += cnt / 2 + cnt % 2;
             cnt = 0;
         }
     }

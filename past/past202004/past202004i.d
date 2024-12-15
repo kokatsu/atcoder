@@ -11,12 +11,13 @@ void main() {
 
     auto res = new int[](L);
     res[] = 1;
-    foreach (_; 0 .. N-1) {
+    foreach (_; 0 .. N - 1) {
         L /= 2;
         int[] next;
         foreach (i; 0 .. L) {
             int x = i * 2, y = i * 2 + 1;
-            if (A[P[x]] < A[P[y]]) swap(x, y);
+            if (A[P[x]] < A[P[y]])
+                swap(x, y);
 
             next ~= P[x];
             ++res[P[x]];

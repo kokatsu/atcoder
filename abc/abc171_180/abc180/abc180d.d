@@ -12,7 +12,8 @@ void main() {
         long S = adds(num, B, isOver);
         isOver |= M > S;
         isOver |= M >= Y;
-        if (isOver) break;
+        if (isOver)
+            break;
 
         num = M;
         ++res;

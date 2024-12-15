@@ -10,7 +10,7 @@ void main() {
         c[] += a[];
     }
 
-    auto res = iota(1, m+1).array;
+    auto res = iota(1, m + 1).array;
 
     zip(c, res).sort!((x, y) => x[0] == y[0] ? x[1] < y[1] : x[0] > y[0]);
 

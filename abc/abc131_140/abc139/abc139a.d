@@ -6,7 +6,8 @@ void main() {
 
     int res;
     foreach (s, t; zip(S, T)) {
-        if (s == t) ++res;
+        if (s == t)
+            ++res;
     }
 
     res.writeln;

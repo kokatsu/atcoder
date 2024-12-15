@@ -9,7 +9,8 @@ void main() {
     readf("%d %d\n", N, K);
 
     auto X = new long[](N), Y = new long[](N);
-    foreach (i; 0 .. N) readf("%d %d\n", X[i], Y[i]);
+    foreach (i; 0 .. N)
+        readf("%d %d\n", X[i], Y[i]);
 
     if (K == 1) {
         "Infinity".writeln;
@@ -17,12 +18,13 @@ void main() {
     }
 
     long[S] list;
-    foreach (i; 0 .. N-1) {
-        foreach (j; i+1 .. N) {
+    foreach (i; 0 .. N - 1) {
+        foreach (j; i + 1 .. N) {
             if (X[i] == X[j]) {
                 long cnt;
                 foreach (x; X) {
-                    if (x == X[i]) ++cnt;
+                    if (x == X[i])
+                        ++cnt;
                 }
 
                 if (cnt >= K) {
@@ -32,7 +34,8 @@ void main() {
             else if (Y[i] == Y[j]) {
                 long cnt;
                 foreach (y; Y) {
-                    if (y == Y[i]) ++cnt;
+                    if (y == Y[i])
+                        ++cnt;
                 }
 
                 if (cnt >= K) {
@@ -51,11 +54,12 @@ void main() {
                 long cnt;
                 foreach (x, y; zip(X, Y)) {
                     long u = x - X[i], v = y - Y[i];
-                    if (Xdiff * v == Ydiff * u) ++cnt;
+                    if (Xdiff * v == Ydiff * u)
+                        ++cnt;
                 }
 
                 if (cnt >= K) {
-                    ++list[S(Xdiff, Ydiff, Xdiff*Y[i]-Ydiff*X[i])];
+                    ++list[S(Xdiff, Ydiff, Xdiff * Y[i] - Ydiff * X[i])];
                 }
             }
         }

@@ -9,10 +9,12 @@ void main() {
     long M = A.maxElement + 1;
     auto lpf = M.iota.array;
     foreach (i; 2 .. M) {
-        if (lpf[i] != i) continue;
+        if (lpf[i] != i)
+            continue;
 
-        foreach (j; iota(i*i, M, i)) {
-            if (lpf[j] != j) continue;
+        foreach (j; iota(i * i, M, i)) {
+            if (lpf[j] != j)
+                continue;
 
             lpf[j] = i;
         }
@@ -25,7 +27,8 @@ void main() {
             long p = lpf[num];
             ++cnts[p];
 
-            while (num % p == 0) num /= p;
+            while (num % p == 0)
+                num /= p;
         }
     }
 

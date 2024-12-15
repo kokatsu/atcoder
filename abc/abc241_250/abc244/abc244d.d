@@ -7,7 +7,8 @@ void main() {
 
     int cnt;
     foreach (i; 0 .. 3) {
-        if (S[i] == T[i]) ++cnt;
+        if (S[i] == T[i])
+            ++cnt;
     }
 
     writeln((cnt == 0 || cnt == 3) ? "Yes" : "No");

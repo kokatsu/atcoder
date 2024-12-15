@@ -7,13 +7,13 @@ void main() {
 
     string[] list;
     foreach (s; S) {
-        foreach(t; S) {
+        foreach (t; S) {
             list ~= [s, t].to!string;
         }
     }
 
     list.sort;
 
-    string res = list[N-1];
+    string res = list[N - 1];
     res.writeln;
 }

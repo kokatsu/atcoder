@@ -6,7 +6,7 @@ void main() {
 
     auto B = readln.chomp.split.to!(int[]);
 
-    int res = B[N-2], pre = int.max;
+    int res = B[N - 2], pre = int.max;
     foreach (b; B) {
         res += min(pre, b);
         pre = b;

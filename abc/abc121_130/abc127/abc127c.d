@@ -12,6 +12,6 @@ void main() {
         A = max(A, L), B = min(B, R);
     }
 
-    int res = max(0, B-A+1);
+    int res = max(0, B - A + 1);
     res.writeln;
 }

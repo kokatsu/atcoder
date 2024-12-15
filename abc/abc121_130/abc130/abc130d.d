@@ -13,7 +13,8 @@ void main() {
             ++r;
         }
 
-        if (S >= K) res += N - r + 1;
+        if (S >= K)
+            res += N - r + 1;
         S -= a[l];
     }
 

@@ -4,9 +4,9 @@ void main() {
     int N, M;
     readf("%d %d\n", N, M);
 
-    auto uf = new UnionFind!int(N*2);
+    auto uf = new UnionFind!int(N * 2);
     foreach (i; 0 .. N) {
-        uf.unite(i*2, i*2+1);
+        uf.unite(i * 2, i * 2 + 1);
     }
 
     int c;
@@ -18,8 +18,10 @@ void main() {
         --A, --C;
 
         A *= 2, C *= 2;
-        if (B == 'B') ++A;
-        if (D == 'B') ++C;
+        if (B == 'B')
+            ++A;
+        if (D == 'B')
+            ++C;
 
         if (uf.root(A) == uf.root(C)) {
             ++c;
@@ -29,7 +31,7 @@ void main() {
     }
 
     int d;
-    foreach (i; 0 .. N*2) {
+    foreach (i; 0 .. N * 2) {
         if (i == uf.root(i)) {
             ++d;
         }
@@ -41,8 +43,7 @@ void main() {
 }
 
 /// Union-Find
-struct UnionFind(T)
-if (isIntegral!T) {
+struct UnionFind(T) if (isIntegral!T) {
 
     /// Constructor
     this(T n) nothrow @safe {

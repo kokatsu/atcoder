@@ -7,7 +7,8 @@ void main() {
         readf("%s\n", S);
 
         D ~= S;
-        if (S == "GB") break;
+        if (S == "GB")
+            break;
     }
 
     D.sort;

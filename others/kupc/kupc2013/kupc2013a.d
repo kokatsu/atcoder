@@ -10,7 +10,8 @@ void main() {
         string name;
         readf("%d %s\n", year, name);
 
-        if (year <= Q) res = name;
+        if (year <= Q)
+            res = name;
     }
 
     res.writeln;

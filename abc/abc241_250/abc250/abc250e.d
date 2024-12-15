@@ -14,7 +14,7 @@ void main() {
     int acnt, bcnt, r;
     foreach (l; 0 .. N) {
         if (a[l] in alist) {
-            L[l] = L[l-1], R[l] = R[l-1];
+            L[l] = L[l - 1], R[l] = R[l - 1];
         }
         else {
             alist[a[l]] = true;

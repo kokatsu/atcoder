@@ -17,11 +17,12 @@ void main() {
 
     auto wins = new int[](L);
     foreach (i; 1 .. L) {
-        wins[i] = wins[i-1] + cnts[i-1].sum;
+        wins[i] = wins[i - 1] + cnts[i - 1].sum;
     }
 
     foreach (r, h; zip(R, H)) {
-        int win = wins[r] + cnts[r][(h+1)%3], lose = N - wins[r+1] + cnts[r][(h+2)%3], draw = cnts[r][h] - 1;
+        int win = wins[r] + cnts[r][(h + 1) % 3],
+            lose = N - wins[r + 1] + cnts[r][(h + 2) % 3], draw = cnts[r][h] - 1;
         writeln(win, " ", lose, " ", draw);
     }
 }

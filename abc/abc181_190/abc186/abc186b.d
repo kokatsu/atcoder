@@ -5,7 +5,7 @@ void main() {
     readf("%d %d\n", H, W);
 
     int mn = 100, lim = 100;
-    auto cnts = new int[](lim+1);
+    auto cnts = new int[](lim + 1);
     foreach (i; 0 .. H) {
         auto A = readln.chomp.split.to!(int[]);
 
@@ -16,7 +16,7 @@ void main() {
     }
 
     int res;
-    foreach (i; mn+1 .. lim+1) {
+    foreach (i; mn + 1 .. lim + 1) {
         res += (i - mn) * cnts[i];
     }
 

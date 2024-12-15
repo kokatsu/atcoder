@@ -13,7 +13,7 @@ void main() {
 
     long res;
     foreach (i; 1 .. N) {
-        res += cnts[i] * cnts[N-i];
+        res += cnts[i] * cnts[N - i];
     }
 
     res.writeln;

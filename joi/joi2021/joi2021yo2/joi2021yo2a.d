@@ -8,12 +8,15 @@ void main() {
     long C = 0;
     long[] L, R;
     foreach (i, s; S) {
-        if (s == '.') continue;
+        if (s == '.')
+            continue;
 
         ++C;
 
-        if (i + 1 <= A) L ~= to!long(i+1);
-        else R ~= to!long(i+1);
+        if (i + 1 <= A)
+            L ~= to!long(i + 1);
+        else
+            R ~= to!long(i + 1);
     }
 
     R.reverse;

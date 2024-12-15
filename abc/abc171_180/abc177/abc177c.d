@@ -11,8 +11,8 @@ void main() {
     auto B = A.cumulativeFold!((a, b) => (a + b) % M).array;
 
     long res;
-    foreach (i; 0 .. N-1) {
-        res = (res + (A[i] * (B[N-1] - B[i] + M)) % M) % M;
+    foreach (i; 0 .. N - 1) {
+        res = (res + (A[i] * (B[N - 1] - B[i] + M)) % M) % M;
     }
 
     res.writeln;

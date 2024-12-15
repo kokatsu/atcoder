@@ -10,10 +10,10 @@ void main() {
         x = (x + y) % MOD;
     }
 
-    auto dp = new long[](S+1);
+    auto dp = new long[](S + 1);
     dp[0] = 1;
-    foreach (i; 3 .. S+1) {
-        addMod(dp[i], dp[i-1]+dp[i-3]);
+    foreach (i; 3 .. S + 1) {
+        addMod(dp[i], dp[i - 1] + dp[i - 3]);
     }
 
     long res = dp[S];

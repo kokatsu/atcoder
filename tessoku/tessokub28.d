@@ -7,11 +7,11 @@ void main() {
     readf("%d\n", N);
 
     auto dp = new long[](N);
-    dp[0..2] = 1;
+    dp[0 .. 2] = 1;
     foreach (i; 2 .. N) {
-        dp[i] = (dp[i-1] + dp[i-2]) % MOD;
+        dp[i] = (dp[i - 1] + dp[i - 2]) % MOD;
     }
 
-    long res = dp[N-1];
+    long res = dp[N - 1];
     res.writeln;
 }

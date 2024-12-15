@@ -5,7 +5,8 @@ void main() {
     readf("%d %d\n", N, T);
 
     auto A = new int[](N), B = new int[](N);
-    foreach (i; 0 .. N) readf("%d %d\n", A[i], B[i]);
+    foreach (i; 0 .. N)
+        readf("%d %d\n", A[i], B[i]);
 
     auto D = new int[](N);
     D[] = A[] - B[];

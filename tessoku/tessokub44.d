@@ -5,7 +5,8 @@ void main() {
     readf("%d\n", N);
 
     auto A = new int[][](N);
-    foreach (i; 0 .. N) A[i] = readln.chomp.split.to!(int[]);
+    foreach (i; 0 .. N)
+        A[i] = readln.chomp.split.to!(int[]);
 
     auto P = iota(N).array;
 

@@ -14,7 +14,7 @@ void main() {
     if (N == M) {
         res = factorial(N) * factorial(M) * 2 % MOD;
     }
-    else if (abs(N-M) == 1) {
+    else if (abs(N - M) == 1) {
         res = factorial(N) * factorial(M) % MOD;
     }
 

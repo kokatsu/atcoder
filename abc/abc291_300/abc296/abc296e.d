@@ -9,7 +9,8 @@ void main() {
     A[] -= 1;
 
     auto cnts = new int[](N);
-    foreach (a; A) ++cnts[a];
+    foreach (a; A)
+        ++cnts[a];
 
     auto list = new int[][](N);
     int res = N;
@@ -20,14 +21,15 @@ void main() {
         }
     }
 
-    foreach (i; 0 .. N-1) {
-        if (list[i].empty) break;
+    foreach (i; 0 .. N - 1) {
+        if (list[i].empty)
+            break;
 
         foreach (l; list[i]) {
             --cnts[A[l]];
             if (cnts[A[l]] == 0) {
                 --res;
-                list[i+1] ~= A[l];
+                list[i + 1] ~= A[l];
             }
         }
     }

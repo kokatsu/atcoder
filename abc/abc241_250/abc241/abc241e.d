@@ -13,7 +13,8 @@ void main() {
     while (K > 0) {
         pre = pos;
         pos = res % N;
-        if (num[pos] >= 0) break;
+        if (num[pos] >= 0)
+            break;
 
         res += A[pos];
         num[pos] = ++cnt;

@@ -7,7 +7,7 @@ void main() {
     auto A = readln.chomp.split.to!(long[]);
 
     foreach (ref a; A) {
-        long C = min(K, a/X);
+        long C = min(K, a / X);
         a -= C * X;
         K -= C;
     }
@@ -19,7 +19,8 @@ void main() {
             a = 0;
             --K;
 
-            if (K <= 0) break;
+            if (K <= 0)
+                break;
         }
     }
 

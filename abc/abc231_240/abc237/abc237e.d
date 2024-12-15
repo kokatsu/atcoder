@@ -30,7 +30,8 @@ void main() {
         foreach (s; slopes[f]) {
             long diff = H[f] - H[s];
             long c = happiness[f] + diff;
-            if (diff < 0) c += diff;
+            if (diff < 0)
+                c += diff;
 
             if (happiness[s] < c) {
                 happiness[s] = c;

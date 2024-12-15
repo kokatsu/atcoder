@@ -16,7 +16,8 @@ void main() {
         int u, v;
         foreach (x; a) {
             u += d, v += x;
-            if (u != v) ++res;
+            if (u != v)
+                ++res;
         }
     }
 

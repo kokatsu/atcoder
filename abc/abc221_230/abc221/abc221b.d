@@ -10,11 +10,11 @@ void main() {
     dchar[] f;
     if (!isOK) {
         foreach (i; 1 .. len) {
-            if (S == f ~ T[i] ~ T[i-1] ~ T[i+1..len]) {
+            if (S == f ~ T[i] ~ T[i - 1] ~ T[i + 1 .. len]) {
                 isOK = true;
                 break;
             }
-            f ~= T[i-1];
+            f ~= T[i - 1];
         }
     }
 

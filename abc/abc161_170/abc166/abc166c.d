@@ -18,9 +18,11 @@ void main() {
     int res;
     foreach (i; 0 .. N) {
         bool isOK = true;
-        foreach (r; roads[i]) isOK &= (H[i] > H[r]);
+        foreach (r; roads[i])
+            isOK &= (H[i] > H[r]);
 
-        if (isOK) ++res;
+        if (isOK)
+            ++res;
     }
 
     res.writeln;

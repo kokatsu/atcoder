@@ -9,7 +9,8 @@ void main() {
     readf("%d %d\n", H, W);
 
     auto S = new string[](H);
-    foreach (i; 0 .. H) readf("%s\n", S[i]);
+    foreach (i; 0 .. H)
+        readf("%s\n", S[i]);
 
     long[] dx = [-1, 0, 1, 0], dy = [0, 1, 0, -1];
 
@@ -33,9 +34,12 @@ void main() {
             foreach (i; 0 .. 4) {
                 Coord nxt = now;
                 nxt.x += dx[i], nxt.y += dy[i];
-                if (nxt.x < 0 || H <= nxt.x || nxt.y < 0 || W <= nxt.y) continue;
-                if (seen[nxt.x][nxt.y]) continue;
-                if (S[nxt.x][nxt.y] == S[now.x][now.y]) continue;
+                if (nxt.x < 0 || H <= nxt.x || nxt.y < 0 || W <= nxt.y)
+                    continue;
+                if (seen[nxt.x][nxt.y])
+                    continue;
+                if (S[nxt.x][nxt.y] == S[now.x][now.y])
+                    continue;
 
                 que ~= nxt;
                 seen[nxt.x][nxt.y] = true;
@@ -48,7 +52,8 @@ void main() {
 
     foreach (i; 0 .. H) {
         foreach (j; 0 .. W) {
-            if (seen[i][j]) continue;
+            if (seen[i][j])
+                continue;
 
             f(i, j);
         }

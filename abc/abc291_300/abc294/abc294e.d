@@ -5,10 +5,12 @@ void main() {
     readf("%d %d %d\n", L, N1, N2);
 
     auto v1 = new long[](N1), l1 = new long[](N1);
-    foreach (i; 0 .. N1) readf("%d %d\n", v1[i], l1[i]);
+    foreach (i; 0 .. N1)
+        readf("%d %d\n", v1[i], l1[i]);
 
     auto v2 = new long[](N2), l2 = new long[](N2);
-    foreach (i; 0 .. N2) readf("%d %d\n", v2[i], l2[i]);
+    foreach (i; 0 .. N2)
+        readf("%d %d\n", v2[i], l2[i]);
 
     long res, pos, idx1, idx2;
     while (pos < L) {

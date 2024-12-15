@@ -5,28 +5,34 @@ void main() {
     readf("%d %d\n", N, M);
 
     auto A = new int[](M), B = new int[](M);
-    foreach (i; 0 .. M) readf("%d %d\n", A[i], B[i]);
+    foreach (i; 0 .. M)
+        readf("%d %d\n", A[i], B[i]);
 
     int Q;
     readf("%d\n", Q);
 
     auto query = new int[][](Q);
-    foreach (i; 0 .. Q) query[i] = readln.chomp.split.to!(int[]);
+    foreach (i; 0 .. Q)
+        query[i] = readln.chomp.split.to!(int[]);
 
     auto seen = new bool[](M);
     foreach (q; query) {
-        if (q[0] == 1) seen[--q[1]] = true;
+        if (q[0] == 1)
+            seen[--q[1]] = true;
     }
 
-    auto uf = new UnionFind!int(N+1);
+    auto uf = new UnionFind!int(N + 1);
     foreach (i; 0 .. M) {
-        if (!seen[i]) uf.unite(A[i], B[i]);
+        if (!seen[i])
+            uf.unite(A[i], B[i]);
     }
 
     string[] res;
     foreach_reverse (q; query) {
-        if (q[0] == 1) uf.unite(A[q[1]], B[q[1]]);
-        else res ~= (uf.isSame(q[1], q[2]) ? "Yes" : "No");
+        if (q[0] == 1)
+            uf.unite(A[q[1]], B[q[1]]);
+        else
+            res ~= (uf.isSame(q[1], q[2]) ? "Yes" : "No");
     }
 
     res.reverse;
@@ -35,8 +41,7 @@ void main() {
 }
 
 /// Union-Find
-struct UnionFind(T)
-if (isIntegral!T) {
+struct UnionFind(T) if (isIntegral!T) {
 
     /// Constructor
     this(T n) nothrow @safe {

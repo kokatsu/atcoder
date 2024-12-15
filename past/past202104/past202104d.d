@@ -11,7 +11,7 @@ void main() {
         res += a;
         if (i >= K - 1) {
             res.writeln;
-            res -= A[i+1-K];
+            res -= A[i + 1 - K];
         }
     }
 }

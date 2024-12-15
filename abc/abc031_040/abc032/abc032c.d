@@ -24,7 +24,7 @@ void main() {
         }
 
         if (l < r) {
-            res = max(res, r-l);
+            res = max(res, r - l);
             mul /= s[l];
         }
     }

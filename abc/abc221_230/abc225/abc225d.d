@@ -4,10 +4,10 @@ void main() {
     int N, Q;
     readf("%d %d\n", N, Q);
 
-    auto next = iota(0, N+1).array;
+    auto next = iota(0, N + 1).array;
     auto prev = next.dup;
 
-    auto list = new int[](N+1);
+    auto list = new int[](N + 1);
 
     foreach (i; 0 .. Q) {
         auto input = readln.chomp.split.to!(int[]);

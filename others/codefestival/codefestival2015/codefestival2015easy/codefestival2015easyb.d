@@ -12,6 +12,6 @@ void main() {
 
     int M = N / 2;
 
-    auto res = iota(M).filter!(i => S[i] != S[M+i]).walkLength;
+    auto res = iota(M).filter!(i => S[i] != S[M + i]).walkLength;
     res.writeln;
 }

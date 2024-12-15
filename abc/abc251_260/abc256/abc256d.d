@@ -5,7 +5,7 @@ void main() {
     readf("%d\n", N);
 
     int lim = 2 * 10 ^^ 5;
-    auto arr = new int[lim+1];
+    auto arr = new int[lim + 1];
 
     foreach (_; 0 .. N) {
         int L, R;
@@ -17,8 +17,8 @@ void main() {
     int u, v;
     int[] X, Y;
     bool isOK;
-    foreach (i; 1 .. lim+1) {
-        arr[i] += arr[i-1];
+    foreach (i; 1 .. lim + 1) {
+        arr[i] += arr[i - 1];
 
         if (!isOK && arr[i] > 0) {
             u = i;
@@ -31,5 +31,6 @@ void main() {
         }
     }
 
-    foreach (x, y; zip(X, Y)) writeln(x, " ", y);
+    foreach (x, y; zip(X, Y))
+        writeln(x, " ", y);
 }

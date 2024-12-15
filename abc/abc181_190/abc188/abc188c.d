@@ -11,12 +11,13 @@ void main() {
     while (l > 2) {
         l /= 2;
         foreach (i; 0 .. l) {
-            B[i] = max(B[i*2], B[i*2+1]);
+            B[i] = max(B[i * 2], B[i * 2 + 1]);
         }
     }
 
     int num = (B[0] < B[1] ? B[0] : B[1]);
     foreach (i, a; A) {
-        if (a == num) writeln(i+1);
+        if (a == num)
+            writeln(i + 1);
     }
 }

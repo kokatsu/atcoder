@@ -17,8 +17,10 @@ void main() {
 
         isOK |= (P * 10 == S);
 
-        if (l == r) ++r;
-        else P -= B[l];
+        if (l == r)
+            ++r;
+        else
+            P -= B[l];
     }
 
     writeln(isOK ? "Yes" : "No");

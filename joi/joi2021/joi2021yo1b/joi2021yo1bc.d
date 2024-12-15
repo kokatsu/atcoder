@@ -8,6 +8,6 @@ void main() {
 
     auto idx = A.maxIndex;
 
-    int[] res = [A[0..idx].sum, A[idx+1..N].sum];
+    int[] res = [A[0 .. idx].sum, A[idx + 1 .. N].sum];
     writefln("%(%d\n%)", res);
 }

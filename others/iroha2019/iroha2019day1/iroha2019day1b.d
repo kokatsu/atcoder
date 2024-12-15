@@ -9,6 +9,6 @@ void main() {
 
     K %= L;
 
-    string res = S[K..L] ~ S[0..K];
+    string res = S[K .. L] ~ S[0 .. K];
     res.writeln;
 }

@@ -7,7 +7,8 @@ void main() {
     auto a = readln.chomp.split.to!(int[]);
 
     int[int] list;
-    foreach (A; a) ++list[A];
+    foreach (A; a)
+        ++list[A];
 
     list.length.writeln;
 }

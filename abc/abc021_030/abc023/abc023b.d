@@ -9,8 +9,8 @@ void main() {
 
     if (N % 2 == 1) {
         int M = N / 2;
-        dchar[] L = ['a', 'c', 'b'].replicate((M+2)/3).take(M).array;
-        dchar[] R = ['c', 'a', 'b'].replicate((M+2)/3).take(M).array;
+        dchar[] L = ['a', 'c', 'b'].replicate((M + 2) / 3).take(M).array;
+        dchar[] R = ['c', 'a', 'b'].replicate((M + 2) / 3).take(M).array;
 
         L.reverse;
 

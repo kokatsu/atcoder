@@ -4,7 +4,8 @@ void main() {
     int N;
     readf("%d\n", N);
 
-    while (N > 0 && N % 10 == 0) N /= 10;
+    while (N > 0 && N % 10 == 0)
+        N /= 10;
 
     int M, t = N;
     while (t > 0) {

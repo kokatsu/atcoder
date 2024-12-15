@@ -9,8 +9,10 @@ void main() {
     int l, r;
     foreach (s; S) {
         if (s == ')') {
-            if (r > 0) --r;
-            else ++l;
+            if (r > 0)
+                --r;
+            else
+                ++l;
         }
         else {
             ++r;

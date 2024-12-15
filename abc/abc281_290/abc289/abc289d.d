@@ -15,16 +15,19 @@ void main() {
     readf("%d\n", X);
 
     bool[int] used;
-    foreach (b; B) used[b] = true;
+    foreach (b; B)
+        used[b] = true;
 
-    auto dp = new bool[](X+1);
+    auto dp = new bool[](X + 1);
     dp[0] = true;
     foreach (i; 0 .. X) {
-        if (!dp[i]) continue;
+        if (!dp[i])
+            continue;
 
         foreach (a; A) {
             int pos = i + a;
-            if (pos > X || pos in used) continue;
+            if (pos > X || pos in used)
+                continue;
 
             dp[pos] = true;
         }

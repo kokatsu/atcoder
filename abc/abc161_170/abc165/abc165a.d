@@ -5,7 +5,7 @@ void main() {
     readf("%d\n%d %d\n", K, A, B);
 
     bool isOK;
-    foreach (i; A .. B+1) {
+    foreach (i; A .. B + 1) {
         isOK |= (i % K == 0);
     }
 

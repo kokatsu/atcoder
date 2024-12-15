@@ -8,7 +8,7 @@ void main() {
 
     auto Q = P.sort;
 
-    auto lba = Q.lowerBound(A+1);
+    auto lba = Q.lowerBound(A + 1);
     auto ubb = Q.upperBound(B);
 
     int x1 = lba.length.to!int;

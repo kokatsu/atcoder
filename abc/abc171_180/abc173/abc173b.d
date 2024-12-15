@@ -7,7 +7,8 @@ void main() {
     string[] list = ["AC", "WA", "TLE", "RE"];
 
     int[string] cnts;
-    foreach (l; list) cnts[l] = 0;
+    foreach (l; list)
+        cnts[l] = 0;
 
     foreach (_; 0 .. N) {
         string S;
@@ -16,5 +17,6 @@ void main() {
         ++cnts[S];
     }
 
-    foreach (l; list) writeln(l, " x ", cnts[l]);
+    foreach (l; list)
+        writeln(l, " x ", cnts[l]);
 }

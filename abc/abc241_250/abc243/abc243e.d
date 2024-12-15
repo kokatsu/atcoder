@@ -6,10 +6,12 @@ void main() {
 
     long L = long.max / 2;
     auto dists = new long[][](N, N);
-    foreach (i; 0 .. N) dists[i][] = L;
+    foreach (i; 0 .. N)
+        dists[i][] = L;
 
     void f(ref long x, long y) {
-        if (x > y) x = y;
+        if (x > y)
+            x = y;
     }
 
     auto A = new long[](M), B = new long[](M), C = new long[](M);
@@ -24,7 +26,7 @@ void main() {
     foreach (i; 0 .. N) {
         foreach (j; 0 .. N) {
             foreach (k; 0 .. N) {
-                f(dists[j][k], dists[j][i]+dists[i][k]);
+                f(dists[j][k], dists[j][i] + dists[i][k]);
             }
         }
     }
@@ -36,7 +38,8 @@ void main() {
             isDelete |= (dists[A[i]][j] + dists[j][B[i]] <= C[i]);
         }
 
-        if (isDelete) ++res;
+        if (isDelete)
+            ++res;
     }
 
     res.writeln;

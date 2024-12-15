@@ -5,7 +5,8 @@ void main() {
     readf("%d %d\n", N, M);
 
     auto s = new string[](N);
-    foreach (i; 0 .. N) readf("%s\n", s[i]);
+    foreach (i; 0 .. N)
+        readf("%s\n", s[i]);
 
     int[] dx = [0, -1, -1, 0, 1, 1, 1, 0, -1];
     int[] dy = [0, 0, 1, 1, 1, 0, -1, -1, -1];

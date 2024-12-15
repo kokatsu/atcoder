@@ -9,7 +9,7 @@ void main() {
         int A, B;
         readf("%d %d\n", A, B);
 
-        res = max(res, A+B);
+        res = max(res, A + B);
     }
 
     res.writeln;

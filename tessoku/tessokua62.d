@@ -19,13 +19,15 @@ void main() {
     void f(int x, int y) {
         root[x] = y;
         foreach (e; edge[x]) {
-            if (root[e] != -1) continue;
+            if (root[e] != -1)
+                continue;
             f(e, y);
         }
     }
 
     foreach (i; 0 .. N) {
-        if (root[i] == - 1) f(i, i);
+        if (root[i] == -1)
+            f(i, i);
     }
 
     writeln(root.all!"a == 0" ? "The graph is connected." : "The graph is not connected.");

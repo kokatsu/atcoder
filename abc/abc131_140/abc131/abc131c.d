@@ -8,6 +8,6 @@ void main() {
         return x - x / y - x / z + x / ((y * z) / gcd(y, z));
     }
 
-    long res = f(B, C, D) - f(A-1, C, D);
+    long res = f(B, C, D) - f(A - 1, C, D);
     res.writeln;
 }

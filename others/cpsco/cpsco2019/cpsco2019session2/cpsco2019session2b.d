@@ -10,8 +10,10 @@ void main() {
         int a;
         readf("%c %d\n", c, a);
 
-        if (c == '+') add += a;
-        if (c == '*' && a > 0) mul *= a;
+        if (c == '+')
+            add += a;
+        if (c == '*' && a > 0)
+            mul *= a;
     }
 
     int res = add * mul;

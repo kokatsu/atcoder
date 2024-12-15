@@ -29,7 +29,8 @@ void main() {
     auto remove = new bool[](N);
 
     auto rbt = new RedBlackTree!(S, "a.cost < b.cost", true)();
-    foreach (i, b; B) rbt.insert(S(b, i.to!long));
+    foreach (i, b; B)
+        rbt.insert(S(b, i.to!long));
 
     long res = long.min;
     while (!rbt.empty) {
@@ -40,7 +41,8 @@ void main() {
         remove[f.edge] = true;
 
         foreach (e; edges[f.edge]) {
-            if (remove[e]) continue;
+            if (remove[e])
+                continue;
 
             rbt.removeKey(S(B[e], e));
             B[e] -= A[f.edge];

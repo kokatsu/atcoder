@@ -14,8 +14,10 @@ void main() {
         readf("%s\n", s[i]);
 
         foreach (j; 0 .. W) {
-            if (s[i][j] == 'S') xs = i, ys = j;
-            if (s[i][j] == 'G') xg = i, yg = j;
+            if (s[i][j] == 'S')
+                xs = i, ys = j;
+            if (s[i][j] == 'G')
+                xg = i, yg = j;
         }
     }
 
@@ -23,7 +25,8 @@ void main() {
 
     bool check(long t) {
         auto times = new long[][](H, W);
-        foreach (i; 0 .. H) times[i][] = long.max;
+        foreach (i; 0 .. H)
+            times[i][] = long.max;
         times[xs][ys] = 0;
 
         auto heap = new BinaryHeap!(Array!Square, "a.time > b.time")();
@@ -35,10 +38,12 @@ void main() {
 
             foreach (i; 0 .. 4) {
                 long x = f.x + dx[i], y = f.y + dy[i];
-                if (x < 0 || H <= x || y < 0 || W <= y) continue;
+                if (x < 0 || H <= x || y < 0 || W <= y)
+                    continue;
 
                 long time = f.time + (s[x][y] == '#' ? t : 1);
-                if (time >= times[x][y]) continue;
+                if (time >= times[x][y])
+                    continue;
 
                 times[x][y] = time;
                 heap.insert(Square(x, y, time));

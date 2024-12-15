@@ -18,7 +18,7 @@ void main() {
             long cnt;
             foreach (a; A) {
                 if (a < 0) {
-                    cnt += t[2].upperBound((mid+1)/a).length;
+                    cnt += t[2].upperBound((mid + 1) / a).length;
                 }
             }
 
@@ -47,12 +47,14 @@ void main() {
         long cnt;
         foreach (a; A) {
             if (a < 0) {
-                cnt += t[0].upperBound(mid/a-1).length;
-                if (a ^^ 2 <= mid) --cnt;
+                cnt += t[0].upperBound(mid / a - 1).length;
+                if (a ^^ 2 <= mid)
+                    --cnt;
             }
             else if (a > 0) {
-                cnt += t[2].lowerBound(mid/a+1).length;
-                if (a ^^ 2 <= mid) --cnt;
+                cnt += t[2].lowerBound(mid / a + 1).length;
+                if (a ^^ 2 <= mid)
+                    --cnt;
             }
         }
 

@@ -11,7 +11,8 @@ void main() {
     auto B = readln.chomp.split.to!(int[]);
 
     bool[int] dict;
-    foreach (b; B) dict[b] = true;
+    foreach (b; B)
+        dict[b] = true;
 
     int res;
     foreach (a; A) {

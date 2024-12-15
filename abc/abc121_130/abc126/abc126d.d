@@ -9,7 +9,7 @@ void main() {
     readf("%d\n", N);
 
     auto edge = new Edge[][](N);
-    foreach (_; 0 .. N-1) {
+    foreach (_; 0 .. N - 1) {
         long u, v, w;
         readf("%d %d %d\n", u, v, w);
 
@@ -21,7 +21,8 @@ void main() {
 
     void f(long pos, long pre = -1) {
         foreach (e; edge[pos]) {
-            if (e.to == pre) continue;
+            if (e.to == pre)
+                continue;
 
             color[e.to] = (e.dist % 2 == 0 ? color[pos] : (color[pos] + 1) % 2);
             f(e.to, pos);
@@ -30,5 +31,6 @@ void main() {
 
     f(0);
 
-    foreach (c; color) c.writeln;
+    foreach (c; color)
+        c.writeln;
 }

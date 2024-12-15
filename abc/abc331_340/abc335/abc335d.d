@@ -5,11 +5,11 @@ void main() {
     readf("%d\n", N);
 
     auto res = new string[][](N, N);
-    res[N/2][N/2] = "T";
+    res[N / 2][N / 2] = "T";
 
     int x, y, dx = 1, dy;
     string num = "1";
-    foreach (i; 0 .. N*N-1) {
+    foreach (i; 0 .. N * N - 1) {
         res[x][y] = num;
         num = num.succ;
 
@@ -19,7 +19,8 @@ void main() {
         }
         else {
             swap(dx, dy);
-            if (dy == 0) dx *= -1;
+            if (dy == 0)
+                dx *= -1;
             x += dx, y += dy;
         }
     }

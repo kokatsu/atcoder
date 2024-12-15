@@ -9,9 +9,12 @@ void main() {
     bool isOK = true;
     foreach (s, t; zip(S, T)) {
         if (s != t) {
-            if (s == '@') isOK &= A.canFind(t);
-            else if (t == '@') isOK &= A.canFind(s);
-            else isOK = false;
+            if (s == '@')
+                isOK &= A.canFind(t);
+            else if (t == '@')
+                isOK &= A.canFind(s);
+            else
+                isOK = false;
         }
     }
 

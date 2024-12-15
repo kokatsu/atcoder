@@ -7,10 +7,12 @@ long powMod(long x, long y) {
     while (y > 0) {
         if (y & 1) {
             res *= x;
-            if (res > MOD) res %= MOD;
+            if (res > MOD)
+                res %= MOD;
         }
         x *= x;
-        if (x > MOD) x %= MOD;
+        if (x > MOD)
+            x %= MOD;
         y >>= 1;
     }
     return res;
@@ -31,6 +33,6 @@ void main() {
         n = n * i % MOD;
     }
 
-    long res = d * powMod(n, MOD-2) % MOD;
+    long res = d * powMod(n, MOD - 2) % MOD;
     res.writeln;
 }

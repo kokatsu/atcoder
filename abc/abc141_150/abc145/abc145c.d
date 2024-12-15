@@ -16,7 +16,7 @@ void main() {
     auto arr = N.iota.array;
     foreach (a; arr.permutations) {
         foreach (i; 1 .. N) {
-            s += hypot(x[a[i-1]]-x[a[i]], y[a[i-1]]-y[a[i]]);
+            s += hypot(x[a[i - 1]] - x[a[i]], y[a[i - 1]] - y[a[i]]);
         }
     }
 

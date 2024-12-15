@@ -38,9 +38,11 @@ void main() {
 
         long nxt = (x + 1) % M;
         if (nxt in heaps) {
-            if (nxt in nums) s += nums[nxt];
+            if (nxt in nums)
+                s += nums[nxt];
             else {
-                if (!heaps[nxt].empty) s += func(nxt);
+                if (!heaps[nxt].empty)
+                    s += func(nxt);
             }
         }
 
@@ -50,7 +52,8 @@ void main() {
 
     long num;
     foreach (l; list) {
-        if (l in seen) continue;
+        if (l in seen)
+            continue;
         num = max(num, func(l));
     }
 

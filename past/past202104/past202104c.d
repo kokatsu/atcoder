@@ -8,8 +8,8 @@ void main() {
     foreach (i; 0 .. N) {
         auto A = readln.chomp.split.to!(int[]);
 
-        foreach (a; A[1..$]) {
-            table[i][a-1] = true;
+        foreach (a; A[1 .. $]) {
+            table[i][a - 1] = true;
         }
     }
 
@@ -20,7 +20,7 @@ void main() {
 
     int res;
     foreach (i; 0 .. N) {
-        if (B.filter!(b => table[i][b-1]).array.length >= Q) {
+        if (B.filter!(b => table[i][b - 1]).array.length >= Q) {
             ++res;
         }
     }

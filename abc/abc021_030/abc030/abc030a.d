@@ -7,8 +7,10 @@ void main() {
     int X = B * C, Y = A * D;
 
     string res = "DRAW";
-    if (X > Y) res = "TAKAHASHI";
-    if (X < Y) res = "AOKI";
+    if (X > Y)
+        res = "TAKAHASHI";
+    if (X < Y)
+        res = "AOKI";
 
     res.writeln;
 }

@@ -4,7 +4,7 @@ void main() {
     long N, M;
     readf("%d %d\n", N, M);
 
-    auto path = new long[][](N+1);
+    auto path = new long[][](N + 1);
     foreach (i; 0 .. M) {
         long A, B;
         readf("%d %d\n", A, B);
@@ -15,11 +15,11 @@ void main() {
 
     long MOD = 10 ^^ 9 + 7;
 
-    auto times = new long[](N+1);
+    auto times = new long[](N + 1);
     times[] = long.max;
     times[1] = 0;
 
-    auto cnts = new long[](N+1);
+    auto cnts = new long[](N + 1);
     cnts[1] = 1;
 
     long[] que = [1];

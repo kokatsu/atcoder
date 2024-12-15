@@ -36,8 +36,7 @@ void main() {
 }
 
 /// Union-Find
-struct UnionFind(T)
-if (isIntegral!T) {
+struct UnionFind(T) if (isIntegral!T) {
 
     /// Constructor
     this(T n) nothrow @safe {

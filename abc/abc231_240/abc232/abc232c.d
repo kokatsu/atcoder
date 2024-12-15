@@ -38,7 +38,8 @@ void main() {
         if (flag) {
             isOK = true;
         }
-    } while (arr.nextPermutation);
+    }
+    while (arr.nextPermutation);
 
     writeln(isOK ? "Yes" : "No");
 }

@@ -9,7 +9,8 @@ void main() {
         int A, B;
         readf("%d %d\n", A, B);
 
-        if (A > B) swap(A, B);
+        if (A > B)
+            swap(A, B);
 
         dict[tuple(A, B)] = true;
     }

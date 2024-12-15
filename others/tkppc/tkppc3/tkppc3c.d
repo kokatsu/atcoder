@@ -17,8 +17,10 @@ void main() {
             return;
         }
 
-        if (r == l) ++r;
-        else mul /= A[l];
+        if (r == l)
+            ++r;
+        else
+            mul /= A[l];
     }
 
     ":(".writeln;

@@ -9,14 +9,15 @@ void main() {
     readf("%d %d %d\n", H, W, N);
 
     auto S = new string[](H);
-    auto T = new Section[](N+1);
+    auto T = new Section[](N + 1);
     foreach (i; 0 .. H) {
         readf("%s\n", S[i]);
 
         foreach (j, s; S[i]) {
-            if (s == '.' || s == 'X') continue;
+            if (s == '.' || s == 'X')
+                continue;
 
-            T[s=='S'?0:s-'0'] = Section(i, j.to!int, 0);
+            T[s == 'S' ? 0 : s - '0'] = Section(i, j.to!int, 0);
         }
     }
 
@@ -24,7 +25,8 @@ void main() {
 
     int bfs(int a) {
         auto D = new int[][](H, W);
-        foreach (i; 0 .. H) D[i][] = int.max;
+        foreach (i; 0 .. H)
+            D[i][] = int.max;
         D[T[a].x][T[a].y] = 0;
 
         Section[] heap = [T[a]];
@@ -32,7 +34,7 @@ void main() {
             auto f = heap.front;
             heap.popFront;
 
-            if (f.x == T[a+1].x && f.y == T[a+1].y) {
+            if (f.x == T[a + 1].x && f.y == T[a + 1].y) {
                 return f.dist;
             }
 
@@ -42,7 +44,7 @@ void main() {
                     continue;
                 }
 
-                heap ~= Section(x, y, f.dist+1);
+                heap ~= Section(x, y, f.dist + 1);
                 D[x][y] = f.dist + 1;
             }
         }
@@ -51,7 +53,8 @@ void main() {
     }
 
     int res;
-    foreach (i; 0 .. N) res += bfs(i);
+    foreach (i; 0 .. N)
+        res += bfs(i);
 
     res.writeln;
 }

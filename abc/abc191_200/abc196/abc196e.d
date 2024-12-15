@@ -9,9 +9,12 @@ void main() {
         long a, t;
         readf("%d %d\n", a, t);
 
-        if (t == 1) l += a, u += a, s += a;
-        else if (t == 2) l = max(l, a), u = max(u, a);
-        else l = min(l, a), u = min(u, a);
+        if (t == 1)
+            l += a, u += a, s += a;
+        else if (t == 2)
+            l = max(l, a), u = max(u, a);
+        else
+            l = min(l, a), u = min(u, a);
     }
 
     long Q;
@@ -19,7 +22,7 @@ void main() {
 
     auto x = readln.chomp.split.to!(long[]);
 
-    auto res = x.map!(i => clamp(i+s, l, u)).array;
+    auto res = x.map!(i => clamp(i + s, l, u)).array;
 
     writefln("%(%s\n%)", res);
 }

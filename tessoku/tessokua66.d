@@ -4,19 +4,20 @@ void main() {
     int N, Q;
     readf("%d %d\n", N, Q);
 
-    auto uf = new UnionFind!int(N+1);
+    auto uf = new UnionFind!int(N + 1);
     foreach (_; 0 .. Q) {
         int t, u, v;
         readf("%d %d %d\n", t, u, v);
 
-        if (t == 1) uf.unite(u, v);
-        else writeln(uf.isSame(u, v) ? "Yes" : "No");
+        if (t == 1)
+            uf.unite(u, v);
+        else
+            writeln(uf.isSame(u, v) ? "Yes" : "No");
     }
 }
 
 /// Union-Find
-struct UnionFind(T)
-if (isIntegral!T) {
+struct UnionFind(T) if (isIntegral!T) {
 
     /// Constructor
     this(T n) nothrow @safe {

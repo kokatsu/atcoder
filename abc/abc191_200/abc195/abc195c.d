@@ -17,7 +17,8 @@ void main() {
             break;
         }
 
-        L *= B; R = L * B - 1;
+        L *= B;
+        R = L * B - 1;
         ++cnt;
     }
 

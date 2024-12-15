@@ -10,12 +10,13 @@ void main() {
         int a, b;
         readf("%d %d\n", a, b);
 
-        ++cnts[a], --cnts[b+1];
+        ++cnts[a], --cnts[b + 1];
     }
 
     int res;
     foreach (i; 0 .. l) {
-        if (i > 0) cnts[i] += cnts[i-1];
+        if (i > 0)
+            cnts[i] += cnts[i - 1];
         res = max(res, cnts[i]);
     }
 

@@ -9,20 +9,20 @@ void main() {
         int u, v;
         readf("%d %d\n", u, v);
 
-        uf.unite(u-1, v-1);
+        uf.unite(u - 1, v - 1);
     }
 
     int res;
     foreach (i; 0 .. N) {
-        if (uf.root(i) == i) ++res;
+        if (uf.root(i) == i)
+            ++res;
     }
 
     res.writeln;
 }
 
 /// Union-Find
-struct UnionFind(T)
-if (isIntegral!T) {
+struct UnionFind(T) if (isIntegral!T) {
 
     /// Constructor
     this(T n) nothrow @safe {

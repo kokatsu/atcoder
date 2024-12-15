@@ -8,16 +8,16 @@ void main() {
 
     auto S = X.assumeSorted;
 
-    auto st = new SegmentTree!(int, min, 1<<30)(N);
+    auto st = new SegmentTree!(int, min, 1 << 30)(N);
     st.set(0, 0);
     foreach (i; 1 .. N) {
-        auto lb1 = S.lowerBound(X[i]-R);
-        auto lb2 = S.lowerBound(X[i]-L+1);
+        auto lb1 = S.lowerBound(X[i] - R);
+        auto lb2 = S.lowerBound(X[i] - L + 1);
         ulong l = lb1.length, r = lb2.length;
-        st.set(i, st.query(l, r)+1);
+        st.set(i, st.query(l, r) + 1);
     }
 
-    int res = st.get(N-1);
+    int res = st.get(N - 1);
     res.writeln;
 }
 
@@ -25,8 +25,7 @@ void main() {
 struct SegmentTree(T, alias op, T initialValue) {
 
     /// Constructor
-    this(U)(U x)
-    if (isIntegral!U) {
+    this(U)(U x) if (isIntegral!U) {
         n = x.to!int;
         size = 1;
         while (size < n) {
@@ -43,7 +42,7 @@ struct SegmentTree(T, alias op, T initialValue) {
         this(n);
 
         foreach (i; 0 .. n) {
-            data[size+i] = arr[i];
+            data[size + i] = arr[i];
         }
 
         foreach_reverse (i; 1 .. size) {
@@ -52,26 +51,23 @@ struct SegmentTree(T, alias op, T initialValue) {
     }
 
     /// Assigns x to data[j].
-    void set(U)(U j, T x)
-    if (isIntegral!U)
+    void set(U)(U j, T x) if (isIntegral!U)
     in (0 <= j && j < n) {
         j += size;
         data[j] = x;
-        foreach (i; 1 .. e+1) {
-            update(j>>i);
+        foreach (i; 1 .. e + 1) {
+            update(j >> i);
         }
     }
 
     /// Returns data[j].
-    T get(U)(U j)
-    if (isIntegral!U)
+    T get(U)(U j) if (isIntegral!U)
     in (0 <= j && j < n) {
-        return data[j+size];
+        return data[j + size];
     }
 
     /// Returns fun(data[l], ..., data[r-1]).
-    T query(U)(U l, U r)
-    if (isIntegral!U)
+    T query(U)(U l, U r) if (isIntegral!U)
     in (0 <= l && l <= r && r <= n) {
         T sml = initialValue, smr = initialValue;
         l += size, r += size;
@@ -99,6 +95,6 @@ private:
     T[] data;
 
     void update(U)(U j) {
-        data[j] = F(data[2*j], data[2*j+1]);
+        data[j] = F(data[2 * j], data[2 * j + 1]);
     }
 }

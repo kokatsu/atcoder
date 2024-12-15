@@ -17,7 +17,8 @@ void main() {
             (x < LIS[mid] ? l : r) = mid;
         }
 
-        if (LIS[l] == int.max) ++res;
+        if (LIS[l] == int.max)
+            ++res;
         LIS[l] = x;
     }
 

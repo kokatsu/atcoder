@@ -13,7 +13,7 @@ void main() {
         long A, B;
         readf("%d %d\n", A, B);
 
-        res += f(B) - f(A-1);
+        res += f(B) - f(A - 1);
     }
 
     res.writeln;

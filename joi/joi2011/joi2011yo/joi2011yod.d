@@ -8,7 +8,7 @@ void main() {
 
     long[long] assoc;
     assoc[A[0]] = 1;
-    foreach (i; 1 .. N-1) {
+    foreach (i; 1 .. N - 1) {
         long[long] next;
         foreach (key, val; assoc) {
             long p = key + A[i];
@@ -25,6 +25,6 @@ void main() {
         assoc = next;
     }
 
-    long res = A[N-1] in assoc ? assoc[A[N-1]] : 0;
+    long res = A[N - 1] in assoc ? assoc[A[N - 1]] : 0;
     res.writeln;
 }

@@ -10,7 +10,8 @@ void main() {
 
         auto non = oct.to!string(9).to!(dchar[]);
         foreach (ref n; non) {
-            if (n == '8') n = '5';
+            if (n == '8')
+                n = '5';
         }
 
         N = non.to!string;

@@ -6,12 +6,12 @@ void main() {
 
     long L = 3 * 10 ^^ 6;
 
-    auto sieve = new bool[](L+1);
-    sieve[2..L+1] = true;
+    auto sieve = new bool[](L + 1);
+    sieve[2 .. L + 1] = true;
     long d = 2;
     while (d * d <= L) {
         if (sieve[d]) {
-            foreach (i; iota(d*d, L+1, d)) {
+            foreach (i; iota(d * d, L + 1, d)) {
                 sieve[i] = false;
             }
         }

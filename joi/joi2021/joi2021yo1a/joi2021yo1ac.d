@@ -13,7 +13,8 @@ void main() {
 
     auto res = B.uniq.filter!(x => x in C).array;
 
-    if (res.empty) return;
+    if (res.empty)
+        return;
 
     res.sort;
 

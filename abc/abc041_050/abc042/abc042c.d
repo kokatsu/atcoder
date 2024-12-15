@@ -14,10 +14,10 @@ void main() {
     int M = ok.countUntil(true).to!int;
 
     int L = ilog10(N) + 1;
-    auto res = new int[](L+1);
-    foreach_reverse (i; 1 .. L+1) {
+    auto res = new int[](L + 1);
+    foreach_reverse (i; 1 .. L + 1) {
         res[i] += N % 10;
-        res[i-1] += res[i] / 10;
+        res[i - 1] += res[i] / 10;
         res[i] %= 10;
         N /= 10;
 
@@ -25,7 +25,7 @@ void main() {
         while (!ok[res[i]]) {
             up = true;
             if (res[i] == 9) {
-                ++res[i-1];
+                ++res[i - 1];
                 res[i] = 0;
             }
             else {
@@ -33,25 +33,24 @@ void main() {
             }
         }
         if (up) {
-            res[i+1..$] = M;
+            res[i + 1 .. $] = M;
         }
     }
 
     if (res[0] == 0) {
-        res = res[1..$];
+        res = res[1 .. $];
     }
     else {
         while (!ok[res[0]]) {
             ++res[0];
         }
-        res[1..$] = M;
+        res[1 .. $] = M;
     }
 
     writefln("%(%d%)", res);
 }
 
-T ilog10(T)(in T x) pure nothrow @safe @nogc
-if (isIntegral!T && T.sizeof <= 8)
+T ilog10(T)(in T x) pure nothrow @safe @nogc if (isIntegral!T && T.sizeof <= 8)
 in {
     assert(x > 0);
 }

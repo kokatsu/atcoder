@@ -8,6 +8,6 @@ void main() {
 
     a.sort!"a > b";
 
-    int res = a.zip(N.iota.map!(i => cos(i*PI).sgn.to!int)).map!(x => x[0] * x[1]).sum;
+    int res = a.zip(N.iota.map!(i => cos(i * PI).sgn.to!int)).map!(x => x[0] * x[1]).sum;
     res.writeln;
 }

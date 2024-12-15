@@ -12,9 +12,10 @@ void main() {
 
     ulong res;
     foreach (i, c; C) {
-        if (c > K) break;
+        if (c > K)
+            break;
 
-        ulong num = i + D.lowerBound(K-c+1).length;
+        ulong num = i + D.lowerBound(K - c + 1).length;
         res = max(res, num);
     }
 

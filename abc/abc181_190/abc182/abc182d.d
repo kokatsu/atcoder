@@ -11,7 +11,7 @@ void main() {
 
     long res, pos;
     foreach (i; 0 .. N) {
-        res = max(res, pos+C[i]);
+        res = max(res, pos + C[i]);
         pos += B[i];
     }
 

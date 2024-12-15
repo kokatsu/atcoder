@@ -12,7 +12,8 @@ void main() {
 
         bool isOK = (h <= 23 && w <= 59);
 
-        if (isOK) break;
+        if (isOK)
+            break;
 
         ++W;
         if (W >= 60) {

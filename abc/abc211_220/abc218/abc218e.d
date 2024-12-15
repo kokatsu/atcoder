@@ -22,8 +22,10 @@ void main() {
     auto uf = UnionFind!long(N);
     long res;
     foreach (e; edge) {
-        if (!uf.same(e.from, e.to)) uf.unite(e.from, e.to);
-        else if (e.cost > 0) res += e.cost;
+        if (!uf.same(e.from, e.to))
+            uf.unite(e.from, e.to);
+        else if (e.cost > 0)
+            res += e.cost;
     }
 
     res.writeln;

@@ -10,7 +10,7 @@ void main() {
 
     C[] -= 1;
 
-    auto cnt = new long[](N+1);
+    auto cnt = new long[](N + 1);
     foreach (a; A) {
         ++cnt[a];
     }

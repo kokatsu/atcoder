@@ -33,7 +33,7 @@ void main() {
 
     auto students = new Student[](N);
     foreach (i; 0 .. N) {
-        students[i] = Student(i+1, A[i], B[i]);
+        students[i] = Student(i + 1, A[i], B[i]);
     }
 
     students.sort!"a > b";

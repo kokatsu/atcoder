@@ -15,12 +15,12 @@ void main() {
 
     if (odds.length > 1) {
         odds.sort!"a > b";
-        res = max(res, odds[0]+odds[1]);
+        res = max(res, odds[0] + odds[1]);
     }
 
     if (evens.length > 1) {
         evens.sort!"a > b";
-        res = max(res, evens[0]+evens[1]);
+        res = max(res, evens[0] + evens[1]);
     }
 
     res.writeln;

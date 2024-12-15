@@ -18,7 +18,7 @@ void main() {
     }
 
     foreach (i, a; A) {
-        items[i%K].insert(Item(i.to!int, a));
+        items[i % K].insert(Item(i.to!int, a));
     }
 
     int k, pos;

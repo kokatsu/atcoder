@@ -10,8 +10,8 @@ void main() {
         if (z == 1) {
             return x % MOD;
         }
-        long n = f(x, y, z/2, MOD);
-        long ret = (n + powMod(y, z/2, M) * n) % MOD;
+        long n = f(x, y, z / 2, MOD);
+        long ret = (n + powMod(y, z / 2, M) * n) % MOD;
         if (z % 2 == 1) {
             ret = (x + y * ret) % MOD;
         }
@@ -27,10 +27,12 @@ long powMod(long x, long y, long z) {
     while (y > 0) {
         if (y % 2 == 1) {
             res *= x;
-            if (res > z) res %= z;
+            if (res > z)
+                res %= z;
         }
         x *= x;
-        if (x > z) x %= z;
+        if (x > z)
+            x %= z;
         y /= 2;
     }
     return res;

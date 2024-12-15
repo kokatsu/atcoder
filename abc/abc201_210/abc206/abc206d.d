@@ -7,22 +7,22 @@ void main() {
     auto A = readln.chomp.split.to!(int[]);
 
     int M = A.maxElement, L = N / 2;
-    auto uf = new UnionFind!int(M+1);
+    auto uf = new UnionFind!int(M + 1);
     foreach (i; 0 .. L) {
-        uf.unite(A[i], A[N-1-i]);
+        uf.unite(A[i], A[N - 1 - i]);
     }
 
     int res;
-    foreach (i; 1 .. M+1) {
-        if (uf.root(i) == i) res += uf.size(i) - 1;
+    foreach (i; 1 .. M + 1) {
+        if (uf.root(i) == i)
+            res += uf.size(i) - 1;
     }
 
     res.writeln;
 }
 
 /// Union-Find
-struct UnionFind(T)
-if (isIntegral!T) {
+struct UnionFind(T) if (isIntegral!T) {
 
     /// Constructor
     this(T n) nothrow @safe {

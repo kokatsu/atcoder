@@ -8,8 +8,10 @@ void main() {
     int M = N * (100 + P) / 100;
 
     string res = "so-so";
-    if (M < L) res = "Yay!";
-    if (M > L) res = ":(";
+    if (M < L)
+        res = "Yay!";
+    if (M > L)
+        res = ":(";
 
     res.writeln;
 }

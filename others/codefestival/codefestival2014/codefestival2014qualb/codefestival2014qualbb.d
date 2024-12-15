@@ -5,7 +5,8 @@ void main() {
     readf("%d %d\n", N, K);
 
     auto a = new long[](N);
-    foreach (i; 0 .. N) readf("%d\n", a[i]);
+    foreach (i; 0 .. N)
+        readf("%d\n", a[i]);
 
     auto c = a.cumulativeFold!"a + b".array.assumeSorted;
 

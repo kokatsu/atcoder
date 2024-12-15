@@ -12,8 +12,8 @@ void main() {
         long c = min(A[i], b);
         res += c, b -= c;
 
-        long d = min(A[i+1], b);
-        res += d, A[i+1] -= d;
+        long d = min(A[i + 1], b);
+        res += d, A[i + 1] -= d;
     }
 
     res.writeln;

@@ -29,8 +29,10 @@ void main() {
         foreach (i; 0 .. 4) {
             int nx = f.x + dx[i], ny = f.y + dy[i];
 
-            if (nx < 0 || H <= nx || ny < 0 || W <= ny) continue;
-            if (S[nx][ny] == '#') continue;
+            if (nx < 0 || H <= nx || ny < 0 || W <= ny)
+                continue;
+            if (S[nx][ny] == '#')
+                continue;
 
             if (dist[nx][ny] == 0) {
                 heap ~= Coord(nx, ny);

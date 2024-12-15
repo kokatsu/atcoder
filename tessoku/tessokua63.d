@@ -14,7 +14,7 @@ void main() {
     }
 
     auto res = new int[](N);
-    res[1..N] = - 1;
+    res[1 .. N] = -1;
 
     int[] queue;
     queue ~= 0;
@@ -22,7 +22,8 @@ void main() {
         auto f = queue.front;
         queue.popFront;
         foreach (e; edge[f]) {
-            if (res[e] >= 0) continue;
+            if (res[e] >= 0)
+                continue;
 
             res[e] = res[f] + 1;
             queue ~= e;

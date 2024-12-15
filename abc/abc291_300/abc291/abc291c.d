@@ -12,12 +12,17 @@ void main() {
     seen[pos] = true;
     bool isOK;
     foreach (s; S) {
-        if (s == 'R') pos += L;
-        if (s == 'L') pos -= L;
-        if (s == 'U') ++pos;
-        if (s == 'D') --pos;
+        if (s == 'R')
+            pos += L;
+        if (s == 'L')
+            pos -= L;
+        if (s == 'U')
+            ++pos;
+        if (s == 'D')
+            --pos;
 
-        if (pos in seen) isOK = true;
+        if (pos in seen)
+            isOK = true;
 
         seen[pos] = true;
     }

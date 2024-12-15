@@ -5,12 +5,14 @@ void main() {
     readf("%d %d\n", N, K);
 
     int res;
-    foreach (i; 1 .. N+1) {
+    foreach (i; 1 .. N + 1) {
         int rem = K - i;
-        if (rem < 2) break;
-        if (rem > N * 2) continue;
+        if (rem < 2)
+            break;
+        if (rem > N * 2)
+            continue;
 
-        int t = clamp(rem-1, 1, N);
+        int t = clamp(rem - 1, 1, N);
         res += (t == N ? N * 2 - rem + 1 : t);
     }
 

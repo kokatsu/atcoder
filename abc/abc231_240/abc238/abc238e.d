@@ -4,12 +4,12 @@ void main() {
     int N, Q;
     readf("%d %d\n", N, Q);
 
-    auto uf = UnionFind!long(N+1);
+    auto uf = UnionFind!long(N + 1);
     foreach (_; 0 .. Q) {
         int l, r;
         readf("%d %d\n", l, r);
 
-        uf.unite(l-1, r);
+        uf.unite(l - 1, r);
     }
 
     writeln(uf.same(0, N) ? "Yes" : "No");

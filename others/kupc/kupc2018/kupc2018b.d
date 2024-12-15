@@ -5,7 +5,8 @@ void main() {
     readf("%d %d\n", H, W);
 
     auto c = new string[](H);
-    foreach (i; 0 .. H) readf("%s\n", c[i]);
+    foreach (i; 0 .. H)
+        readf("%s\n", c[i]);
 
     int x = H - 1, y = c[x].countUntil('s').to!int;
 
@@ -19,14 +20,14 @@ void main() {
             res = command;
         }
         else {
-            if (v > 0 && c[u-1][v-1] == '.' && !seen[u-1][v-1]) {
-                f(u-1, v-1, command~"L");
+            if (v > 0 && c[u - 1][v - 1] == '.' && !seen[u - 1][v - 1]) {
+                f(u - 1, v - 1, command ~ "L");
             }
-            if (c[u-1][v] == '.' && !seen[u-1][v]) {
-                f(u-1, v, command~"S");
+            if (c[u - 1][v] == '.' && !seen[u - 1][v]) {
+                f(u - 1, v, command ~ "S");
             }
-            if (v < W - 1 && c[u-1][v+1] == '.' && !seen[u-1][v+1]) {
-                f(u-1, v+1, command~"R");
+            if (v < W - 1 && c[u - 1][v + 1] == '.' && !seen[u - 1][v + 1]) {
+                f(u - 1, v + 1, command ~ "R");
             }
         }
     }

@@ -7,6 +7,7 @@ void main() {
     auto P = readln.chomp.split.to!(int[]);
 
     foreach (i, p; P) {
-        if (p == X) writeln(i+1);
+        if (p == X)
+            writeln(i + 1);
     }
 }

@@ -6,6 +6,6 @@ void main() {
 
     int M = X % (L * 2);
 
-    int res = min(M, L*2-M);
+    int res = min(M, L * 2 - M);
     res.writeln;
 }

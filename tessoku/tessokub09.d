@@ -15,16 +15,18 @@ void main() {
     }
 
     foreach (i; 0 .. L) {
-        foreach (j; 0 .. L-1) {
-            dp[i][j+1] += dp[i][j];
+        foreach (j; 0 .. L - 1) {
+            dp[i][j + 1] += dp[i][j];
         }
-        if (i > 0) dp[i][] += dp[i-1][];
+        if (i > 0)
+            dp[i][] += dp[i - 1][];
     }
 
     int res;
     foreach (i; 0 .. L) {
         foreach (j; 0 .. L) {
-            if (dp[i][j] > 0) ++res;
+            if (dp[i][j] > 0)
+                ++res;
         }
     }
 

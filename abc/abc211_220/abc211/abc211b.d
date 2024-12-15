@@ -2,7 +2,8 @@ import std;
 
 void main() {
     auto S = new string[](4);
-    foreach (i; 0 .. 4) S[i] = readln.chomp;
+    foreach (i; 0 .. 4)
+        S[i] = readln.chomp;
 
     S.sort;
 

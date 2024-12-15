@@ -9,9 +9,9 @@ void main() {
     long l, r = a.sum;
 
     long res = long.max;
-    foreach (i; 0 .. N-1) {
+    foreach (i; 0 .. N - 1) {
         l += a[i], r -= a[i];
-        res = min(res, abs(l-r));
+        res = min(res, abs(l - r));
     }
 
     res.writeln;

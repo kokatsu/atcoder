@@ -10,9 +10,11 @@ void main() {
         string ret;
         auto len = x.length;
 
-        foreach (i; 0 .. len-1) {
-            if (x[i] == y || x[i+1] == y) ret ~= y;
-            else ret ~= x[i];
+        foreach (i; 0 .. len - 1) {
+            if (x[i] == y || x[i + 1] == y)
+                ret ~= y;
+            else
+                ret ~= x[i];
         }
 
         return ret;

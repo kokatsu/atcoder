@@ -12,13 +12,13 @@ void main() {
         return;
     }
 
-    auto sieve = new bool[](L+1);
+    auto sieve = new bool[](L + 1);
     foreach (l; list) {
-        foreach (i; iota(l, L+1, l)) {
+        foreach (i; iota(l, L + 1, l)) {
             sieve[i] = true;
         }
     }
 
-    auto res = iota(L+1).filter!(i => sieve[i]).array[0..N];
+    auto res = iota(L + 1).filter!(i => sieve[i]).array[0 .. N];
     writefln("%(%s %)", res);
 }

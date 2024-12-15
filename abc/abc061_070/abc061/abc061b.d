@@ -9,8 +9,9 @@ void main() {
         int a, b;
         readf("%d %d\n", a, b);
 
-        ++res[a-1], ++res[b-1];
+        ++res[a - 1], ++res[b - 1];
     }
 
-    foreach (r; res) r.writeln;
+    foreach (r; res)
+        r.writeln;
 }

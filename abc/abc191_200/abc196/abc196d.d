@@ -24,20 +24,20 @@ void main() {
         }
 
         if (a > 0) {
-            if (y + 1 < W && !room[x][y+1]) {
-                room[x][y] = room[x][y+1] = true;
-                f(a-1, b, cnt+1);
-                room[x][y] = room[x][y+1] = false;
+            if (y + 1 < W && !room[x][y + 1]) {
+                room[x][y] = room[x][y + 1] = true;
+                f(a - 1, b, cnt + 1);
+                room[x][y] = room[x][y + 1] = false;
             }
-            if (x + 1 < H && !room[x+1][y]) {
-                room[x][y] = room[x+1][y] = true;
-                f(a-1, b, cnt+1);
-                room[x][y] = room[x+1][y] = false;
+            if (x + 1 < H && !room[x + 1][y]) {
+                room[x][y] = room[x + 1][y] = true;
+                f(a - 1, b, cnt + 1);
+                room[x][y] = room[x + 1][y] = false;
             }
         }
         if (b > 0) {
             room[x][y] = true;
-            f(a, b-1, cnt+1);
+            f(a, b - 1, cnt + 1);
             room[x][y] = false;
         }
     }

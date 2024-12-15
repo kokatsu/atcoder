@@ -8,11 +8,14 @@ void main() {
 
     long res, num = 1;
     foreach (A; a) {
-        if (A == num) ++num;
-        else ++res;
+        if (A == num)
+            ++num;
+        else
+            ++res;
     }
 
-    if (res == N) res = -1;
+    if (res == N)
+        res = -1;
 
     res.writeln;
 }

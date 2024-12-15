@@ -14,20 +14,20 @@ void main() {
         readf("%d %d\n", t, x);
 
         if (t == 1) {
-            D[$-1] ~= x;
-            N = min(L, N+1);
+            D[$ - 1] ~= x;
+            N = min(L, N + 1);
         }
         else if (t == 2) {
             D ~= (long[]).init;
             F ~= x;
-            N = min(L, N*2);
+            N = min(L, N * 2);
         }
         else {
             if (x <= N) {
                 foreach_reverse (i, d; D) {
                     auto l = d.length;
                     if (x <= l) {
-                        d[l-x].writeln;
+                        d[l - x].writeln;
                         break;
                     }
                     else {
@@ -36,7 +36,7 @@ void main() {
                             x /= 2;
                         }
                         else {
-                            F[i-1].writeln;
+                            F[i - 1].writeln;
                             break;
                         }
                     }

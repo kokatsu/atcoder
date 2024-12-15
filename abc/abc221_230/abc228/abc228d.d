@@ -39,7 +39,7 @@ void main() {
             rbt.removeKey(f);
         }
         else {
-            A[x%N].writeln;
+            A[x % N].writeln;
         }
     }
 }

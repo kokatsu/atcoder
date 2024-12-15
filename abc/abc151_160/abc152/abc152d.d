@@ -5,11 +5,13 @@ void main() {
     readf("%d\n", N);
 
     auto cnts = new int[][](10, 10);
-    foreach (i; 1 .. N+1) {
-        if (i % 10 == 0) continue;
+    foreach (i; 1 .. N + 1) {
+        if (i % 10 == 0)
+            continue;
 
         int f = i, b = i % 10;
-        while (f >= 10) f /= 10;
+        while (f >= 10)
+            f /= 10;
 
         ++cnts[f][b];
     }

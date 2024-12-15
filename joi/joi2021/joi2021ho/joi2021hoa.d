@@ -8,19 +8,19 @@ void main() {
 
     auto L = new long[](N);
     foreach (i; 1 .. N) {
-        L[i] += L[i-1];
+        L[i] += L[i - 1];
 
-        long D = A[i-1] - A[i];
+        long D = A[i - 1] - A[i];
         if (D >= 0) {
             L[i] += D + 1;
         }
     }
 
     auto R = new long[](N);
-    foreach_reverse (i; 0 .. N-1) {
-        R[i] += R[i+1];
+    foreach_reverse (i; 0 .. N - 1) {
+        R[i] += R[i + 1];
 
-        long D = A[i+1] - A[i];
+        long D = A[i + 1] - A[i];
         if (D >= 0) {
             R[i] += D + 1;
         }

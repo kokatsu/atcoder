@@ -10,11 +10,11 @@ void main() {
 
         E.sort!"a > b";
 
-        X[i] = E[B-1];
+        X[i] = E[B - 1];
     }
 
     X.sort!"a > b";
 
-    int res = X[D-1];
+    int res = X[D - 1];
     res.writeln;
 }

@@ -9,7 +9,7 @@ void main() {
 
     int res;
     foreach (v, c; zip(V, C)) {
-        res += max(0, v-c);
+        res += max(0, v - c);
     }
 
     res.writeln;

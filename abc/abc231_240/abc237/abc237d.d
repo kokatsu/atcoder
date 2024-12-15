@@ -8,8 +8,10 @@ void main() {
 
     int[] l, r;
     foreach_reverse (i, s; S) {
-        if (s == 'R') l ~= i.to!int;
-        else r ~= i.to!int;
+        if (s == 'R')
+            l ~= i.to!int;
+        else
+            r ~= i.to!int;
     }
 
     l.reverse;

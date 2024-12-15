@@ -13,8 +13,10 @@ void main() {
         --B[];
 
         foreach (i, b; B) {
-            if (b == a) ++res[i];
-            else ++res[a];
+            if (b == a)
+                ++res[i];
+            else
+                ++res[a];
         }
     }
 

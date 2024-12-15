@@ -17,9 +17,9 @@ void main() {
 
         res = max(res, candies.length);
 
-        --candies[c[i-K+1]];
-        if (candies[c[i-K+1]] == 0) {
-            candies.remove(c[i-K+1]);
+        --candies[c[i - K + 1]];
+        if (candies[c[i - K + 1]] == 0) {
+            candies.remove(c[i - K + 1]);
         }
     }
 

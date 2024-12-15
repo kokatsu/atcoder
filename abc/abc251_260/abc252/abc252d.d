@@ -11,7 +11,7 @@ void main() {
     }
 
     auto M = A.maxElement;
-    auto cnts = new long[](M+1);
+    auto cnts = new long[](M + 1);
 
     long res, num;
     foreach (i, a; A) {
@@ -22,12 +22,13 @@ void main() {
             res += f(L);
 
             long tmp = num;
-            if (cnts[a] > 1) tmp -= f(cnts[a]-1);
+            if (cnts[a] > 1)
+                tmp -= f(cnts[a] - 1);
             res -= tmp;
         }
 
         if (cnts[a] > 1) {
-            num -= f(cnts[a]-1);
+            num -= f(cnts[a] - 1);
             num += f(cnts[a]);
         }
 

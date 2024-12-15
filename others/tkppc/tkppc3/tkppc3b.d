@@ -12,8 +12,8 @@ void main() {
         (i % 2 == 1 ? odd : even) += d;
     }
 
-    string res1 = (total % 3 == 0) && ((N[$-1] - '0') % 2 == 0) ? "yES" : "nO";
-    string res2 = abs(odd-even) % 11 == 0 ? "yES" : "nO";
+    string res1 = (total % 3 == 0) && ((N[$ - 1] - '0') % 2 == 0) ? "yES" : "nO";
+    string res2 = abs(odd - even) % 11 == 0 ? "yES" : "nO";
     res1.writeln;
     res2.writeln;
 }

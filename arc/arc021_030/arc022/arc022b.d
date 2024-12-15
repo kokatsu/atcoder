@@ -8,14 +8,14 @@ void main() {
 
     int M = A.maxElement;
 
-    auto contains = new bool[](M+1);
+    auto contains = new bool[](M + 1);
     int res, r;
     foreach (l; 0 .. N) {
         while (r < N && !contains[A[r]]) {
             contains[A[r++]] = true;
         }
 
-        res = max(res, r-l);
+        res = max(res, r - l);
 
         contains[A[l]] = false;
     }

@@ -10,8 +10,8 @@ void main() {
     if (R - L < MOD) {
         res = MOD;
         foreach (i; L .. R) {
-            foreach (j; i+1 .. R+1) {
-                res = min(res, i*j%MOD);
+            foreach (j; i + 1 .. R + 1) {
+                res = min(res, i * j % MOD);
             }
         }
     }

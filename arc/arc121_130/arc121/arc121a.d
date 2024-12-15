@@ -18,9 +18,9 @@ void main() {
     long[long] distance;
 
     void calcDistance(long[] arr, int[] idx, ulong a, ulong b) {
-        long s = N * idx[a] + idx[N-b-1];
-        long t = N * idx[N-b-1] + idx[a];
-        long d = arr[a] - arr[N-b-1];
+        long s = N * idx[a] + idx[N - b - 1];
+        long t = N * idx[N - b - 1] + idx[a];
+        long d = arr[a] - arr[N - b - 1];
         if (s in distance) {
             distance[s] = max(distance[s], d);
         }

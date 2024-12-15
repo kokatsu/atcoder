@@ -22,7 +22,8 @@ void main() {
             num = muls(num, n, isOver);
             num = adds(num, y, isOver);
 
-            if (isOver || num > M) return false;
+            if (isOver || num > M)
+                return false;
         }
 
         return true;

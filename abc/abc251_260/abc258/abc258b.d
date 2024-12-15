@@ -5,7 +5,8 @@ void main() {
     readf("%d\n", N);
 
     auto A = new string[](N);
-    foreach (i; 0 .. N) A[i] = readln.chomp;
+    foreach (i; 0 .. N)
+        A[i] = readln.chomp;
 
     long[] dx = [-1, -1, 0, 1, 1, 1, 0, -1];
     long[] dy = [0, 1, 1, 1, 0, -1, -1, -1];
@@ -20,7 +21,7 @@ void main() {
             long nx = (N + x + dx[dir]) % N;
             long ny = (N + y + dy[dir]) % N;
             long nxt = num * 10 + (A[x][y] - '0');
-            f(nx, ny, dir, cnt+1, nxt);
+            f(nx, ny, dir, cnt + 1, nxt);
         }
     }
 

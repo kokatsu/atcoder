@@ -7,13 +7,15 @@ void main() {
     auto A = readln.chomp.split.to!(long[]);
 
     long[long] cnts;
-    foreach (a; A) ++cnts[a];
+    foreach (a; A)
+        ++cnts[a];
 
     A.sort!"a > b";
 
     long res, mx = (1L << 32);
     foreach (a; A) {
-        if (cnts[a] == 0) continue;
+        if (cnts[a] == 0)
+            continue;
         --cnts[a];
 
         long num = 1;

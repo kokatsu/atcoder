@@ -11,7 +11,7 @@ void main() {
 
     auto diff = new int[](N);
     foreach (i; 0 .. N) {
-        diff[i] = x[i+1] - x[i];
+        diff[i] = x[i + 1] - x[i];
     }
 
     int res = diff.fold!((a, b) => gcd(a, b));

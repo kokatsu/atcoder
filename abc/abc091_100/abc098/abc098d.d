@@ -15,8 +15,10 @@ void main() {
 
         res += r - l;
 
-        if (l == r) ++r;
-        else x -= A[l], y ^= A[l];
+        if (l == r)
+            ++r;
+        else
+            x -= A[l], y ^= A[l];
     }
 
     res.writeln;

@@ -9,7 +9,7 @@ void main() {
         long A, B;
         readf("%d %d\n", A, B);
 
-        res += min(A/2, B);
+        res += min(A / 2, B);
     }
 
     res.writeln;

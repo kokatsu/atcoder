@@ -8,13 +8,14 @@ void main() {
 
     int res, r;
     foreach (l; 0 .. N) {
-        while (r < N - 1 && H[r] >= H[r+1]) {
+        while (r < N - 1 && H[r] >= H[r + 1]) {
             ++r;
         }
 
-        res = max(res, r-l);
+        res = max(res, r - l);
 
-        if (l == r) ++r;
+        if (l == r)
+            ++r;
     }
 
     res.writeln;

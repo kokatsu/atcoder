@@ -5,7 +5,8 @@ void main() {
     readf("%d %d\n", N, K);
 
     auto T = new int[][](N);
-    foreach (i; 0 .. N) T[i] = readln.chomp.split.to!(int[]);
+    foreach (i; 0 .. N)
+        T[i] = readln.chomp.split.to!(int[]);
 
     bool prob;
 
@@ -15,7 +16,7 @@ void main() {
         }
         else {
             foreach (t; T[times]) {
-                f(times+1, xor^t);
+                f(times + 1, xor ^ t);
             }
         }
     }

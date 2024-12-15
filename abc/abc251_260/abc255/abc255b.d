@@ -7,7 +7,8 @@ void main() {
     auto A = readln.chomp.split.to!(long[]);
 
     auto X = new real[](N), Y = new real[](N);
-    foreach (i; 0 .. N) readf("%f %f\n", X[i], Y[i]);
+    foreach (i; 0 .. N)
+        readf("%f %f\n", X[i], Y[i]);
 
     A[] -= 1;
 
@@ -20,10 +21,12 @@ void main() {
         foreach (a; A) {
             light[a] = true;
             foreach (i; 0 .. N) {
-                if (light[i]) continue;
+                if (light[i])
+                    continue;
 
-                real d = hypot(X[i]-X[a], Y[i]-Y[a]);
-                if (d <= mid) light[i] = true;
+                real d = hypot(X[i] - X[a], Y[i] - Y[a]);
+                if (d <= mid)
+                    light[i] = true;
             }
         }
 

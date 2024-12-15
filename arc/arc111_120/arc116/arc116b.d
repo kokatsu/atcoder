@@ -12,7 +12,7 @@ void main() {
 
     long res = A[0] * A[0] % M, s = A[0];
     foreach (i; 1 .. N) {
-        s = (s * 2 + M - A[i-1] + A[i]) % M;
+        s = (s * 2 + M - A[i - 1] + A[i]) % M;
         res = (res + (A[i] * s) % M) % M;
     }
 

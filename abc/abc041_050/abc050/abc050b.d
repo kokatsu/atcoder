@@ -15,7 +15,7 @@ void main() {
         int P, X;
         readf("%d %d\n", P, X);
 
-        int res = S - T[P-1] + X;
+        int res = S - T[P - 1] + X;
         res.writeln;
     }
 }

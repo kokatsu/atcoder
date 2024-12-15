@@ -10,9 +10,12 @@ void main() {
 
     long XOR;
     foreach (a; A) {
-        if (a < X) XOR ^= 0;
-        else if (a <= Y) XOR ^= 1;
-        else XOR ^= 2;
+        if (a < X)
+            XOR ^= 0;
+        else if (a <= Y)
+            XOR ^= 1;
+        else
+            XOR ^= 2;
     }
 
     writeln(XOR != 0 ? "First" : "Second");

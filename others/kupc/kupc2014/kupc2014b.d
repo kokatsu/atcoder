@@ -2,19 +2,19 @@ import std;
 
 void main() {
     int L = 10 ^^ 3;
-    auto sieve = new bool[](L+1);
-    sieve[2..L+1] = true;
+    auto sieve = new bool[](L + 1);
+    sieve[2 .. L + 1] = true;
     int d = 2;
     while (d * d <= L) {
         if (sieve[d]) {
-            foreach (i; iota(d*d, L+1, d)) {
+            foreach (i; iota(d * d, L + 1, d)) {
                 sieve[i] = false;
             }
         }
         ++d;
     }
 
-    auto primes = iota(L+1).filter!(i => sieve[i]).array;
+    auto primes = iota(L + 1).filter!(i => sieve[i]).array;
 
     int res = 1;
     foreach (p; primes) {
@@ -26,7 +26,8 @@ void main() {
             char c;
             readf("%c\n", c);
 
-            if (c == 'N') break;
+            if (c == 'N')
+                break;
 
             a *= p, b *= p;
         }

@@ -9,15 +9,16 @@ void main() {
     auto len = s.length;
     string[] list;
     foreach (i; 0 .. len) {
-        foreach (j; 1 .. K+1) {
-            if (i + j > len) break;
-            list ~= s[i..i+j];
+        foreach (j; 1 .. K + 1) {
+            if (i + j > len)
+                break;
+            list ~= s[i .. i + j];
         }
     }
 
     list.sort;
     auto dict = list.uniq.array;
 
-    string res = dict[K-1];
+    string res = dict[K - 1];
     res.writeln;
 }

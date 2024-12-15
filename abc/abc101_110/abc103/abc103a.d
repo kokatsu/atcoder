@@ -5,7 +5,7 @@ void main() {
 
     int res = int.max;
     foreach (a; A.permutations) {
-        res = min(res, a.slide(2).map!(x => abs(x[0]-x[1])).sum);
+        res = min(res, a.slide(2).map!(x => abs(x[0] - x[1])).sum);
     }
 
     res.writeln;

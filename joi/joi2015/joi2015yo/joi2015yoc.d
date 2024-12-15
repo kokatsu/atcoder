@@ -11,8 +11,10 @@ void main() {
 
         int num = -1;
         foreach (j, s; S) {
-            if (s == 'c') num = 0;
-            else if (num >= 0) ++num;
+            if (s == 'c')
+                num = 0;
+            else if (num >= 0)
+                ++num;
 
             res[i][j] = num;
         }

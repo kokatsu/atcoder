@@ -6,8 +6,8 @@ void main() {
 
     int M = N * 2;
 
-    auto A = new int[][](M-1);
-    foreach (i; 0 .. M-1) {
+    auto A = new int[][](M - 1);
+    foreach (i; 0 .. M - 1) {
         A[i] = readln.chomp.split.to!(int[]);
     }
 
@@ -20,15 +20,17 @@ void main() {
         }
 
         foreach (i; 0 .. M) {
-            if (used[i]) continue;
+            if (used[i])
+                continue;
 
             used[i] = true;
-            foreach (j; i+1 .. M) {
-                if (used[j]) continue;
+            foreach (j; i + 1 .. M) {
+                if (used[j])
+                    continue;
 
                 used[j] = true;
 
-                f(xor^A[i][j-i-1], cnt+1, list);
+                f(xor ^ A[i][j - i - 1], cnt + 1, list);
 
                 used[j] = false;
             }

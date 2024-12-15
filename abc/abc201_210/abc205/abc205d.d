@@ -21,7 +21,7 @@ void main() {
 
         long res = K;
         if (l > 0) {
-            res += A[l-1] - B[l-1];
+            res += A[l - 1] - B[l - 1];
         }
 
         res.writeln;

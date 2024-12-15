@@ -8,13 +8,14 @@ void main() {
     auto list = new long[][](N);
     foreach (i; 0 .. N) {
         auto input = readln.chomp.split.to!(long[]);
-        list[i] = input[1..$];
+        list[i] = input[1 .. $];
     }
 
     long res;
     void dfs(long idx, long num) {
         if (idx == N) {
-            if (num == X) ++res;
+            if (num == X)
+                ++res;
         }
         else {
             foreach (l; list[idx]) {
@@ -25,7 +26,7 @@ void main() {
                     continue;
                 }
 
-                dfs(idx+1, m);
+                dfs(idx + 1, m);
             }
         }
     }

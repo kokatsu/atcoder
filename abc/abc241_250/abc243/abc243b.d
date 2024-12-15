@@ -10,10 +10,13 @@ void main() {
     long x, y;
     long[long] listA, listB;
     foreach (i; 0 .. N) {
-        if (A[i] == B[i]) ++x;
+        if (A[i] == B[i])
+            ++x;
 
-        if (B[i] in listA) y += listA[B[i]];
-        if (A[i] in listB) y += listB[A[i]];
+        if (B[i] in listA)
+            y += listA[B[i]];
+        if (A[i] in listB)
+            y += listB[A[i]];
 
         ++listA[A[i]], ++listB[B[i]];
     }

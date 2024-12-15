@@ -26,8 +26,8 @@ void main() {
             }
         }
         else {
-            dfs(x~N[cnt], y, cnt+1);
-            dfs(x, y~N[cnt], cnt+1);
+            dfs(x ~ N[cnt], y, cnt + 1);
+            dfs(x, y ~ N[cnt], cnt + 1);
         }
     }
 

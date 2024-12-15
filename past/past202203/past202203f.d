@@ -15,12 +15,12 @@ void main() {
     bool isOk = true;
     foreach (i; 0 .. H) {
         foreach (j; 0 .. W) {
-            if (i > 0 && A[i][j] != A[i-1][j]) {
-                isOk &= C[A[i][j]] != C[A[i-1][j]];
+            if (i > 0 && A[i][j] != A[i - 1][j]) {
+                isOk &= C[A[i][j]] != C[A[i - 1][j]];
             }
 
-            if (j > 0 && A[i][j] != A[i][j-1]) {
-                isOk &= C[A[i][j]] != C[A[i][j-1]];
+            if (j > 0 && A[i][j] != A[i][j - 1]) {
+                isOk &= C[A[i][j]] != C[A[i][j - 1]];
             }
         }
     }

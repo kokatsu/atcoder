@@ -9,7 +9,8 @@ void main() {
         res *= C;
         res /= B - A;
     }
-    else if (X > B) res = 0;
+    else if (X > B)
+        res = 0;
 
     format("%.10f", res).writeln;
 }

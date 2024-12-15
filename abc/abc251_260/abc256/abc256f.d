@@ -13,16 +13,18 @@ void main() {
     auto A = readln.chomp.split.to!(long[]);
 
     auto B = A.dup;
-    foreach (i, ref b; B) b = (b * (i + 1)) % MOD;
+    foreach (i, ref b; B)
+        b = (b * (i + 1)) % MOD;
 
     auto C = B.dup;
-    foreach (i, ref c; C) c = (c * (i + 1)) % MOD;
+    foreach (i, ref c; C)
+        c = (c * (i + 1)) % MOD;
 
     auto st1 = new SegmentTree!(long, "a + b", 0)(A);
     auto st2 = new SegmentTree!(long, "a + b", 0)(B);
     auto st3 = new SegmentTree!(long, "a + b", 0)(C);
 
-    long inv2 = powMod(2, MOD-2, MOD);
+    long inv2 = powMod(2, MOD - 2, MOD);
 
     foreach (_; 0 .. Q) {
         auto q = readln.chomp.split.to!(long[]);
@@ -30,13 +32,13 @@ void main() {
         if (q[0] == 1) {
             long x = q[1], v = q[2];
 
-            st1.set(x-1, v);
+            st1.set(x - 1, v);
 
             v = (v * x) % MOD;
-            st2.set(x-1, v);
+            st2.set(x - 1, v);
 
             v = (v * x) % MOD;
-            st3.set(x-1, v);
+            st3.set(x - 1, v);
         }
         else {
             long x = q[1];
@@ -45,7 +47,7 @@ void main() {
 
             long t = (st2.query(0, x) * inv2) % MOD;
             t = (t * (x * 2 + 3)) % MOD;
-            addMod(res, MOD-t);
+            addMod(res, MOD - t);
 
             t = (st1.query(0, x) * inv2) % MOD;
             t = (t * (x + 1) % MOD * (x + 2)) % MOD;
@@ -61,10 +63,12 @@ long powMod(long x, long y, long z) {
     while (y > 0) {
         if (y % 2 == 1) {
             res *= x;
-            if (res > z) res %= z;
+            if (res > z)
+                res %= z;
         }
         x *= x;
-        if (x > z) x %= z;
+        if (x > z)
+            x %= z;
         y /= 2;
     }
     return res;
@@ -86,7 +90,7 @@ struct SegmentTree(T, alias fun, T initialValue) {
         _data[] = initialValue;
 
         foreach (i; 0 .. _n) {
-            _data[_size+i] = arr[i];
+            _data[_size + i] = arr[i];
         }
 
         foreach_reverse (i; 1 .. _size) {
@@ -98,14 +102,14 @@ struct SegmentTree(T, alias fun, T initialValue) {
     void set(long j, T x) {
         j += _size;
         _data[j] = x;
-        foreach (i; 1 .. _e+1) {
-            update(j>>i);
+        foreach (i; 1 .. _e + 1) {
+            update(j >> i);
         }
     }
 
     /// Returns _data[j].
     T get(long j) {
-        return _data[j+_size];
+        return _data[j + _size];
     }
 
     /// Returns fun(_data[l], ..., _data[r-1]).
@@ -136,7 +140,7 @@ private:
     T[] _data;
 
     void update(long j) {
-        _data[j] = F(_data[2*j], _data[2*j+1]);
+        _data[j] = F(_data[2 * j], _data[2 * j + 1]);
     }
 
     T F(T a, T b) {

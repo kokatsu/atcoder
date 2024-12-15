@@ -12,7 +12,7 @@ void main() {
     }
 
     foreach (i; 1 .. N) {
-        res[i] = A[i-1] * 2 - res[i-1];
+        res[i] = A[i - 1] * 2 - res[i - 1];
     }
 
     writefln("%(%s %)", res);

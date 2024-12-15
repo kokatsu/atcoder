@@ -10,7 +10,8 @@ void main() {
 
         foreach (j; 1 .. 6) {
             long rem = ((i + 1) * 63 + j * 9 + 9) % 11;
-            if (rem == k) ++cnt;
+            if (rem == k)
+                ++cnt;
         }
 
         res += cnt * (n - i + 8) / 11;

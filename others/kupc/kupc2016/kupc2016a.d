@@ -9,7 +9,8 @@ void main() {
         int t;
         readf("%d\n", t);
 
-        if (A <= t && t < B) --res;
+        if (A <= t && t < B)
+            --res;
     }
 
     res.writeln;

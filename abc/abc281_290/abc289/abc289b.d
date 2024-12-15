@@ -6,8 +6,9 @@ void main() {
 
     auto a = readln.chomp.split.to!(int[]);
 
-    auto used = new bool[](N+1);
-    foreach (x; a) used[x] = true;
+    auto used = new bool[](N + 1);
+    foreach (x; a)
+        used[x] = true;
 
     int i, pos = 1;
     int[] res;
@@ -17,7 +18,7 @@ void main() {
             ++next;
         }
 
-        auto arr = iota(pos, next+1).array;
+        auto arr = iota(pos, next + 1).array;
         arr.reverse;
 
         res ~= arr;

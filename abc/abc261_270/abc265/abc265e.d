@@ -25,39 +25,41 @@ void main() {
         list[Coord(X, Y)] = true;
     }
 
-    auto dp = new long[][][](N+1, N+1, N+1);
+    auto dp = new long[][][](N + 1, N + 1, N + 1);
     dp[0][0][0] = 1;
     foreach (i; 0 .. N) {
         foreach_reverse (j; 0 .. N) {
-            if (i < j) continue;
+            if (i < j)
+                continue;
 
             foreach_reverse (k; 0 .. N) {
-                if (i < j + k) continue;
+                if (i < j + k)
+                    continue;
 
                 long l = i - j - k;
                 long x = A * j + C * k + E * l, y = B * j + D * k + F * l;
 
                 long x1 = x + A, y1 = y + B;
                 if (!(Coord(x1, y1) in list)) {
-                    addMod(dp[i+1][j+1][k], dp[i][j][k]);
+                    addMod(dp[i + 1][j + 1][k], dp[i][j][k]);
                 }
 
                 long x2 = x + C, y2 = y + D;
                 if (!(Coord(x2, y2) in list)) {
-                    addMod(dp[i+1][j][k+1], dp[i][j][k]);
+                    addMod(dp[i + 1][j][k + 1], dp[i][j][k]);
                 }
 
                 long x3 = x + E, y3 = y + F;
                 if (!(Coord(x3, y3) in list)) {
-                    addMod(dp[i+1][j][k], dp[i][j][k]);
+                    addMod(dp[i + 1][j][k], dp[i][j][k]);
                 }
             }
         }
     }
 
     long res;
-    foreach (i; 0 .. N+1) {
-        foreach (j; 0 .. N+1) {
+    foreach (i; 0 .. N + 1) {
+        foreach (j; 0 .. N + 1) {
             addMod(res, dp[N][i][j]);
         }
     }

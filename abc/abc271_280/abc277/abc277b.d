@@ -17,7 +17,8 @@ void main() {
         isOK &= A.canFind(S[0]);
         isOK &= B.canFind(S[1]);
 
-        if (S in list) isOK = false;
+        if (S in list)
+            isOK = false;
 
         list[S] = true;
     }

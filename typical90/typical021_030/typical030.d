@@ -4,13 +4,13 @@ void main() {
     int N, K;
     readf("%d %d\n", N, K);
 
-    auto factors = new int[](N+1);
-    foreach (i; 2 .. N+1) {
+    auto factors = new int[](N + 1);
+    foreach (i; 2 .. N + 1) {
         if (factors[i] > 0) {
             continue;
         }
 
-        foreach (j; iota(i, N+1, i)) {
+        foreach (j; iota(i, N + 1, i)) {
             ++factors[j];
         }
     }

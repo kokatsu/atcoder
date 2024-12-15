@@ -6,6 +6,6 @@ void main() {
 
     auto A = readln.chomp.split.to!(int[]).assumeSorted;
 
-    auto res = A.lowerBound(X+1).length;
+    auto res = A.lowerBound(X + 1).length;
     res.writeln;
 }

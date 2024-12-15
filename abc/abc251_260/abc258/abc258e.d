@@ -8,9 +8,9 @@ void main() {
 
     long S = W.sum;
 
-    auto C = new long[](N*2+1);
-    foreach (i; 0 .. N*2) {
-        C[i+1] = C[i] + W[i%N];
+    auto C = new long[](N * 2 + 1);
+    foreach (i; 0 .. N * 2) {
+        C[i + 1] = C[i] + W[i % N];
     }
 
     auto A = C.assumeSorted;
@@ -24,7 +24,7 @@ void main() {
     while (cntList[pos] == -1) {
         cntList[pos] = numList.length.to!long;
 
-        auto lb = A.lowerBound(C[pos]+r);
+        auto lb = A.lowerBound(C[pos] + r);
 
         long nxt = lb.length.to!long;
         numList ~= nxt - pos + d * N;
@@ -41,8 +41,10 @@ void main() {
         --K;
 
         long res;
-        if (K < len) res = numList[K];
-        else res = numList[(K-len)%ring+his];
+        if (K < len)
+            res = numList[K];
+        else
+            res = numList[(K - len) % ring + his];
 
         res.writeln;
     }

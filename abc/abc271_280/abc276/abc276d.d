@@ -26,7 +26,8 @@ void main() {
         isOK &= (num == 1);
     }
 
-    if(!isOK) res = -1;
+    if (!isOK)
+        res = -1;
 
     res.writeln;
 }

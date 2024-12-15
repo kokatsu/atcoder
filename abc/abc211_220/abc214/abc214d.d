@@ -4,17 +4,17 @@ void main() {
     long N;
     readf("%d\n", N);
 
-    auto u = new long[](N-1), v = new long[](N-1), w = new long[](N-1);
-    foreach (i; 0 .. N-1) {
+    auto u = new long[](N - 1), v = new long[](N - 1), w = new long[](N - 1);
+    foreach (i; 0 .. N - 1) {
         readf("%d %d %d\n", u[i], v[i], w[i]);
     }
 
     zip(u, v, w).sort!"a[2] < b[2]";
 
-    auto uf = new UnionFind!long(N+1);
+    auto uf = new UnionFind!long(N + 1);
 
     long res;
-    foreach (i; 0 .. N-1) {
+    foreach (i; 0 .. N - 1) {
         long x = uf.size(u[i]), y = uf.size(v[i]);
         res += w[i] * x * y;
         uf.unite(u[i], v[i]);
@@ -24,8 +24,7 @@ void main() {
 }
 
 /// Union-Find
-struct UnionFind(T)
-if (isIntegral!T) {
+struct UnionFind(T) if (isIntegral!T) {
 
     /// Constructor
     this(T n) nothrow @safe {

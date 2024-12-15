@@ -6,7 +6,7 @@ void main() {
     int N;
     readf("%d\n", N);
 
-    auto dp = new int[][](L+1, L+1);
+    auto dp = new int[][](L + 1, L + 1);
     foreach (_; 0 .. N) {
         int X, Y;
         readf("%d %d\n", X, Y);
@@ -14,11 +14,11 @@ void main() {
         ++dp[X][Y];
     }
 
-    foreach (i; 1 .. L+1) {
+    foreach (i; 1 .. L + 1) {
         foreach (j; 0 .. L) {
-            dp[i][j+1] += dp[i][j];
+            dp[i][j + 1] += dp[i][j];
         }
-        dp[i][] += dp[i-1][];
+        dp[i][] += dp[i - 1][];
     }
 
     int Q;

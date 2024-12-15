@@ -19,7 +19,8 @@ void main() {
 
     int res;
     foreach (i, x; p) {
-        if (uf.same(i.to!int, x)) ++res;
+        if (uf.same(i.to!int, x))
+            ++res;
     }
 
     res.writeln;

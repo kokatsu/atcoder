@@ -10,7 +10,7 @@ void main() {
 
     bool isOK;
     foreach (i; 0 .. 3) {
-        if (S == T[i..i+len].to!string) {
+        if (S == T[i .. i + len].to!string) {
             isOK = true;
         }
     }

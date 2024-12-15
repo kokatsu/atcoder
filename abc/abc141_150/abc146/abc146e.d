@@ -11,17 +11,19 @@ void main() {
     long[long] cnts;
     cnts[0] = 1;
 
-    auto list = new long[](N+1);
+    auto list = new long[](N + 1);
 
     long res;
     foreach (i, b; B) {
         long num = (b + K - i - 1) % K;
 
-        if (i >= K - 1) --cnts[list[i-K+1]];
+        if (i >= K - 1)
+            --cnts[list[i - K + 1]];
 
-        if (num in cnts) res += cnts[num];
+        if (num in cnts)
+            res += cnts[num];
         ++cnts[num];
-        list[i+1] = num;
+        list[i + 1] = num;
     }
 
     res.writeln;

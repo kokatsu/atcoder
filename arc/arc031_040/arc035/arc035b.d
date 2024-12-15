@@ -11,7 +11,8 @@ void main() {
     readf("%d\n", N);
 
     auto T = new long[](N);
-    foreach (i; 0 .. N) readf("%d\n", T[i]);
+    foreach (i; 0 .. N)
+        readf("%d\n", T[i]);
 
     T.sort;
 
@@ -21,7 +22,7 @@ void main() {
     foreach (g; G) {
         auto x = g[0].to!long, y = g[1].to!long;
         foreach (i; 0 .. y) {
-            time += x, mn += time, mulMod(comb, y-i);
+            time += x, mn += time, mulMod(comb, y - i);
         }
     }
 

@@ -5,7 +5,9 @@ void main() {
     string S;
     readf("%d\n%s\n", N, S);
 
-    auto zeros = iota(N).filter!(i => S[i] == '0').map!(i => i + 1).array;
+    auto zeros = iota(N).filter!(i => S[i] == '0')
+        .map!(i => i + 1)
+        .array;
     auto L = zeros.length;
     if (L == 1) {
         writeln(-1);
@@ -19,7 +21,7 @@ void main() {
             res[i] = i + 1;
         }
         else {
-            res[i] = zeros[++cnt%L];
+            res[i] = zeros[++cnt % L];
         }
     }
 

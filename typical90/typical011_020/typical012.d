@@ -5,7 +5,7 @@ void main() {
     readf("%d %d\n%d\n", H, W, Q);
 
     auto isRed = new bool[][](H, W);
-    auto uf = UnionFind!int(H*W);
+    auto uf = UnionFind!int(H * W);
     foreach (_; 0 .. Q) {
         auto input = readln.chomp.split.to!(int[]);
 

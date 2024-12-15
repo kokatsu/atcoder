@@ -9,24 +9,29 @@ void main() {
     auto A = new int[](N);
     A[0] = 1;
     foreach (i, s; S) {
-        if (s == 'A') ++a;
-        else a = 1;
+        if (s == 'A')
+            ++a;
+        else
+            a = 1;
 
-        A[i+1] = a;
+        A[i + 1] = a;
     }
 
     int b = 1;
     auto B = new int[](N);
-    B[N-1] = 1;
+    B[N - 1] = 1;
     foreach_reverse (i, s; S) {
-        if (s == 'B') ++b;
-        else b = 1;
+        if (s == 'B')
+            ++b;
+        else
+            b = 1;
 
         B[i] = b;
     }
 
     int res;
-    foreach (x, y; zip(A, B)) res += max(x, y);
+    foreach (x, y; zip(A, B))
+        res += max(x, y);
 
     res.writeln;
 }

@@ -12,16 +12,20 @@ void main() {
         --A, --B;
 
         ++dp[A][B];
-        if (C < H) --dp[C][B];
-        if (D < W) --dp[A][D];
-        if (C < H && D < W) ++dp[C][D];
+        if (C < H)
+            --dp[C][B];
+        if (D < W)
+            --dp[A][D];
+        if (C < H && D < W)
+            ++dp[C][D];
     }
 
     foreach (i; 0 .. H) {
-        foreach (j; 0 .. W-1) {
-            dp[i][j+1] += dp[i][j];
+        foreach (j; 0 .. W - 1) {
+            dp[i][j + 1] += dp[i][j];
         }
-        if (i > 0) dp[i][] += dp[i-1][];
+        if (i > 0)
+            dp[i][] += dp[i - 1][];
     }
 
     writefln("%(%(%s %)\n%)", dp);

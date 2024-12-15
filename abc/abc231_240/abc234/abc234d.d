@@ -11,8 +11,10 @@ void main() {
     foreach (i, p; P) {
         heap.insert(p);
 
-        if (heap.length > K) heap.popFront;
+        if (heap.length > K)
+            heap.popFront;
 
-        if (i >= K - 1) heap.front.writeln;
+        if (i >= K - 1)
+            heap.front.writeln;
     }
 }

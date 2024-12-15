@@ -23,8 +23,8 @@ void main() {
     }
 
     int res;
-    foreach (i; 0 .. N-1) {
-        foreach (j; i+1 .. N) {
+    foreach (i; 0 .. N - 1) {
+        foreach (j; i + 1 .. N) {
             int l = max(L[i], L[j]), r = min(R[i], R[j]);
             if (l <= r) {
                 ++res;

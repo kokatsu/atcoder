@@ -16,20 +16,21 @@ void main() {
 
     foreach (i; 0 .. L) {
         foreach (j; 1 .. L) {
-            cumSum[i][j] += cumSum[i][j-1];
+            cumSum[i][j] += cumSum[i][j - 1];
         }
     }
 
     foreach (i; 1 .. L) {
         foreach (j; 0 .. L) {
-            cumSum[i][j] += cumSum[i-1][j];
+            cumSum[i][j] += cumSum[i - 1][j];
         }
     }
 
     int res;
-    foreach (i; K+1 .. L) {
-        foreach (j; K+1 .. L) {
-            int num = cumSum[i][j] - cumSum[i][j-K-1] - cumSum[i-K-1][j] + cumSum[i-K-1][j-K-1];
+    foreach (i; K + 1 .. L) {
+        foreach (j; K + 1 .. L) {
+            int num = cumSum[i][j] - cumSum[i][j - K - 1] - cumSum[i - K - 1][j]
+                + cumSum[i - K - 1][j - K - 1];
             res = max(res, num);
         }
     }

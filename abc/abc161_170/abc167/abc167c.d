@@ -9,11 +9,11 @@ void main() {
     foreach (i; 0 .. N) {
         auto input = readln.chomp.split.to!(int[]);
         C[i] = input[0];
-        A[i] = input[1..$];
+        A[i] = input[1 .. $];
     }
 
     int res = int.max;
-    foreach (i; 1 .. 1<<N) {
+    foreach (i; 1 .. 1 << N) {
         int S;
         auto B = new int[](M);
         foreach (j; 0 .. N) {
@@ -24,10 +24,12 @@ void main() {
         }
 
         bool isOK = (B.minElement >= X);
-        if (isOK) res = min(res, S);
+        if (isOK)
+            res = min(res, S);
     }
 
-    if (res == int.max) res = -1;
+    if (res == int.max)
+        res = -1;
 
     res.writeln;
 }

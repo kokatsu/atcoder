@@ -7,8 +7,10 @@ void main() {
     int num = A + B + C - max(A, B, C) - min(A, B, C);
 
     string res = "A";
-    if (num == B) res = "B";
-    if (num == C) res = "C";
+    if (num == B)
+        res = "B";
+    if (num == C)
+        res = "C";
 
     res.writeln;
 }

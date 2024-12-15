@@ -11,14 +11,15 @@ void main() {
         readf("%s\n", S);
 
         foreach (j, s; S) {
-            if (s == 'o') C[i] |= 1 << j;
+            if (s == 'o')
+                C[i] |= 1 << j;
         }
     }
 
     int res;
-    foreach (i; 0 .. D-1) {
-        foreach (j; i+1 .. D) {
-            res = max(res, popcnt(C[i]|C[j]));
+    foreach (i; 0 .. D - 1) {
+        foreach (j; i + 1 .. D) {
+            res = max(res, popcnt(C[i] | C[j]));
         }
     }
 

@@ -10,16 +10,17 @@ void main() {
         int s, t, c;
         readf("%d %d %d\n", s, t, c);
 
-        ++cnts[c-1][s*2-1], --cnts[c-1][t*2];
+        ++cnts[c - 1][s * 2 - 1], --cnts[c - 1][t * 2];
     }
 
     long res;
     auto rec = new int[](L);
     foreach (i; 0 .. C) {
         foreach (j; 1 .. L) {
-            cnts[i][j] += cnts[i][j-1];
+            cnts[i][j] += cnts[i][j - 1];
 
-            if (cnts[i][j] > 0) res = max(res, ++rec[j]);
+            if (cnts[i][j] > 0)
+                res = max(res, ++rec[j]);
         }
     }
 

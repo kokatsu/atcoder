@@ -5,7 +5,8 @@ void main() {
     readf("%d %d\n", H, W);
 
     auto A = new int[][](H);
-    foreach (i; 0 .. H) A[i] = readln.chomp.split.to!(int[]);
+    foreach (i; 0 .. H)
+        A[i] = readln.chomp.split.to!(int[]);
 
     int res = int.max;
     foreach (m; 0 .. H) {
@@ -13,7 +14,7 @@ void main() {
             int dist;
             foreach (i; 0 .. H) {
                 foreach (j; 0 .. W) {
-                    dist += A[i][j] * min(abs(i-m), abs(j-n));
+                    dist += A[i][j] * min(abs(i - m), abs(j - n));
                 }
             }
             res = min(res, dist);

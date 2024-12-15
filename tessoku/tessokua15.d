@@ -12,8 +12,7 @@ void main() {
 }
 
 /// compress
-void compress(T)(ref T[] arr)
-if (isIntegral!T) {
+void compress(T)(ref T[] arr) if (isIntegral!T) {
     auto sorted = arr.dup.sort.uniq.array.assumeSorted;
     foreach (ref a; arr) {
         a = sorted.lowerBound(a).length.to!(T);

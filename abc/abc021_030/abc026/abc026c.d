@@ -9,7 +9,7 @@ void main() {
         long B;
         readf("%d\n", B);
 
-        A[B-1] ~= i;
+        A[B - 1] ~= i;
     }
 
     long f(long x) {
@@ -18,7 +18,8 @@ void main() {
             long m = f(a);
             mn = min(mn, m), mx = max(mx, m);
         }
-        if (mn == long.max) mn = 0;
+        if (mn == long.max)
+            mn = 0;
         return mn + mx + 1;
     }
 

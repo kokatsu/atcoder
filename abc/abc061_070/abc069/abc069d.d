@@ -29,5 +29,6 @@ void main() {
         }
     }
 
-    foreach (d; c) writefln("%(%s %)", d);
+    foreach (d; c)
+        writefln("%(%s %)", d);
 }

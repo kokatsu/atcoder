@@ -12,20 +12,20 @@ void main() {
     auto dp = new long[][][](N, 2, 2);
     dp[0][0][1] = C[0], dp[0][1][] = L;
     foreach (i; 1 .. N) {
-        if (S[i] == S[i-1]) {
-            dp[i][0][0] = dp[i-1][0][1];
-            dp[i][0][1] = dp[i-1][0][0] + C[i];
-            dp[i][1][0] = min(dp[i-1][0][0], dp[i-1][1][1]);
-            dp[i][1][1] = min(dp[i-1][0][1], dp[i-1][1][0]) + C[i];
+        if (S[i] == S[i - 1]) {
+            dp[i][0][0] = dp[i - 1][0][1];
+            dp[i][0][1] = dp[i - 1][0][0] + C[i];
+            dp[i][1][0] = min(dp[i - 1][0][0], dp[i - 1][1][1]);
+            dp[i][1][1] = min(dp[i - 1][0][1], dp[i - 1][1][0]) + C[i];
         }
         else {
-            dp[i][0][0] = dp[i-1][0][0];
-            dp[i][0][1] = dp[i-1][0][1] + C[i];
-            dp[i][1][0] = min(dp[i-1][0][1], dp[i-1][1][0]);
-            dp[i][1][1] = min(dp[i-1][0][0], dp[i-1][1][1]) + C[i];
+            dp[i][0][0] = dp[i - 1][0][0];
+            dp[i][0][1] = dp[i - 1][0][1] + C[i];
+            dp[i][1][0] = min(dp[i - 1][0][1], dp[i - 1][1][0]);
+            dp[i][1][1] = min(dp[i - 1][0][0], dp[i - 1][1][1]) + C[i];
         }
     }
 
-    long res = dp[N-1][1].minElement;
+    long res = dp[N - 1][1].minElement;
     res.writeln;
 }

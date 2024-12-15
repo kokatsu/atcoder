@@ -5,7 +5,8 @@ void main() {
     readf("%d\n", N);
 
     auto A = new long[](5);
-    foreach (i; 0 .. 5) readf("%d\n", A[i]);
+    foreach (i; 0 .. 5)
+        readf("%d\n", A[i]);
 
     long M = A.minElement;
 

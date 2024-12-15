@@ -11,7 +11,7 @@ void main() {
         auto L = S.length;
         ulong res, i;
         while (i + 5 <= L) {
-            if (S[i..i+5] == "tokyo" || S[i..i+5] == "kyoto") {
+            if (S[i .. i + 5] == "tokyo" || S[i .. i + 5] == "kyoto") {
                 ++res;
                 i += 5;
             }

@@ -35,13 +35,16 @@ void main() {
         auto f = que.front;
         que.popFront;
 
-        if (f == b) continue;
+        if (f == b)
+            continue;
 
         foreach (r; roads[f]) {
-            if (dists[r] < dists[f] + 1) continue;
+            if (dists[r] < dists[f] + 1)
+                continue;
             addMod(cnts[r], cnts[f]);
 
-            if (dists[r] == dists[f] + 1) continue;
+            if (dists[r] == dists[f] + 1)
+                continue;
             que ~= r;
             dists[r] = dists[f] + 1;
         }

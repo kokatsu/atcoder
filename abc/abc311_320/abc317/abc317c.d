@@ -20,13 +20,15 @@ void main() {
         arr[to] = true;
         res = max(res, num);
         foreach (i; 0 .. N) {
-            if (arr[i] || roads[to][i] == 0) continue;
-            f(i, num+roads[to][i], arr);
+            if (arr[i] || roads[to][i] == 0)
+                continue;
+            f(i, num + roads[to][i], arr);
         }
         arr[to] = false;
     }
 
-    foreach (i; 0 .. N) f(i, 0, seen);
+    foreach (i; 0 .. N)
+        f(i, 0, seen);
 
     res.writeln;
 }

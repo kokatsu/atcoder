@@ -17,14 +17,17 @@ void main() {
 
         bool isOk;
         foreach (p; P) {
-            if (isOk) break;
+            if (isOk)
+                break;
 
             foreach (i; 1 .. M) {
-                if (isOk) break;
+                if (isOk)
+                    break;
 
                 int q = p + i, c = 1;
                 while (c < L && q < M) {
-                    if (T[q] != S[c]) break;
+                    if (T[q] != S[c])
+                        break;
 
                     q += i, ++c;
                 }
@@ -33,7 +36,8 @@ void main() {
             }
         }
 
-        if (isOk) ++res;
+        if (isOk)
+            ++res;
     }
 
     res.writeln;

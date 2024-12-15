@@ -8,7 +8,8 @@ void main() {
 
     bool isOK = true;
     foreach (a; A) {
-        if (a % 2 == 1) continue;
+        if (a % 2 == 1)
+            continue;
 
         isOK &= (a % 3 == 0 || a % 5 == 0);
     }

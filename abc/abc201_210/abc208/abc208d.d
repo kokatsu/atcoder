@@ -16,7 +16,7 @@ void main() {
         long A, B, C;
         readf("%d %d %d\n", A, B, C);
 
-        dists[A-1][B-1] = C;
+        dists[A - 1][B - 1] = C;
     }
 
     void f(ref long x, long y) {
@@ -27,13 +27,14 @@ void main() {
     foreach (i; 0 .. N) {
         foreach (j; 0 .. N) {
             foreach (k; 0 .. N) {
-                f(dists[j][k], dists[j][i]+dists[i][k]);
+                f(dists[j][k], dists[j][i] + dists[i][k]);
             }
         }
 
         foreach (j; 0 .. N) {
             foreach (k; 0 .. N) {
-                if (dists[j][k] < L) res += dists[j][k];
+                if (dists[j][k] < L)
+                    res += dists[j][k];
             }
         }
     }

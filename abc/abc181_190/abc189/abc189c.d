@@ -12,9 +12,9 @@ void main() {
         int num = A[i];
         res = max(res, num);
 
-        foreach (j; i+1 .. N) {
+        foreach (j; i + 1 .. N) {
             num = min(num, A[j]);
-            res = max(res, num*(j-i+1));
+            res = max(res, num * (j - i + 1));
         }
     }
 

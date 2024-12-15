@@ -21,7 +21,7 @@ void main() {
     auto use = new long[](N);
 
     auto D = new long[](N);
-    D[1..$] = long.max / 2;
+    D[1 .. $] = long.max / 2;
 
     auto heap = new BinaryHeap!(Array!Edge, "a.dist > b.dist")();
     heap.insert(Edge(0, 0, 0));
@@ -29,11 +29,13 @@ void main() {
         auto f = heap.front;
         heap.popFront;
 
-        if (f.dist != D[f.to]) continue;
+        if (f.dist != D[f.to])
+            continue;
 
         foreach (e; edge[f.to]) {
             long d = f.dist + e.dist;
-            if (d >= D[e.to]) continue;
+            if (d >= D[e.to])
+                continue;
 
             use[e.to] = e.num;
             D[e.to] = d;

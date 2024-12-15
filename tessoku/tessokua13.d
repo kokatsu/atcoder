@@ -10,7 +10,7 @@ void main() {
 
     long res;
     foreach (i, a; A) {
-        res += S.lowerBound(a+K+1).length.to!long - i - 1;
+        res += S.lowerBound(a + K + 1).length.to!long - i - 1;
     }
 
     res.writeln;

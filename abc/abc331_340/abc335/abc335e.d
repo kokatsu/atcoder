@@ -42,18 +42,17 @@ void main() {
     foreach (i; 0 .. L) {
         foreach (p; pruned[i]) {
             if (dp[roots[p.from]] > 0) {
-                dp[roots[p.to]] = max(dp[roots[p.to]], dp[roots[p.from]]+1);
+                dp[roots[p.to]] = max(dp[roots[p.to]], dp[roots[p.from]] + 1);
             }
         }
     }
 
-    int res = dp[uf.root(N-1)];
+    int res = dp[uf.root(N - 1)];
     res.writeln;
 }
 
 /// Union-Find
-struct UnionFind(T)
-if (isIntegral!T) {
+struct UnionFind(T) if (isIntegral!T) {
 
     /// Constructor
     this(T n) nothrow @safe {

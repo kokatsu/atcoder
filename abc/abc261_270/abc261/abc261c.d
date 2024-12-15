@@ -8,8 +8,10 @@ void main() {
     foreach (i; 0 .. N) {
         auto S = readln.chomp;
 
-        if (S in cnts) writefln("%s(%d)", S, cnts[S]);
-        else S.writeln;
+        if (S in cnts)
+            writefln("%s(%d)", S, cnts[S]);
+        else
+            S.writeln;
 
         ++cnts[S];
     }

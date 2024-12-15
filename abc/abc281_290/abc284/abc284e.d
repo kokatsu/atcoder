@@ -21,9 +21,11 @@ void main() {
         long ret = 1;
         seen[pos] = true;
         foreach (edge; edges[pos]) {
-            if (seen[edge]) continue;
+            if (seen[edge])
+                continue;
             ret += f(edge);
-            if (ret >= L) break;
+            if (ret >= L)
+                break;
         }
         seen[pos] = false;
         return ret;

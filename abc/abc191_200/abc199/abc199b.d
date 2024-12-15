@@ -7,6 +7,6 @@ void main() {
     auto A = readln.chomp.split.to!(int[]);
     auto B = readln.chomp.split.to!(int[]);
 
-    int res = max(0, B.minElement-A.maxElement+1);
+    int res = max(0, B.minElement - A.maxElement + 1);
     res.writeln;
 }

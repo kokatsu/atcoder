@@ -6,7 +6,7 @@ void main() {
 
     bool[string] registered;
 
-    foreach (i; 1 .. N+1) {
+    foreach (i; 1 .. N + 1) {
         string S = readln.chomp;
 
         if (S in registered) {

@@ -9,9 +9,9 @@ void main() {
     auto S = L.sort;
 
     long res;
-    foreach (i; 0 .. N-2) {
-        foreach (j; i+1 .. N-1) {
-            auto lb = S.lowerBound(L[i]+L[j]);
+    foreach (i; 0 .. N - 2) {
+        foreach (j; i + 1 .. N - 1) {
+            auto lb = S.lowerBound(L[i] + L[j]);
             res += lb.length.to!long - j - 1;
         }
     }

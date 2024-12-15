@@ -10,7 +10,7 @@ void main() {
         isOK |= (S == T);
 
         auto b = S.back;
-        S = b ~ S[0..$-1];
+        S = b ~ S[0 .. $ - 1];
     }
 
     writeln(isOK ? "Yes" : "No");

@@ -19,7 +19,7 @@ void main() {
         int L, R;
         readf("%d %d\n", L, R);
 
-        int res = max(X[L-2], Y[R]);
+        int res = max(X[L - 2], Y[R]);
         res.writeln;
     }
 }

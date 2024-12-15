@@ -1,6 +1,6 @@
 import std;
 
-enum int L = 10 ^^6 + 1;
+enum int L = 10 ^^ 6 + 1;
 
 void main() {
     int N;
@@ -16,8 +16,9 @@ void main() {
 
     int res;
     foreach (i; 1 .. L) {
-        A[i] += A[i-1];
-        if (A[i-1] == 0 && A[i] > 0) ++res;
+        A[i] += A[i - 1];
+        if (A[i - 1] == 0 && A[i] > 0)
+            ++res;
     }
 
     res.writeln;

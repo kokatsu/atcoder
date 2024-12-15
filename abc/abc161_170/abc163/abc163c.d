@@ -9,7 +9,9 @@ void main() {
     A[] -= 1;
 
     auto res = new int[](N);
-    foreach (a; A) ++res[a];
+    foreach (a; A)
+        ++res[a];
 
-    foreach (r; res) r.writeln;
+    foreach (r; res)
+        r.writeln;
 }

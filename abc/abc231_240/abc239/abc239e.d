@@ -7,7 +7,7 @@ void main() {
     auto X = readln.chomp.split.to!(int[]);
 
     auto edge = new int[][](N);
-    foreach (_; 0 .. N-1) {
+    foreach (_; 0 .. N - 1) {
         int A, B;
         readf("%d %d\n", A, B);
 
@@ -24,18 +24,20 @@ void main() {
 
     void f(int pos, int pre = -1) {
         foreach (e; edge[pos]) {
-            if (e == pre) continue;
+            if (e == pre)
+                continue;
             f(e, pos);
         }
 
         auto tmp = list[pos];
         foreach (e; edge[pos]) {
-            if (e == pre) continue;
+            if (e == pre)
+                continue;
             tmp ~= list[e];
         }
 
         tmp.sort!"a > b";
-        list[pos] = tmp[0..l];
+        list[pos] = tmp[0 .. l];
     }
 
     f(0);

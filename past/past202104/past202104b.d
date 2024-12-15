@@ -8,6 +8,6 @@ void main() {
 
     long P = T.countUntil("post");
 
-    string res = P >= 0 ? (P+1).to!string : "none";
+    string res = P >= 0 ? (P + 1).to!string : "none";
     res.writeln;
 }

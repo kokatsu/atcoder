@@ -4,7 +4,7 @@ void main() {
     int N, L;
     readf("%d %d\n", N, L);
 
-    auto apples = iota(L, L+N).array;
+    auto apples = iota(L, L + N).array;
 
     apples.sort!"a * a < b * b";
 

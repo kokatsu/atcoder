@@ -11,7 +11,8 @@ void main() {
     foreach (i; 0 .. u) {
         long num;
         foreach (j; 0 .. L) {
-            if ((i >> j) & 1) num += A[j];
+            if ((i >> j) & 1)
+                num += A[j];
         }
 
         P[i] = num;
@@ -22,7 +23,8 @@ void main() {
     foreach (i; 0 .. v) {
         long num;
         foreach (j; 0 .. R) {
-            if ((i >> j) & 1) num += A[L+j];
+            if ((i >> j) & 1)
+                num += A[L + j];
         }
 
         Q[i] = num;
@@ -32,8 +34,9 @@ void main() {
     long res;
     foreach (p; P) {
         long lim = T - p;
-        auto lb = S.lowerBound(lim+1);
-        if (!lb.empty) res = max(res, p+lb.back);
+        auto lb = S.lowerBound(lim + 1);
+        if (!lb.empty)
+            res = max(res, p + lb.back);
     }
 
     res.writeln;

@@ -8,7 +8,7 @@ void main() {
     foreach (_; 0 .. N) {
         auto S = readln.chomp;
         foreach (i, s; S) {
-            list[s-'0'] ~= i.to!int;
+            list[s - '0'] ~= i.to!int;
         }
     }
 

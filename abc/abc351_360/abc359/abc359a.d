@@ -9,7 +9,8 @@ void main() {
         string S;
         readf("%s\n", S);
 
-        if (S == "Takahashi") ++res;
+        if (S == "Takahashi")
+            ++res;
     }
 
     res.writeln;

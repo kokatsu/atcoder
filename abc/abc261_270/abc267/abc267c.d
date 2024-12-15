@@ -17,7 +17,7 @@ void main() {
         now += M * A[i] - dec;
         res = max(res, now);
 
-        dec += A[i] - A[i-M];
+        dec += A[i] - A[i - M];
     }
 
     res.writeln;

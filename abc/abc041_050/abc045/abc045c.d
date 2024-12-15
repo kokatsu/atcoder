@@ -12,8 +12,9 @@ void main() {
         }
         else {
             long d = S[pos] - '0';
-            f(tot+num, d, pos+1);
-            if (pos > 0) f(tot, num*10+d, pos+1);
+            f(tot + num, d, pos + 1);
+            if (pos > 0)
+                f(tot, num * 10 + d, pos + 1);
         }
     }
 

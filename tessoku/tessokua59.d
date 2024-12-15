@@ -4,7 +4,7 @@ void main() {
     int N, Q;
     readf("%d %d\n", N, Q);
 
-    auto st = new SegmentTree!(int, "a + b", 0)(N+1);
+    auto st = new SegmentTree!(int, "a + b", 0)(N + 1);
     foreach (_; 0 .. Q) {
         int op, x, y;
         readf("%d %d %d\n", op, x, y);
@@ -22,8 +22,7 @@ void main() {
 struct SegmentTree(T, alias op, T initialValue) {
 
     /// Constructor
-    this(U)(U x)
-    if (isIntegral!U) {
+    this(U)(U x) if (isIntegral!U) {
         n = x.to!int;
         size = 1;
         while (size < n) {
@@ -40,7 +39,7 @@ struct SegmentTree(T, alias op, T initialValue) {
         this(n);
 
         foreach (i; 0 .. n) {
-            data[size+i] = arr[i];
+            data[size + i] = arr[i];
         }
 
         foreach_reverse (i; 1 .. size) {
@@ -49,26 +48,23 @@ struct SegmentTree(T, alias op, T initialValue) {
     }
 
     /// Assigns x to data[j].
-    void set(U)(U j, T x)
-    if (isIntegral!U)
+    void set(U)(U j, T x) if (isIntegral!U)
     in (0 <= j && j < n) {
         j += size;
         data[j] = x;
-        foreach (i; 1 .. e+1) {
-            update(j>>i);
+        foreach (i; 1 .. e + 1) {
+            update(j >> i);
         }
     }
 
     /// Returns data[j].
-    T get(U)(U j)
-    if (isIntegral!U)
+    T get(U)(U j) if (isIntegral!U)
     in (0 <= j && j < n) {
-        return data[j+size];
+        return data[j + size];
     }
 
     /// Returns fun(data[l], ..., data[r-1]).
-    T query(U)(U l, U r)
-    if (isIntegral!U)
+    T query(U)(U l, U r) if (isIntegral!U)
     in (0 <= l && l <= r && r <= n) {
         T sml = initialValue, smr = initialValue;
         l += size, r += size;
@@ -96,6 +92,6 @@ private:
     T[] data;
 
     void update(U)(U j) {
-        data[j] = F(data[2*j], data[2*j+1]);
+        data[j] = F(data[2 * j], data[2 * j + 1]);
     }
 }

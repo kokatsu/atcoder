@@ -31,5 +31,6 @@ void main() {
 
     res.sort;
 
-    foreach (r; res) r.writeln;
+    foreach (r; res)
+        r.writeln;
 }

@@ -5,7 +5,8 @@ void main() {
     readf("%d\n", N);
 
     auto X = new long[](N), Y = new long[](N);
-    foreach (i; 0 .. N) readf("%d %d\n", X[i], Y[i]);
+    foreach (i; 0 .. N)
+        readf("%d %d\n", X[i], Y[i]);
 
     auto S = readln.chomp;
 
@@ -21,8 +22,10 @@ void main() {
                 }
             }
 
-            if (Y[i] in L) L[Y[i]].insert(X[i]);
-            else L[Y[i]] = [X[i]].redBlackTree;
+            if (Y[i] in L)
+                L[Y[i]].insert(X[i]);
+            else
+                L[Y[i]] = [X[i]].redBlackTree;
         }
         else {
             if (Y[i] in L) {
@@ -33,8 +36,10 @@ void main() {
                 }
             }
 
-            if (Y[i] in R) R[Y[i]].insert(X[i]);
-            else R[Y[i]] = [X[i]].redBlackTree;
+            if (Y[i] in R)
+                R[Y[i]].insert(X[i]);
+            else
+                R[Y[i]] = [X[i]].redBlackTree;
         }
     }
 

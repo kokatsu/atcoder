@@ -12,7 +12,7 @@ void main() {
         readf("%d %d %d\n", L, R, H);
 
         --L, --R;
-        foreach (i; L .. R+1) {
+        foreach (i; L .. R + 1) {
             W[i] = min(W[i], H);
         }
     }

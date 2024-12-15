@@ -6,7 +6,7 @@ void main() {
     int Q;
     readf("%d\n", Q);
 
-    foreach(_; 0 .. Q) {
+    foreach (_; 0 .. Q) {
         auto query = readln.chomp.split.to!(int[]);
 
         if (query[0] == 1) {
@@ -16,7 +16,7 @@ void main() {
             rbt.removeKey(query[1]);
         }
         else {
-            auto ub = rbt.upperBound(query[1]-1);
+            auto ub = rbt.upperBound(query[1] - 1);
             writeln(ub.empty ? -1 : ub.front);
         }
     }

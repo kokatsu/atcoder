@@ -6,8 +6,10 @@ void main() {
 
     long res = N, M = 200, L = 1000;
     foreach (i; 0 .. K) {
-        if (res % M == 0) res /= M;
-        else res = res * L + M;
+        if (res % M == 0)
+            res /= M;
+        else
+            res = res * L + M;
     }
 
     res.writeln;

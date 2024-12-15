@@ -14,16 +14,17 @@ void main() {
         if (S % 2 == 0) {
             long rem = S / 2;
 
-            long a = min(A, rem/100);
+            long a = min(A, rem / 100);
             rem -= a * 100;
 
-            long b = min(B, rem/10);
+            long b = min(B, rem / 10);
             rem -= b * 10;
 
             long c = min(C, rem);
             rem -= c;
 
-            if (rem == 0) res = "Yes";
+            if (rem == 0)
+                res = "Yes";
         }
 
         res.writeln;

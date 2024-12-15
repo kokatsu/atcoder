@@ -7,10 +7,11 @@ void main() {
     int M = N * 2;
 
     auto x = new int[](M), y = new int[](M);
-    foreach (i; 0 .. M) readf("%d %d\n", x[i], y[i]);
+    foreach (i; 0 .. M)
+        readf("%d %d\n", x[i], y[i]);
 
     auto isRed = new bool[](M);
-    isRed[0..N] = true;
+    isRed[0 .. N] = true;
 
     zip(x, y, isRed).sort;
 

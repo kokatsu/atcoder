@@ -8,7 +8,7 @@ void main() {
 
     foreach (i, c; C) {
         if (A + B == c) {
-            writeln(i+1);
+            writeln(i + 1);
         }
     }
 }

@@ -8,7 +8,8 @@ void main() {
     readf("%d\n", N);
 
     auto a = new long[][](N);
-    foreach (i; 0 .. N) a[i] = readln.chomp.split.to!(long[]);
+    foreach (i; 0 .. N)
+        a[i] = readln.chomp.split.to!(long[]);
 
     long L = 1 << N;
     auto dp = new long[](L);
@@ -16,11 +17,11 @@ void main() {
     foreach (i; 0 .. L) {
         foreach (j; 0 .. N) {
             if (!((i >> j) & 1) && a[j][i.popcnt]) {
-                dp[i+(1<<j)] = (dp[i+(1<<j)] + dp[i]) % MOD;
+                dp[i + (1 << j)] = (dp[i + (1 << j)] + dp[i]) % MOD;
             }
         }
     }
 
-    long res = dp[L-1];
+    long res = dp[L - 1];
     res.writeln;
 }

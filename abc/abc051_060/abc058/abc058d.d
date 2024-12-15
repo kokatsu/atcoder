@@ -18,13 +18,13 @@ void main() {
 
     long u;
     foreach (i; 1 .. n) {
-        long d = (x[i] - x[i-1]) * ((i * (n - i)) % MOD) % MOD;
+        long d = (x[i] - x[i - 1]) * ((i * (n - i)) % MOD) % MOD;
         addMod(u, d);
     }
 
     long v;
     foreach (i; 1 .. m) {
-        long d = (y[i] - y[i-1]) * ((i * (m - i)) % MOD) % MOD;
+        long d = (y[i] - y[i - 1]) * ((i * (m - i)) % MOD) % MOD;
         addMod(v, d);
     }
 

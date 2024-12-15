@@ -22,7 +22,8 @@ void main() {
         que.popFront;
 
         foreach (e; edge[f]) {
-            if (signposts[e] > 0) continue;
+            if (signposts[e] > 0)
+                continue;
 
             signposts[e] = f + 1;
             que ~= e;
@@ -32,5 +33,6 @@ void main() {
     signposts.popFront;
 
     writeln("Yes");
-    foreach (s; signposts) s.writeln;
+    foreach (s; signposts)
+        s.writeln;
 }

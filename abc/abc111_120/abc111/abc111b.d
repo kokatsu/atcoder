@@ -8,7 +8,8 @@ void main() {
         return s.all!(x => x == s.front);
     }
 
-    while (!f(N)) N = N.succ;
+    while (!f(N))
+        N = N.succ;
 
     N.writeln;
 }

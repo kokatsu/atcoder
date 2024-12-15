@@ -4,8 +4,8 @@ void main() {
     int N, M;
     readf("%d %d\n", N, M);
 
-    auto graph = new int[][](N+1);
-    auto indegree = new int[](N+1);
+    auto graph = new int[][](N + 1);
+    auto indegree = new int[](N + 1);
     foreach (i; 0 .. M) {
         int A, B;
         readf("%d %d\n", A, B);
@@ -15,7 +15,7 @@ void main() {
     }
 
     auto heap = new BinaryHeap!(Array!int, "a > b")();
-    foreach (i; 1 .. N+1) {
+    foreach (i; 1 .. N + 1) {
         if (indegree[i] == 0) {
             heap.insert(i);
         }

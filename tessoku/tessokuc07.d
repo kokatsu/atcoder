@@ -17,7 +17,7 @@ void main() {
         long X;
         readf("%d\n", X);
 
-        auto lb = S.lowerBound(X+1);
+        auto lb = S.lowerBound(X + 1);
 
         auto res = lb.length;
         res.writeln;

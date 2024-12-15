@@ -10,7 +10,7 @@ void main() {
     }
 
     int res;
-    foreach (i; 1 .. 1<<H) {
+    foreach (i; 1 .. 1 << H) {
         int[int] list;
 
         foreach (j; 0 .. W) {

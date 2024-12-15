@@ -7,10 +7,12 @@ long powMod(long x, long y) {
     while (y > 0) {
         if (y & 1) {
             res *= x;
-            if (res > MOD) res %= MOD;
+            if (res > MOD)
+                res %= MOD;
         }
         x *= x;
-        if (x > MOD) x %= MOD;
+        if (x > MOD)
+            x %= MOD;
         y >>= 1;
     }
     return res;
@@ -24,7 +26,7 @@ void main() {
     foreach (i; 0 .. r) {
         res *= n - i;
         res %= MOD;
-        res *= powMod(i+1, MOD-2);
+        res *= powMod(i + 1, MOD - 2);
         res %= MOD;
     }
 

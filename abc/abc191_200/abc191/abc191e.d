@@ -20,8 +20,10 @@ void main() {
 
         --A, --B;
 
-        if (A == B) times[A] = min(times[A], C);
-        else roads[A] ~= Road(B, C);
+        if (A == B)
+            times[A] = min(times[A], C);
+        else
+            roads[A] ~= Road(B, C);
     }
 
     auto table = new long[][](N, N);
@@ -38,10 +40,12 @@ void main() {
             auto f = heap.front;
             heap.popFront;
 
-            if (t[f.town] < f.time) continue;
+            if (t[f.town] < f.time)
+                continue;
 
             foreach (r; roads[f.town]) {
-                if (t[r.town] <= r.time + t[f.town]) continue;
+                if (t[r.town] <= r.time + t[f.town])
+                    continue;
 
                 t[r.town] = r.time + t[f.town];
                 heap.insert(Road(r.town, t[r.town]));
@@ -51,11 +55,13 @@ void main() {
 
     foreach (i, ref t; times) {
         foreach (j; 0 .. N) {
-            if (i == j) continue;
+            if (i == j)
+                continue;
 
-            t = min(t, table[i][j]+table[j][i]);
+            t = min(t, table[i][j] + table[j][i]);
         }
     }
 
-    foreach (t; times) writeln(t == lim ? -1 : t);
+    foreach (t; times)
+        writeln(t == lim ? -1 : t);
 }

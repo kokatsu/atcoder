@@ -21,7 +21,8 @@ void main() {
     }
 
     ulong res;
-    if (isOK) res = powmod(2uL, N/2, M);
+    if (isOK)
+        res = powmod(2uL, N / 2, M);
 
     res.writeln;
 }

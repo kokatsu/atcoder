@@ -6,6 +6,7 @@ void main() {
     readf("%d\n%s\n", N, S);
 
     foreach (i; 1 .. N) {
-        if (S[i] == 'J') S[i-1].writeln;
+        if (S[i] == 'J')
+            S[i - 1].writeln;
     }
 }

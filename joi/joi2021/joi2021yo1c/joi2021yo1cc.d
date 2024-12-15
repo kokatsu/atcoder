@@ -11,7 +11,7 @@ void main() {
 
     size_t res;
     foreach (a; A) {
-        res += C.upperBound(a-1).length;
+        res += C.upperBound(a - 1).length;
     }
 
     res.writeln;

@@ -5,7 +5,8 @@ void main() {
     readf("%d %d\n", N, K);
 
     auto T = new int[][](N);
-    foreach (i; 0 .. N) T[i] = readln.chomp.split.to!(int[]);
+    foreach (i; 0 .. N)
+        T[i] = readln.chomp.split.to!(int[]);
 
     auto arr = iota(1, N).array;
     int res;
@@ -18,7 +19,8 @@ void main() {
 
         time += T[from][0];
 
-        if (time == K) ++res;
+        if (time == K)
+            ++res;
     }
 
     res.writeln;

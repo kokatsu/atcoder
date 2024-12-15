@@ -7,8 +7,10 @@ void main() {
     int hare = (A * C + X) * B, tortoise = A * X;
 
     string res = "Tie";
-    if (hare < tortoise) res = "Hare";
-    if (hare > tortoise) res = "Tortoise";
+    if (hare < tortoise)
+        res = "Hare";
+    if (hare > tortoise)
+        res = "Tortoise";
 
     res.writeln;
 }

@@ -12,7 +12,8 @@ void main() {
     long res, num;
     foreach (a; A) {
         num = (num + a) % M;
-        if (num in list) res += list[num];
+        if (num in list)
+            res += list[num];
         ++list[num];
     }
 

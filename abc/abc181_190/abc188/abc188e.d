@@ -11,7 +11,7 @@ void main() {
         long X, Y;
         readf("%d %d\n", X, Y);
 
-        roads[X-1] ~= Y - 1;
+        roads[X - 1] ~= Y - 1;
     }
 
     auto B = A.dup;
@@ -21,7 +21,8 @@ void main() {
     long res = long.min;
     auto seen = new bool[](N);
     foreach (p; pos) {
-        if (seen[p]) continue;
+        if (seen[p])
+            continue;
 
         long[] que;
         que ~= p;
@@ -30,9 +31,10 @@ void main() {
             que.popFront;
 
             foreach (r; roads[f]) {
-                if (seen[r]) continue;
+                if (seen[r])
+                    continue;
 
-                res = max(res, A[r]-A[p]);
+                res = max(res, A[r] - A[p]);
                 seen[r] = true;
                 que ~= r;
             }

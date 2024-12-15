@@ -12,7 +12,8 @@ void main() {
     bool isZero;
     long l = 1;
     foreach (A; a) {
-        if (isZero) break;
+        if (isZero)
+            break;
 
         long g = gcd(l, A);
         l /= g;
@@ -25,7 +26,8 @@ void main() {
     }
 
     long res;
-    if (!isZero) res = ((M / l) + 1) / 2;
+    if (!isZero)
+        res = ((M / l) + 1) / 2;
 
     res.writeln;
 }

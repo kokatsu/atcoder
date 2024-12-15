@@ -12,6 +12,6 @@ void main() {
 
     G.sort!"a[1] == b[1] ? a[0] < b[0] : a[1] < b[1]";
 
-    auto res = max(0, G.length.to!int-K).iota.map!(i => G[i][1]).sum;
+    auto res = max(0, G.length.to!int - K).iota.map!(i => G[i][1]).sum;
     res.writeln;
 }

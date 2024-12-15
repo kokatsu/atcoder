@@ -6,6 +6,8 @@ void main() {
 
     long K = A + B;
 
-    if (K % 2 == 0) writeln(K/2);
-    else writeln("IMPOSSIBLE");
+    if (K % 2 == 0)
+        writeln(K / 2);
+    else
+        writeln("IMPOSSIBLE");
 }

@@ -7,7 +7,7 @@ void main() {
     auto h = readln.chomp.split.to!(int[]);
 
     auto tree = new int[][](n);
-    foreach (_; 0 .. n-1) {
+    foreach (_; 0 .. n - 1) {
         int a, b;
         readf("%d %d\n", a, b);
 
@@ -19,7 +19,8 @@ void main() {
         int ret;
 
         foreach (e; tree[pos]) {
-            if (e == par) continue;
+            if (e == par)
+                continue;
 
             int num = f(e, pos);
             if (h[e] == 1 || num > 0) {
@@ -30,6 +31,6 @@ void main() {
         return ret;
     }
 
-    int res = f(x-1);
+    int res = f(x - 1);
     res.writeln;
 }

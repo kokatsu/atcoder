@@ -19,7 +19,8 @@ void main() {
     }
 
     string dir = "East";
-    if (dist < 0) dir = "West", dist *= -1;
+    if (dist < 0)
+        dir = "West", dist *= -1;
 
     writeln(dir, " ", dist);
 }

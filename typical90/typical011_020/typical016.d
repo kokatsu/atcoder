@@ -6,13 +6,13 @@ void main() {
 
     long limit = 9999;
     long res = int.max;
-    foreach (i; 0 .. limit+1) {
+    foreach (i; 0 .. limit + 1) {
         long x = A * i;
         if (x > N) {
             break;
         }
 
-        foreach (j; 0 .. limit-i+1) {
+        foreach (j; 0 .. limit - i + 1) {
             long y = B * j;
             if (x + y > N) {
                 break;
@@ -24,7 +24,7 @@ void main() {
             }
 
             long k = rem / C;
-            res = min(res, i+j+k);
+            res = min(res, i + j + k);
         }
     }
 

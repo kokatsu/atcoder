@@ -18,7 +18,7 @@ void main() {
 
     edges.sort!"a.dist < b.dist";
 
-    auto uf = new UnionFind!int(N+1);
+    auto uf = new UnionFind!int(N + 1);
     int res;
     foreach (e; edges) {
         if (!uf.isSame(A[e.num], B[e.num])) {
@@ -31,8 +31,7 @@ void main() {
 }
 
 /// Union-Find
-struct UnionFind(T)
-if (isIntegral!T) {
+struct UnionFind(T) if (isIntegral!T) {
 
     /// Constructor
     this(T n) nothrow @safe {

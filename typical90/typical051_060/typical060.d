@@ -33,7 +33,8 @@ void main() {
     }
 
     long res;
-    foreach (i; 0 .. N) res = max(res, inc[i]+dec[i]-1);
+    foreach (i; 0 .. N)
+        res = max(res, inc[i] + dec[i] - 1);
 
     res.writeln;
 }

@@ -9,9 +9,9 @@ void main() {
     --H, --W;
 
     long res = 1;
-    foreach (i; 1 .. W+1) {
+    foreach (i; 1 .. W + 1) {
         res = (res * (H + i)) % MOD;
-        res = (res * powMod(i, MOD-2, MOD)) % MOD;
+        res = (res * powMod(i, MOD - 2, MOD)) % MOD;
     }
 
     res.writeln;
@@ -22,10 +22,12 @@ long powMod(long x, long y, long z) {
     while (y > 0) {
         if (y % 2 == 1) {
             res *= x;
-            if (res > z) res %= z;
+            if (res > z)
+                res %= z;
         }
         x *= x;
-        if (x > z) x %= z;
+        if (x > z)
+            x %= z;
         y /= 2;
     }
     return res;

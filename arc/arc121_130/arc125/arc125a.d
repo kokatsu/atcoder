@@ -10,7 +10,7 @@ void main() {
     int idx = N;
     foreach (i; 1 .. N) {
         if (S[i] != S[0]) {
-            idx = min(idx, i, N-i);
+            idx = min(idx, i, N - i);
         }
     }
 

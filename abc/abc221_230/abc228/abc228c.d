@@ -15,8 +15,7 @@ void main() {
     auto U = T.sort;
 
     foreach (i, s; S) {
-        auto l = U.upperBound(s+300).length;
-
+        auto l = U.upperBound(s + 300).length;
 
         if (l < K) {
             writeln("Yes");

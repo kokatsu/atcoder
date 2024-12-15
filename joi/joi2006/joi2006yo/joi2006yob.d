@@ -10,7 +10,6 @@ void main() {
         dict[a[0]] = a[1];
     }
 
-
     int m = readln.strip.split.to!(int[])[0];
 
     auto c = new string[](m);

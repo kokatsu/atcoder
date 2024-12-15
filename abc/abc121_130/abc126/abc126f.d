@@ -21,7 +21,8 @@ void main() {
         int[Pair] list;
         foreach (i; 0 .. lim) {
             int u = i, v = K ^ i;
-            if (u > v) swap(u, v);
+            if (u > v)
+                swap(u, v);
             ++list[Pair(u, v)];
         }
 
@@ -35,9 +36,10 @@ void main() {
         res.length = len * 4;
         foreach (i; 0 .. cnt) {
             foreach (j; 0 .. 8) {
-                auto d = j.to!(dchar[])(4).map!(a => a - '0').fold!"a ^ b";
+                auto d = j.to!(dchar[])(4).map!(a => a - '0')
+                    .fold!"a ^ b";
                 int a = (d >> 1) & 1, b = d & 1;
-                res[pos+j] = Q[num+a][b];
+                res[pos + j] = Q[num + a][b];
             }
             pos += 8, num += 2;
         }

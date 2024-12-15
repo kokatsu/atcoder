@@ -5,7 +5,7 @@ void main() {
     readf("%d %d %d\n", N, A, B);
 
     int res;
-    foreach (i; 1 .. N+1) {
+    foreach (i; 1 .. N + 1) {
         int S, R = i;
         while (R > 0) {
             S += R % 10;

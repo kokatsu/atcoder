@@ -11,34 +11,39 @@ void main() {
     auto A = readln.chomp.split.to!(long[]);
 
     auto S = new string[](N);
-    foreach (i; 0 .. N) readf("%s\n", S[i]);
+    foreach (i; 0 .. N)
+        readf("%s\n", S[i]);
 
     auto list = new City[][](N, N);
     foreach (i; 0 .. N) {
-        list[i][] = City(long.max/4, 0);
+        list[i][] = City(long.max / 4, 0);
         list[i][i] = City(0, A[i]);
     }
 
     foreach (i; 0 .. N) {
         foreach (j; 0 .. N) {
-            if (S[i][j] == 'N') continue;
+            if (S[i][j] == 'N')
+                continue;
 
-            list[i][j] = City(list[i][i].cnt+1, list[i][i].num+A[j]);
+            list[i][j] = City(list[i][i].cnt + 1, list[i][i].num + A[j]);
         }
     }
 
     foreach (i; 0 .. N) {
         foreach (j; 0 .. N) {
-            if (j == i) continue;
+            if (j == i)
+                continue;
 
             foreach (k; 0 .. N) {
-                if (k == i || k == j) continue;
+                if (k == i || k == j)
+                    continue;
 
                 City tmp = list[j][i];
                 tmp.cnt += list[i][k].cnt, tmp.num += list[i][k].num;
                 tmp.num -= A[i];
 
-                if (tmp.cnt < list[j][k].cnt || (tmp.cnt == list[j][k].cnt && tmp.num > list[j][k].num)) {
+                if (tmp.cnt < list[j][k].cnt || (tmp.cnt == list[j][k].cnt
+                        && tmp.num > list[j][k].num)) {
                     list[j][k] = tmp;
                 }
             }

@@ -5,7 +5,7 @@ void main() {
     readf("%d\n", N);
 
     auto edge = new long[][](N);
-    foreach (_; 0 .. N-1) {
+    foreach (_; 0 .. N - 1) {
         long u, v;
         readf("%d %d\n", u, v);
 
@@ -20,9 +20,10 @@ void main() {
         len += depth;
 
         foreach (e; edge[pos]) {
-            if (e == pre) continue;
+            if (e == pre)
+                continue;
 
-            child[pos] += f(depth+1, e, pos) + 1;
+            child[pos] += f(depth + 1, e, pos) + 1;
         }
 
         return child[pos];
@@ -36,7 +37,8 @@ void main() {
         dis[pos] = num;
 
         foreach (e; edge[pos]) {
-            if (e == pre) continue;
+            if (e == pre)
+                continue;
 
             long tmp = num + N - (child[e] + 1) * 2;
             g(tmp, e, pos);
@@ -45,5 +47,6 @@ void main() {
 
     g(len);
 
-    foreach (d; dis) d.writeln;
+    foreach (d; dis)
+        d.writeln;
 }

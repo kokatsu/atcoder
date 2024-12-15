@@ -8,7 +8,7 @@ void main() {
 
     long res;
     foreach (i; 1 .. N) {
-        long diff = a[i] + a[i-1] - x;
+        long diff = a[i] + a[i - 1] - x;
         if (diff > 0) {
             a[i] -= min(a[i], diff);
             res += diff;

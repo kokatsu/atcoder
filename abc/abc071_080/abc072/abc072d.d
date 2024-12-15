@@ -17,7 +17,7 @@ void main() {
         ++res;
 
         if (i < N - 1) {
-            p.swapAt(i, i+1);
+            p.swapAt(i, i + 1);
         }
     }
 

@@ -11,7 +11,7 @@ void main() {
     while (exp2 <= N) {
         long a = N / exp2;
         long c = N % exp2;
-        res = min(res, a+b+c);
+        res = min(res, a + b + c);
         ++b;
         exp2 *= 2;
     }

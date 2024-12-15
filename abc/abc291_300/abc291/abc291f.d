@@ -15,13 +15,13 @@ void main() {
         foreach (j; 0 .. M) {
             if (S[j] == '1' && i + j + 1 < N) {
                 edges1[i] ~= i + j + 1;
-                edges2[i+j+1] ~= i;
+                edges2[i + j + 1] ~= i;
             }
         }
     }
 
     auto dist1 = new int[](N);
-    dist1[1..$] = L;
+    dist1[1 .. $] = L;
 
     int[] heap1;
     heap1 ~= 0;
@@ -38,7 +38,7 @@ void main() {
     }
 
     auto dist2 = new int[](N);
-    dist2[0..$-1] = L;
+    dist2[0 .. $ - 1] = L;
 
     int[] heap2;
     heap2 ~= N - 1;
@@ -54,27 +54,30 @@ void main() {
         }
     }
 
-    auto res = new int[](N-2);
-    foreach (i; 1 .. N-1) {
-        if (dist1[N-1] >= L) {
-            res[i-1] = -1;
+    auto res = new int[](N - 2);
+    foreach (i; 1 .. N - 1) {
+        if (dist1[N - 1] >= L) {
+            res[i - 1] = -1;
             continue;
         }
 
         int num = L;
-        long p = max(0, i-M);
+        long p = max(0, i - M);
         foreach (j; p .. i) {
-            if (dist1[j] >= L) continue;
+            if (dist1[j] >= L)
+                continue;
 
             foreach (e; edges1[j]) {
-                if (e <= i) continue;
-                if (dist2[e] >= L) continue;
+                if (e <= i)
+                    continue;
+                if (dist2[e] >= L)
+                    continue;
 
-                num = min(num, dist1[j]+dist2[e]+1);
+                num = min(num, dist1[j] + dist2[e] + 1);
             }
         }
 
-        res[i-1] = (num >= L ? -1 : num);
+        res[i - 1] = (num >= L ? -1 : num);
     }
 
     writefln("%(%s %)", res);

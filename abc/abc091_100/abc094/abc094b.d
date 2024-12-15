@@ -11,6 +11,6 @@ void main() {
 
     int P = A.countUntil(X).to!int;
 
-    int res = min(P, M-P);
+    int res = min(P, M - P);
     res.writeln;
 }

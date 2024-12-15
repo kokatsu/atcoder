@@ -16,13 +16,16 @@ void main() {
         else {
             int res = int.max;
 
-            auto lb = rbt.lowerBound(x+1);
-            if (!lb.empty) res = min(res, x-lb.back);
+            auto lb = rbt.lowerBound(x + 1);
+            if (!lb.empty)
+                res = min(res, x - lb.back);
 
-            auto ub = rbt.upperBound(x-1);
-            if (!ub.empty) res = min(res, ub.front-x);
+            auto ub = rbt.upperBound(x - 1);
+            if (!ub.empty)
+                res = min(res, ub.front - x);
 
-            if (res == int.max) res = -1;
+            if (res == int.max)
+                res = -1;
 
             res.writeln;
         }

@@ -5,13 +5,14 @@ void main() {
     readf("%d\n", N);
 
     auto X = new int[](N), Y = new int[](N);
-    foreach (i; 0 .. N) readf("%d %d\n", X[i], Y[i]);
+    foreach (i; 0 .. N)
+        readf("%d %d\n", X[i], Y[i]);
 
     zip(X, Y).sort!((a, b) => a[0] == b[0] ? a[1] > b[1] : a[0] < b[0]);
 
     int[] arr = [];
     foreach (i, y; Y) {
-        if (arr.empty || y > arr[$-1]) {
+        if (arr.empty || y > arr[$ - 1]) {
             arr ~= y;
         }
         else {

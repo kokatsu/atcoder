@@ -13,7 +13,7 @@ void main() {
         long a, b, c;
         readf("%d %d %d\n", a, b, c);
 
-        heap.insert(Plan(a-1, c));
+        heap.insert(Plan(a - 1, c));
         heap.insert(Plan(b, -c));
     }
 

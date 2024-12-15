@@ -7,8 +7,8 @@ void main() {
     foreach (n; N) {
         long d = n - '0';
 
-        long u = min(x+d, y+10-d);
-        long v = min(x+d+1, y+10-d-1);
+        long u = min(x + d, y + 10 - d);
+        long v = min(x + d + 1, y + 10 - d - 1);
 
         x = u, y = v;
     }

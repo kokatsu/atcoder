@@ -6,6 +6,6 @@ void main() {
 
     int mn = A, mx = A * 6;
 
-    bool isOK = (mn <= B && B <=mx);
+    bool isOK = (mn <= B && B <= mx);
     writeln(isOK ? "Yes" : "No");
 }

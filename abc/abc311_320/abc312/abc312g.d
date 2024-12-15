@@ -5,7 +5,7 @@ void main() {
     readf("%d\n", N);
 
     auto edges = new long[][](N);
-    foreach (_; 0 .. N-1) {
+    foreach (_; 0 .. N - 1) {
         long A, B;
         readf("%d %d\n", A, B);
 
@@ -21,14 +21,16 @@ void main() {
     void f(long x, long y = -1) {
         long num = (N - 1) ^^ 2;
         foreach (e; edges[x]) {
-            if (e == y) continue;
+            if (e == y)
+                continue;
 
             f(e, x);
             num -= cnts[e] ^^ 2;
             cnts[x] += cnts[e];
         }
 
-        if (y != - 1) num -= (N - cnts[x]) ^^ 2;
+        if (y != -1)
+            num -= (N - cnts[x]) ^^ 2;
 
         res -= num / 2;
     }

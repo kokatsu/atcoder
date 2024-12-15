@@ -8,8 +8,9 @@ void main() {
 
     auto uf = new UnionFind!int(M);
 
-    auto boxes = new int[](M), f = new int[](N+1);
-    foreach (i; 1 .. N+1) boxes[i] = f[i] = i;
+    auto boxes = new int[](M), f = new int[](N + 1);
+    foreach (i; 1 .. N + 1)
+        boxes[i] = f[i] = i;
 
     int cnt = N;
     foreach (_; 0 .. Q) {
@@ -17,7 +18,8 @@ void main() {
 
         if (op[0] == 1) {
             int X = op[1], Y = op[2];
-            if (f[Y] == 0) continue;
+            if (f[Y] == 0)
+                continue;
 
             if (f[X] == 0) {
                 f[X] = f[Y];
@@ -55,8 +57,7 @@ void main() {
 }
 
 /// Union-Find
-struct UnionFind(T)
-if (isIntegral!T) {
+struct UnionFind(T) if (isIntegral!T) {
 
     /// Constructor
     this(T n) nothrow @safe {

@@ -16,8 +16,10 @@ void main() {
         }
         else {
             int t = a - m;
-            if (d < t) res = 1, d = t;
-            else if (d == t) ++res;
+            if (d < t)
+                res = 1, d = t;
+            else if (d == t)
+                ++res;
         }
     }
 

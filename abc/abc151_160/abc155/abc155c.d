@@ -15,10 +15,12 @@ void main() {
 
     string[] res;
     foreach (key, val; list) {
-        if (val == mx) res ~= key;
+        if (val == mx)
+            res ~= key;
     }
 
     res.sort;
 
-    foreach (r; res) r.writeln;
+    foreach (r; res)
+        r.writeln;
 }

@@ -8,12 +8,12 @@ void main() {
 
     auto S = A.assumeSorted;
 
-    auto dp = new int[](N+1);
+    auto dp = new int[](N + 1);
     dp[1] = 1;
-    foreach (i; 2 .. N+1) {
-        auto lb = S.lowerBound(i+1).array;
+    foreach (i; 2 .. N + 1) {
+        auto lb = S.lowerBound(i + 1).array;
         foreach (l; lb) {
-            dp[i] = max(dp[i], i-dp[i-l]);
+            dp[i] = max(dp[i], i - dp[i - l]);
         }
     }
 

@@ -5,7 +5,7 @@ void main() {
     readf("%d %d\n", N, Q);
 
     auto road = new int[][](N);
-    foreach (_; 0 .. N-1) {
+    foreach (_; 0 .. N - 1) {
         int a, b;
         readf("%d %d\n", a, b);
 
@@ -19,7 +19,8 @@ void main() {
         list[now] = flag;
 
         foreach (r; road[now]) {
-            if (r == pre) continue;
+            if (r == pre)
+                continue;
 
             f(r, now, !flag);
         }

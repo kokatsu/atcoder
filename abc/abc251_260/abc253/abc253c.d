@@ -17,8 +17,10 @@ void main() {
         }
         else if (num == 2) {
             long x = query[1].to!long, len = query[2].to!long;
-            if (x in cnts) len = min(len, cnts[x]);
-            else len = 0;
+            if (x in cnts)
+                len = min(len, cnts[x]);
+            else
+                len = 0;
 
             while (len > 0) {
                 rbt.removeKey(x);

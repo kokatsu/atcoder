@@ -11,10 +11,11 @@ void main() {
         int Tak = int.min, Aoki = int.min;
 
         foreach (j; 0 .. N) {
-            if (i == j) continue;
+            if (i == j)
+                continue;
 
             int cnt, l = min(i, j), r = max(i, j), even, odd;
-            foreach (k; l .. r+1) {
+            foreach (k; l .. r + 1) {
                 (cnt++ & 1 ? even : odd) += a[k];
             }
 

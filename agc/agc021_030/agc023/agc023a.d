@@ -13,7 +13,8 @@ void main() {
     foreach (a; A) {
         S += a;
 
-        if (S in cnts) res += cnts[S];
+        if (S in cnts)
+            res += cnts[S];
 
         ++cnts[S];
     }

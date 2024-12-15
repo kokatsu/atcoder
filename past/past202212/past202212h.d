@@ -7,11 +7,12 @@ void main() {
 
     auto pos = new ulong[][](10);
     foreach (i, n; N) {
-        pos[n-'0'] ~= i;
+        pos[n - '0'] ~= i;
     }
 
     auto S = new SortedRange!(ulong[], "a < b")[](10);
-    foreach (i; 0 .. 10) S[i] = pos[i].assumeSorted;
+    foreach (i; 0 .. 10)
+        S[i] = pos[i].assumeSorted;
 
     ulong res;
     foreach (i, n; N) {
@@ -22,7 +23,7 @@ void main() {
             res += (d - j) * ub.length;
         }
 
-        foreach (j; d+1 .. 10) {
+        foreach (j; d + 1 .. 10) {
             auto ub = S[j].upperBound(i);
             res += (j - d) * ub.length;
         }

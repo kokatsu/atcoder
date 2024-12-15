@@ -14,7 +14,8 @@ void main() {
     foreach (i; 0 .. N) {
         res += B[A[i]];
 
-        if (pre + 1 == A[i]) res += C[pre];
+        if (pre + 1 == A[i])
+            res += C[pre];
 
         pre = A[i];
     }

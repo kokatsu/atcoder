@@ -17,9 +17,10 @@ void main() {
 
     foreach (a; A) {
         if (a == N - 1) {
-            if (X[a] < G) ++X[a];
+            if (X[a] < G)
+                ++X[a];
         }
-        else if (X[a] + 1 < X[a+1]) {
+        else if (X[a] + 1 < X[a + 1]) {
             ++X[a];
         }
     }

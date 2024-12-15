@@ -13,14 +13,16 @@ void main() {
             ++cnt;
         }
         else {
-            if (cnt >= K) res += cnt - K + 1;
+            if (cnt >= K)
+                res += cnt - K + 1;
             cnt = 1;
         }
 
         pre = A;
     }
 
-    if (cnt >= K) res += cnt - K + 1;
+    if (cnt >= K)
+        res += cnt - K + 1;
 
     res.writeln;
 }

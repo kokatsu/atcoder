@@ -7,8 +7,10 @@ void main() {
     g.sort!"a[1] > b[1]";
 
     int res;
-    if (g[0][1] == 2) res = g[1][0];
-    if (g[0][1] == 3) res = g[0][0];
+    if (g[0][1] == 2)
+        res = g[1][0];
+    if (g[0][1] == 3)
+        res = g[0][0];
 
     res.writeln;
 }

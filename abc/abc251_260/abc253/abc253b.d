@@ -8,7 +8,8 @@ void main() {
     foreach (i; 0 .. H) {
         auto S = readln.chomp;
         foreach (j, s; S) {
-            if (s == 'o') x ~= i, y ~= j.to!int;
+            if (s == 'o')
+                x ~= i, y ~= j.to!int;
         }
     }
 

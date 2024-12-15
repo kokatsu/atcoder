@@ -7,13 +7,13 @@ void main() {
     --K;
     long N = A + B;
 
-    auto table = new long[][](N+1, N+1);
+    auto table = new long[][](N + 1, N + 1);
     table[0][0] = 1;
-    foreach (i; 1 .. N+1) {
+    foreach (i; 1 .. N + 1) {
         table[i][0] = 1;
 
-        foreach (j; 1 .. i+1) {
-            table[i][j] = table[i-1][j-1] + table[i-1][j];
+        foreach (j; 1 .. i + 1) {
+            table[i][j] = table[i - 1][j - 1] + table[i - 1][j];
         }
     }
 

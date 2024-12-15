@@ -8,9 +8,12 @@ void main() {
 
     long res, cntA;
     foreach (x; t) {
-        if (x == 'A') ++cntA;
-        else if (x == 'D') res += cntA;
-        else cntA = 0;
+        if (x == 'A')
+            ++cntA;
+        else if (x == 'D')
+            res += cntA;
+        else
+            cntA = 0;
     }
 
     res.writeln;

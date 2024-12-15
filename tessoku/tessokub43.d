@@ -10,7 +10,9 @@ void main() {
 
     auto res = new int[](N);
     res[] = M;
-    foreach (a; A) --res[a];
+    foreach (a; A)
+        --res[a];
 
-    foreach (r; res) r.writeln;
+    foreach (r; res)
+        r.writeln;
 }

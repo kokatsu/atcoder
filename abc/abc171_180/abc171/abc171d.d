@@ -7,7 +7,7 @@ void main() {
     auto A = readln.chomp.split.to!(long[]);
 
     long S;
-    auto list = new long[]((10^^5)+1);
+    auto list = new long[]((10 ^^ 5) + 1);
     foreach (a; A) {
         S += a;
         ++list[a];

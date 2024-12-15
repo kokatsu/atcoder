@@ -6,7 +6,7 @@ void main() {
 
     long[] fib = [0, 1];
     while (fib.back < n) {
-        fib ~= fib[$-2] + fib[$-1];
+        fib ~= fib[$ - 2] + fib[$ - 1];
     }
 
     long res;

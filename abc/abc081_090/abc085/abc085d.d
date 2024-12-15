@@ -5,14 +5,16 @@ void main() {
     readf("%d %d\n", N, H);
 
     auto a = new long[](N), b = new long[](N);
-    foreach (i; 0 .. N) readf("%d %d\n", a[i], b[i]);
+    foreach (i; 0 .. N)
+        readf("%d %d\n", a[i], b[i]);
 
     zip(a, b).sort!"a[0] > b[0]";
 
     long amax = a.front, bmax = b.front;
     a.popFront, b.popFront;
 
-    if (!a.empty) zip(a, b).sort!"a[1] > b[1]";
+    if (!a.empty)
+        zip(a, b).sort!"a[1] > b[1]";
 
     long res;
     while (H > 0) {

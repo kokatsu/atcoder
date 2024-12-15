@@ -5,8 +5,8 @@ void main() {
     readf("%d\n", N);
 
     bool isOk = true;
-    auto uf = new UnionFind!int(N+1);
-    foreach (_; 0 .. N-1) {
+    auto uf = new UnionFind!int(N + 1);
+    foreach (_; 0 .. N - 1) {
         int A, B;
         readf("%d %d\n", A, B);
 
@@ -22,8 +22,7 @@ void main() {
 }
 
 /// Union-Find
-struct UnionFind(T)
-if (isIntegral!T) {
+struct UnionFind(T) if (isIntegral!T) {
 
     /// Constructor
     this(T n) nothrow @safe {

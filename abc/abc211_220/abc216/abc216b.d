@@ -11,7 +11,7 @@ void main() {
         auto input = readln.chomp.split;
         S[i] = input[0], T[i] = input[1];
 
-        foreach (j; 0 .. i-1) {
+        foreach (j; 0 .. i - 1) {
             isOK |= (S[i] == S[j] && T[i] == T[j]);
         }
     }

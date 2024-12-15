@@ -20,12 +20,12 @@ void main() {
             auto cnts = new long[](26);
             while (D > 0 && !S.empty) {
                 if (D >= S.front[1]) {
-                    cnts[S.front[0]-'a'] += S.front[1];
+                    cnts[S.front[0] - 'a'] += S.front[1];
                     D -= S.front[1];
                     S.removeFront;
                 }
                 else {
-                    cnts[S.front[0]-'a'] += D;
+                    cnts[S.front[0] - 'a'] += D;
                     S.front[1] -= D;
                     D = 0;
                 }

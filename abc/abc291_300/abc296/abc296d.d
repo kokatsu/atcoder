@@ -7,14 +7,17 @@ void main() {
     readf("%d %d\n", N, M);
 
     long res = -1;
-    foreach (i; 1 .. S+1) {
-        if (i > N) break;
+    foreach (i; 1 .. S + 1) {
+        if (i > N)
+            break;
 
         long d = (M + i - 1) / i;
         long m = i * d;
         if (1 <= d && d <= N) {
-            if (res == -1) res = m;
-            else res = min(res, m);
+            if (res == -1)
+                res = m;
+            else
+                res = min(res, m);
         }
     }
 

@@ -8,7 +8,8 @@ void main() {
 
     long L = A[0], R = A[0];
     foreach (i; 1 .. N) {
-        if (L < R) L = R;
+        if (L < R)
+            L = R;
         R = (R + A[i] >= A[i] ? R + A[i] : A[i]);
     }
 

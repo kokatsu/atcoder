@@ -25,14 +25,17 @@ void main() {
         seen[x][y] = true;
         foreach (i; 0 .. 4) {
             int nx = x + dx[i], ny = y + dy[i];
-            if (nx < 0 || H <= nx || ny < 0 || W <= ny) continue;
-            if (C[nx][ny] == '#') continue;
+            if (nx < 0 || H <= nx || ny < 0 || W <= ny)
+                continue;
+            if (C[nx][ny] == '#')
+                continue;
             if (seen[nx][ny]) {
-                if (C[nx][ny] == 'S' && cnt >= 3) isOK = true;
+                if (C[nx][ny] == 'S' && cnt >= 3)
+                    isOK = true;
                 continue;
             }
 
-            f(nx, ny, cnt+1);
+            f(nx, ny, cnt + 1);
         }
     }
 

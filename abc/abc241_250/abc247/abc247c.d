@@ -9,7 +9,7 @@ void main() {
             return [1];
         }
         else {
-            auto list = f(num-1);
+            auto list = f(num - 1);
             return list ~ [num] ~ list;
         }
     }

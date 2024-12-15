@@ -10,8 +10,10 @@ void main() {
         string u;
         readf("%f %s\n", x, u);
 
-        if (u == "JPY") res += x;
-        else res += x * rate;
+        if (u == "JPY")
+            res += x;
+        else
+            res += x * rate;
     }
 
     writefln("%.10f", res);

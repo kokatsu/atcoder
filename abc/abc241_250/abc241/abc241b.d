@@ -8,7 +8,8 @@ void main() {
     auto B = readln.chomp.split.to!(int[]);
 
     int[int] list;
-    foreach (a; A) ++list[a];
+    foreach (a; A)
+        ++list[a];
 
     bool isOK = true;
     foreach (b; B) {

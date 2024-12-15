@@ -10,8 +10,10 @@ void main() {
     A.popFront;
 
     foreach (a; A) {
-        if (mx <= a) mx = a;
-        else res += mx - a;
+        if (mx <= a)
+            mx = a;
+        else
+            res += mx - a;
     }
 
     res.writeln;

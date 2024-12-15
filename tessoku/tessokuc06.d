@@ -5,7 +5,7 @@ void main() {
     readf("%d\n", N);
 
     N.writeln;
-    foreach (i; 1 .. N+1) {
-        writefln("%d %d", i, i%N+1);
+    foreach (i; 1 .. N + 1) {
+        writefln("%d %d", i, i % N + 1);
     }
 }

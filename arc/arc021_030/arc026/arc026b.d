@@ -8,15 +8,18 @@ void main() {
     while (d * d <= N) {
         if (N % d == 0) {
             S += d;
-            if (d * d != N) S += N / d;
+            if (d * d != N)
+                S += N / d;
         }
 
         ++d;
     }
 
     string res = "Perfect";
-    if (S < N) res = "Deficient";
-    if (S > N) res = "Abundant";
+    if (S < N)
+        res = "Deficient";
+    if (S > N)
+        res = "Abundant";
 
     res.writeln;
 }

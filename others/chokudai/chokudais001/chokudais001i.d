@@ -12,7 +12,8 @@ void main() {
     long res, num;
     foreach (x; a) {
         num += x;
-        if (num - N in dict) res += dict[num-N];
+        if (num - N in dict)
+            res += dict[num - N];
         ++dict[num];
     }
 

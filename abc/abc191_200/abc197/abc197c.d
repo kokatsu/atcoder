@@ -8,7 +8,7 @@ void main() {
 
     --N;
     long res = long.max;
-    foreach (i; 0 .. 1<<N) {
+    foreach (i; 0 .. 1 << N) {
         int or, xor;
         foreach (j, a; A) {
             or |= a;

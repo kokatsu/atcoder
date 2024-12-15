@@ -22,9 +22,9 @@ void main() {
     auto MP = new long[](len);
     foreach (i; 0 .. len) {
         if (i >= D) {
-            MP[i] += MP[i-D];
+            MP[i] += MP[i - D];
 
-            auto s = C[i], t = C[i-D];
+            auto s = C[i], t = C[i - D];
             MP[i] += abs(s.x - t.x) + abs(s.y - t.y);
         }
     }

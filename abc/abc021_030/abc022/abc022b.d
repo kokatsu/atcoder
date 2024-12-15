@@ -10,7 +10,8 @@ void main() {
         int A;
         readf("%d\n", A);
 
-        if (A in exists) ++res;
+        if (A in exists)
+            ++res;
 
         exists[A] = true;
     }

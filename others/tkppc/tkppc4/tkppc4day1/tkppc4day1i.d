@@ -16,12 +16,13 @@ void main() {
     foreach_reverse (i, a; A) {
         L[i] = C.lowerBound(a).length;
         R[i] = (R[i] + C.upperBound(a).length) % MOD;
-        if (i > 0) R[i-1] += R[i];
+        if (i > 0)
+            R[i - 1] += R[i];
     }
 
     long res;
-    foreach (i; 0 .. N-1) {
-        res = (res + L[i] * R[i+1]) % MOD;
+    foreach (i; 0 .. N - 1) {
+        res = (res + L[i] * R[i + 1]) % MOD;
     }
 
     res.writeln;

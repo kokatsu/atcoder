@@ -20,6 +20,6 @@ void main() {
 
     res[] += 1;
 
-    writefln("%(%s %)", res[0..N]);
-    writefln("%(%s %)", res[N..$]);
+    writefln("%(%s %)", res[0 .. N]);
+    writefln("%(%s %)", res[N .. $]);
 }

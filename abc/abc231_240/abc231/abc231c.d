@@ -12,7 +12,7 @@ void main() {
         int x;
         readf("%d\n", x);
 
-        auto res = B.upperBound(x-1).length;
+        auto res = B.upperBound(x - 1).length;
         res.writeln;
     }
 }

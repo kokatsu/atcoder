@@ -5,7 +5,7 @@ void main() {
 
     long[] cnts = new long[](10);
     foreach (x; X) {
-        ++cnts[x-'0'];
+        ++cnts[x - '0'];
     }
 
     long t;
@@ -18,7 +18,7 @@ void main() {
 
         res ~= ((num % 10) + '0').to!dchar;
         t = num / 10;
-        --cnts[x-'0'];
+        --cnts[x - '0'];
     }
 
     while (t > 0) {

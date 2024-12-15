@@ -9,7 +9,8 @@ void main() {
         int L, R, T;
         readf("%d %d %d\n", L, R, T);
 
-        foreach (i; L-1 .. R) a[i] = T;
+        foreach (i; L - 1 .. R)
+            a[i] = T;
     }
 
     writefln("%(%s\n%)", a);

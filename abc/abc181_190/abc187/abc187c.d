@@ -10,7 +10,7 @@ void main() {
         auto S = readln.chomp;
 
         bool isFront = (S.front == '!');
-        string T = (isFront ? S[1..$] : S);
+        string T = (isFront ? S[1 .. $] : S);
         (isFront ? list1[T] : list0[T]) = true;
 
         if ((T in list0) && (T in list1)) {

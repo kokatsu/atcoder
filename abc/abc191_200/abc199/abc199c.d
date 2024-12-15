@@ -10,7 +10,7 @@ void main() {
     readf("%d\n", Q);
 
     int swpCnt;
-    dchar[][] Sarr = [S[0..N], S[N..2*N]];
+    dchar[][] Sarr = [S[0 .. N], S[N .. 2 * N]];
 
     foreach (i; 0 .. Q) {
         int T, A, B;
@@ -35,6 +35,6 @@ void main() {
         }
     }
 
-    dchar[] res = Sarr[swpCnt%2] ~ Sarr[(swpCnt+1)%2];
+    dchar[] res = Sarr[swpCnt % 2] ~ Sarr[(swpCnt + 1) % 2];
     res.writeln;
 }

@@ -6,6 +6,6 @@ void main() {
 
     auto A = readln.chomp.split.to!(int[]);
 
-    int res = max(-1, N-A.sum);
+    int res = max(-1, N - A.sum);
     res.writeln;
 }

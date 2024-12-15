@@ -38,7 +38,7 @@ void main() {
     }
 
     long res;
-    foreach (i; 0 .. N-1) {
+    foreach (i; 0 .. N - 1) {
         res = max(res, min(L[i], R[i]));
     }
 

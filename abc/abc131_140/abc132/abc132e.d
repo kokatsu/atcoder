@@ -13,7 +13,7 @@ void main() {
         int u, v;
         readf("%d %d\n", u, v);
 
-        edges[u-1] ~= v - 1;
+        edges[u - 1] ~= v - 1;
     }
 
     int S, T;
@@ -22,7 +22,8 @@ void main() {
     --S, --T;
 
     auto cnts = new int[][](N, 3);
-    foreach (i; 0 .. N) cnts[i][] = int.max;
+    foreach (i; 0 .. N)
+        cnts[i][] = int.max;
     cnts[S][0] = 0;
 
     Hopscotch[] que;
@@ -31,15 +32,18 @@ void main() {
         auto f = que.front;
         que.popFront;
 
-        if (f.to == T && f.op == 0) break;
+        if (f.to == T && f.op == 0)
+            break;
 
         foreach (e; edges[f.to]) {
             int op = (f.op + 1) % 3;
 
             int cnt = f.cnt;
-            if (op == 0) ++cnt;
+            if (op == 0)
+                ++cnt;
 
-            if (cnts[e][op] <= cnt) continue;
+            if (cnts[e][op] <= cnt)
+                continue;
 
             que ~= Hopscotch(e, op, cnt);
             cnts[e][op] = cnt;

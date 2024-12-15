@@ -10,7 +10,8 @@ void main() {
         readf("%s\n", C);
 
         foreach (i, c; C) {
-            if (c == '#') ++res[i];
+            if (c == '#')
+                ++res[i];
         }
     }
 

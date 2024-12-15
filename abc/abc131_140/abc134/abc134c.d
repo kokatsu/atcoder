@@ -5,7 +5,8 @@ void main() {
     readf("%d\n", N);
 
     auto A = new int[](N);
-    foreach (i; 0 .. N) readf("%d\n", A[i]);
+    foreach (i; 0 .. N)
+        readf("%d\n", A[i]);
 
     auto B = A.dup;
 

@@ -22,7 +22,8 @@ void main() {
 
     long[] stack;
     foreach (i, c; cnts) {
-        if (c == 0) stack ~= i;
+        if (c == 0)
+            stack ~= i;
     }
 
     long res = N;

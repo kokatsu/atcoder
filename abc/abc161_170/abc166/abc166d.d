@@ -14,7 +14,7 @@ void main() {
     foreach (i; 0 .. L) {
         foreach (j; 0 .. L) {
             if (list[i] - list[j] == X) {
-                writeln(i-M, " ", j-M);
+                writeln(i - M, " ", j - M);
                 return;
             }
         }

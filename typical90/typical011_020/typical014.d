@@ -12,7 +12,7 @@ void main() {
 
     long res;
     foreach (a, b; zip(A, B)) {
-        res += abs(a-b);
+        res += abs(a - b);
     }
 
     res.writeln;

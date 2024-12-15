@@ -6,9 +6,10 @@ struct String {
 
     this(string x) {
         this.origin = x;
-        int l = x.countUntil!"a != '0'".to!int;
+        int l = x.countUntil!"a != '0'"
+            .to!int;
         if (l >= 0) {
-            this.value = x[l..$];
+            this.value = x[l .. $];
             this.lead = l;
         }
         else {

@@ -5,7 +5,8 @@ void main() {
     readf("%d\n", D);
 
     string res = "Christmas";
-    foreach (i; D .. 25) res ~= " Eve";
+    foreach (i; D .. 25)
+        res ~= " Eve";
 
     res.writeln;
 }

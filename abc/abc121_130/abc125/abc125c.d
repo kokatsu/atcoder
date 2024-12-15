@@ -8,10 +8,10 @@ void main() {
 
     auto L = A.cumulativeFold!gcd.array;
 
-    long res = L[N-2], R = A.back;
-    foreach_reverse (i; 0 .. N-2) {
+    long res = L[N - 2], R = A.back;
+    foreach_reverse (i; 0 .. N - 2) {
         res = max(res, gcd(L[i], R));
-        R = gcd(R, A[i+1]);
+        R = gcd(R, A[i + 1]);
     }
     res = max(res, R);
 

@@ -7,7 +7,8 @@ void main() {
     readf("%d\n", N);
 
     long res = N % MOD;
-    if (res < 0) res += MOD;
+    if (res < 0)
+        res += MOD;
 
     res.writeln;
 }

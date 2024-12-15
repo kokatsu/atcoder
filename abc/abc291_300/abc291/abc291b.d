@@ -9,7 +9,7 @@ void main() {
     X.sort;
 
     real res = 0.0;
-    foreach (i; N .. N*4) {
+    foreach (i; N .. N * 4) {
         res += X[i].to!real;
     }
 

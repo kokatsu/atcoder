@@ -7,9 +7,10 @@ void main() {
 
     int cnt;
     foreach (i; 1 .. N) {
-        if (S[i] == S[i-1]) ++cnt;
+        if (S[i] == S[i - 1])
+            ++cnt;
     }
 
-    int res = min(N-1, cnt+K*2);
+    int res = min(N - 1, cnt + K * 2);
     res.writeln;
 }

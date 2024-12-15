@@ -9,11 +9,11 @@ void main() {
     readf("%f %f\n", A, B);
 
     if (A <= B * C) {
-        writefln("%.15f", A/C);
+        writefln("%.15f", A / C);
         return;
     }
     if (B <= A * C) {
-        writefln("%.15f", B/C);
+        writefln("%.15f", B / C);
         return;
     }
 
@@ -21,9 +21,9 @@ void main() {
     while (ng - ok > EPS) {
         real mid = (ok + ng) / 2.0;
 
-        real x = A / cos(mid), y = B / cos(PI_6-mid);
+        real x = A / cos(mid), y = B / cos(PI_6 - mid);
         (x <= y ? ok : ng) = mid;
     }
 
-    writefln("%.15f", A/cos(ok));
+    writefln("%.15f", A / cos(ok));
 }

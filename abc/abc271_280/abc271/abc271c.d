@@ -19,12 +19,16 @@ void main() {
                 cnt -= 2;
             }
             else if (cnt == 1) {
-                if (N - idx >= 1) --cnt, b.popBack, --N;
-                else break;
+                if (N - idx >= 1)
+                    --cnt, b.popBack, --N;
+                else
+                    break;
             }
             else {
-                if (N - idx >= 2) cnt -= 2, b.popBack, b.popBack, N -= 2;
-                else break;
+                if (N - idx >= 2)
+                    cnt -= 2, b.popBack, b.popBack, N -= 2;
+                else
+                    break;
             }
         }
         else {
@@ -35,7 +39,7 @@ void main() {
     }
 
     while (cnt >= 2) {
-        ++res, cnt -=2;
+        ++res, cnt -= 2;
     }
 
     res.writeln;

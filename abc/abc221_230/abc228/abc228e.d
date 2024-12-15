@@ -11,7 +11,7 @@ void main() {
     ulong a = powmod(K, N, phi);
     ulong res;
     if (M % MOD > 0) {
-        res = powmod(M, a+phi, MOD);
+        res = powmod(M, a + phi, MOD);
     }
 
     res.writeln;

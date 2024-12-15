@@ -5,7 +5,8 @@ void main() {
     readf("%d %d %d\n", N, M, L);
 
     void f(ref int x, int y) {
-        if (x > y) x = y;
+        if (x > y)
+            x = y;
     }
 
     int lim = int.max / 2;
@@ -27,7 +28,7 @@ void main() {
     foreach (i; 0 .. N) {
         foreach (j; 0 .. N) {
             foreach (k; 0 .. N) {
-                f(dists[j][k], dists[j][i]+dists[i][k]);
+                f(dists[j][k], dists[j][i] + dists[i][k]);
             }
         }
     }
@@ -42,15 +43,17 @@ void main() {
     foreach (i; 0 .. N) {
         foreach (j; 0 .. N) {
             foreach (k; 0 .. N) {
-                f(times[j][k], times[j][i]+times[i][k]);
+                f(times[j][k], times[j][i] + times[i][k]);
             }
         }
     }
 
     foreach (i; 0 .. N) {
         foreach (j; 0 .. N) {
-            if (times[i][j] == lim) times[i][j] = -1;
-            else --times[i][j];
+            if (times[i][j] == lim)
+                times[i][j] = -1;
+            else
+                --times[i][j];
         }
     }
 
@@ -61,7 +64,7 @@ void main() {
         int s, t;
         readf("%d %d\n", s, t);
 
-        int res = times[s-1][t-1];
+        int res = times[s - 1][t - 1];
         res.writeln;
     }
 }

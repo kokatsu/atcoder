@@ -10,7 +10,8 @@ void main() {
     long res;
     foreach (i, a; A) {
         long num = a - i - 1;
-        if (num in list) res += list[num];
+        if (num in list)
+            res += list[num];
 
         num -= a * 2;
         ++list[num];

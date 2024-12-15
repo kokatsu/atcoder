@@ -6,6 +6,6 @@ void main() {
 
     long R = N % K;
 
-    long res = min(R, K-R);
+    long res = min(R, K - R);
     res.writeln;
 }

@@ -14,13 +14,15 @@ void main() {
 
         ++d;
     }
-    if (N > 1) ++factors[N];
+    if (N > 1)
+        ++factors[N];
 
     long res;
     foreach (v; factors.byValue) {
         long num = v;
-        foreach (i; 1 .. v+1) {
-            if (num < i) break;
+        foreach (i; 1 .. v + 1) {
+            if (num < i)
+                break;
 
             num -= i;
             ++res;

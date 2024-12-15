@@ -14,8 +14,10 @@ void main() {
 
         res += r - l.to!long;
 
-        if (l == r) ++r;
-        else num -= a;
+        if (l == r)
+            ++r;
+        else
+            num -= a;
     }
 
     res.writeln;

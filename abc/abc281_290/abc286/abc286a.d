@@ -6,8 +6,8 @@ void main() {
 
     auto A = readln.chomp.split.to!(int[]);
 
-    foreach (i; 0 .. Q-P+1) {
-        A.swapAt(P+i-1, R+i-1);
+    foreach (i; 0 .. Q - P + 1) {
+        A.swapAt(P + i - 1, R + i - 1);
     }
 
     writefln("%(%s %)", A);

@@ -20,7 +20,7 @@ void main() {
     }
 
     auto costs1 = new long[](N), costs2 = new long[](N);
-    costs1[1..N] = costs2[1..N] = T + 1;
+    costs1[1 .. N] = costs2[1 .. N] = T + 1;
 
     void f(long x, ref long[] costs, Road[][] roads) {
         auto heap = new BinaryHeap!(Array!Road, "a.cost > b.cost")();
@@ -32,7 +32,7 @@ void main() {
             foreach (r; roads[fr.to]) {
                 if (costs[r.to] > costs[fr.to] + r.cost) {
                     costs[r.to] = costs[fr.to] + r.cost;
-                    heap.insert(Road(r.to, costs[fr.to]+r.cost));
+                    heap.insert(Road(r.to, costs[fr.to] + r.cost));
                 }
             }
         }
@@ -42,9 +42,10 @@ void main() {
 
     long res;
     foreach (i; 0 .. N) {
-        if (T <= costs1[i] + costs2[i]) continue;
+        if (T <= costs1[i] + costs2[i])
+            continue;
 
-        res = max(res, A[i]*(T-costs1[i]-costs2[i]));
+        res = max(res, A[i] * (T - costs1[i] - costs2[i]));
     }
 
     res.writeln;

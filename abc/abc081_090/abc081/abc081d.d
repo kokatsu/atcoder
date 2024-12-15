@@ -15,14 +15,16 @@ void main() {
     if (mnval < 0 && mxval > 0) {
         if (mxval >= -mnval) {
             foreach (i, ref x; a) {
-                if (i != mxpos) from ~= mxpos + 1, to ~= i.to!long + 1;
+                if (i != mxpos)
+                    from ~= mxpos + 1, to ~= i.to!long + 1;
             }
 
             from ~= mxpos + 1, to ~= mxpos + 1;
         }
         else {
             foreach (i, ref x; a) {
-                if (i != mnpos) from ~= mnpos + 1, to ~= i.to!long + 1;
+                if (i != mnpos)
+                    from ~= mnpos + 1, to ~= i.to!long + 1;
             }
 
             from ~= mnpos + 1, to ~= mnpos + 1;
@@ -44,5 +46,6 @@ void main() {
     ulong len = from.length;
 
     len.writeln;
-    foreach (i; 0 .. len) writeln(from[i], " ", to[i]);
+    foreach (i; 0 .. len)
+        writeln(from[i], " ", to[i]);
 }

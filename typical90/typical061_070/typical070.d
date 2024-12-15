@@ -13,7 +13,7 @@ void main() {
 
     long res;
     foreach (i; 0 .. N) {
-        res += abs(X[i]-X[N/2]) + abs(Y[i]-Y[N/2]);
+        res += abs(X[i] - X[N / 2]) + abs(Y[i] - Y[N / 2]);
     }
 
     res.writeln;

@@ -7,10 +7,12 @@ long powMod(long x, long y) {
     while (y > 0) {
         if (y & 1) {
             res *= x;
-            if (res > MOD) res %= MOD;
+            if (res > MOD)
+                res %= MOD;
         }
         x *= x;
-        if (x > MOD) x %= MOD;
+        if (x > MOD)
+            x %= MOD;
         y >>= 1;
     }
     return res;
@@ -45,7 +47,8 @@ void main() {
 
         foreach (i; 0 .. 4) {
             long nx = x + dx[i], ny = y + dy[i];
-            if (nx < 0 || nx >= H || ny < 0 || ny >= W || S[nx][ny] == '.' || seen[nx][ny]) continue;
+            if (nx < 0 || nx >= H || ny < 0 || ny >= W || S[nx][ny] == '.' || seen[nx][ny])
+                continue;
 
             long q = nx * W + ny;
             uf.unite(p, q);
@@ -55,7 +58,8 @@ void main() {
 
     foreach (i; 0 .. H) {
         foreach (j; 0 .. W) {
-            if (seen[i][j] || S[i][j] == '.') continue;
+            if (seen[i][j] || S[i][j] == '.')
+                continue;
             f(i, j);
         }
     }
@@ -63,7 +67,8 @@ void main() {
     long cnt;
     foreach (i; 0 .. N) {
         long x = i / W, y = i % W;
-        if (S[x][y] == '#' && uf.root(i) == i) ++cnt;
+        if (S[x][y] == '#' && uf.root(i) == i)
+            ++cnt;
     }
 
     long num;
@@ -73,7 +78,8 @@ void main() {
         long x = r / W, y = r % W;
         foreach (i; 0 .. 4) {
             long nx = x + dx[i], ny = y + dy[i];
-            if (nx < 0 || nx >= H || ny < 0 || ny >= W || S[nx][ny] == '.') continue;
+            if (nx < 0 || nx >= H || ny < 0 || ny >= W || S[nx][ny] == '.')
+                continue;
 
             long p = nx * W + ny;
             dict[uf.root(p)] = true;
@@ -82,12 +88,11 @@ void main() {
         num = (num + cnt - dict.length.to!long + 1) % MOD;
     }
 
-    long res = num * powMod(R.length.to!long, MOD-2) % MOD;
+    long res = num * powMod(R.length.to!long, MOD - 2) % MOD;
     res.writeln;
 }
 
-struct UnionFind(T)
-if (isIntegral!T) {
+struct UnionFind(T) if (isIntegral!T) {
 
     /// Constructor
     this(T n) nothrow @safe {

@@ -17,7 +17,7 @@ void main() {
             string t = re ~ x;
             if (S.matchFirst(t)) {
                 ++res;
-                f(t, len+1);
+                f(t, len + 1);
             }
         }
     }

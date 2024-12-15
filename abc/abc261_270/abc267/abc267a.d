@@ -7,8 +7,9 @@ void main() {
     string[] list = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
 
     int res = 5;
-    foreach (i, l ; list) {
-        if (l == S) res -= i;
+    foreach (i, l; list) {
+        if (l == S)
+            res -= i;
     }
 
     res.writeln;

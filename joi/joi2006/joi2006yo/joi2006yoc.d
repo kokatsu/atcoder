@@ -76,8 +76,7 @@ struct Dice6 {
         }
     }
 
-    @property int pip()
-    {
+    @property int pip() {
         return dice6["top"];
     }
 }

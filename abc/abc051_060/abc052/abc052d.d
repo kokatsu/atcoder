@@ -8,8 +8,8 @@ void main() {
 
     long res;
     foreach (i; 1 .. N) {
-        long D = X[i] - X[i-1];
-        res += min(D*A, B);
+        long D = X[i] - X[i - 1];
+        res += min(D * A, B);
     }
 
     res.writeln;

@@ -12,15 +12,15 @@ void main() {
     }
 
     int res;
-    auto dp = new int[][](W+1, K+1);
+    auto dp = new int[][](W + 1, K + 1);
     foreach (_; 0 .. N) {
         int A, B;
         readf("%d %d\n", A, B);
 
-        foreach_reverse (i; 0 .. W-A+1) {
+        foreach_reverse (i; 0 .. W - A + 1) {
             foreach_reverse (j; 0 .. K) {
-                f(dp[i+A][j+1], dp[i][j]+B);
-                f(res, dp[i+A][j+1]);
+                f(dp[i + A][j + 1], dp[i][j] + B);
+                f(res, dp[i + A][j + 1]);
             }
         }
     }

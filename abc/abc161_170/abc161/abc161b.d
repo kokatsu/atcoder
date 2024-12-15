@@ -10,7 +10,8 @@ void main() {
 
     int cnt;
     foreach (a; A) {
-        if (a * M * 4 >= S) ++cnt;
+        if (a * M * 4 >= S)
+            ++cnt;
     }
 
     writeln(cnt >= M ? "Yes" : "No");

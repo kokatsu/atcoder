@@ -15,8 +15,10 @@ void main() {
     auto D = readln.chomp.split.to!(long[]);
 
     S[] list;
-    foreach (a, b; zip(A, B)) list ~= S(a, b, 0);
-    foreach (c, d; zip(C, D)) list ~= S(c, d, 1);
+    foreach (a, b; zip(A, B))
+        list ~= S(a, b, 0);
+    foreach (c, d; zip(C, D))
+        list ~= S(c, d, 1);
 
     list.sort!"a.wid == b.wid ? a.box > b.box : a.wid > b.wid";
 
@@ -27,7 +29,7 @@ void main() {
             rbt.insert(l.len);
         }
         else {
-            auto ub = rbt.upperBound(l.len-1);
+            auto ub = rbt.upperBound(l.len - 1);
             if (ub.empty) {
                 isOK = false;
             }

@@ -7,14 +7,15 @@ void main() {
     auto used = new bool[](8);
     dchar[] res;
     foreach_reverse (s; S) {
-        if (!used[s-'A']) {
+        if (!used[s - 'A']) {
             res ~= s;
-            used[s-'A'] = true;
+            used[s - 'A'] = true;
         }
     }
 
     foreach (i; 0 .. 8) {
-        if (!used[i]) res ~= 'A' + i;
+        if (!used[i])
+            res ~= 'A' + i;
     }
 
     res.reverse;

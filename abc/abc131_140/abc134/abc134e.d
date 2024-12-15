@@ -10,7 +10,8 @@ void main() {
         readf("%d\n", A);
 
         auto l = rbt.lowerBound(A);
-        if (!l.empty) rbt.removeKey(l.back);
+        if (!l.empty)
+            rbt.removeKey(l.back);
 
         rbt.insert(A);
     }

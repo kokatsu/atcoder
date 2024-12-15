@@ -5,10 +5,12 @@ void main() {
     readf("%d\n", N);
 
     auto S = new dchar[][](N);
-    foreach (i; 0 .. N) readf("%s\n", S[i]);
+    foreach (i; 0 .. N)
+        readf("%s\n", S[i]);
 
     auto T = new dchar[][](N);
-    foreach (i; 0 .. N) readf("%s\n", T[i]);
+    foreach (i; 0 .. N)
+        readf("%s\n", T[i]);
 
     int res = int.max;
     foreach (i; 0 .. 4) {
@@ -33,7 +35,7 @@ T[][] rotate(T)(T[][] mat) {
     auto ret = new T[][](c, r);
     foreach (i; 0 .. r) {
         foreach (j; 0 .. c) {
-            ret[j][r-i-1] = mat[i][j];
+            ret[j][r - i - 1] = mat[i][j];
         }
     }
     return ret;

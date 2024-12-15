@@ -8,7 +8,8 @@ void main() {
         long res, num, cnt;
         bool isWalk = true;
         while (num < X) {
-            if (isWalk) res += y;
+            if (isWalk)
+                res += y;
             ++num, ++cnt;
 
             if (isWalk && cnt >= x) {
@@ -26,7 +27,10 @@ void main() {
 
     long S = f(A, B, C) - f(D, E, F);
 
-    if (S > 0) writeln("Takahashi");
-    else if (S < 0) writeln("Aoki");
-    else writeln("Draw");
+    if (S > 0)
+        writeln("Takahashi");
+    else if (S < 0)
+        writeln("Aoki");
+    else
+        writeln("Draw");
 }

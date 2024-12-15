@@ -9,10 +9,12 @@ void main() {
         int A, P, X;
         readf("%d %d %d\n", A, P, X);
 
-        if (X > A) res = min(res, P);
+        if (X > A)
+            res = min(res, P);
     }
 
-    if (res == int.max) res = -1;
+    if (res == int.max)
+        res = -1;
 
     res.writeln;
 }

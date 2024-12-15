@@ -12,7 +12,8 @@ void main() {
             (S[r++] == 'o' ? cnto : cntx) += 1;
         }
 
-        if (cnto * cntx > 0) res += N - r + 1;
+        if (cnto * cntx > 0)
+            res += N - r + 1;
 
         (S[l] == 'o' ? cnto : cntx) -= 1;
     }

@@ -9,7 +9,7 @@ void main() {
         int u, v;
         readf("%d %d\n", u, v);
 
-        edges[u-1] ~= v - 1;
+        edges[u - 1] ~= v - 1;
     }
 
     int res;
@@ -18,7 +18,8 @@ void main() {
         seen[now] = true;
 
         foreach (e; edges[now]) {
-            if (seen[e]) continue;
+            if (seen[e])
+                continue;
 
             ++res;
             dfs(e, seen);

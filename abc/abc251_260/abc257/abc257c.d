@@ -21,7 +21,7 @@ void main() {
     long res;
     foreach (a; A) {
         long num;
-        num += C.upperBound(a-1).length;
+        num += C.upperBound(a - 1).length;
         num += D.lowerBound(a).length;
 
         res = max(res, num);
@@ -30,7 +30,7 @@ void main() {
     foreach (b; B) {
         long num;
         num += C.upperBound(b).length;
-        num += D.lowerBound(b+1).length;
+        num += D.lowerBound(b + 1).length;
 
         res = max(res, num);
     }

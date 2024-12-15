@@ -15,7 +15,8 @@ void main() {
             num += a * b;
         }
 
-        if (num > 0) ++res;
+        if (num > 0)
+            ++res;
     }
 
     res.writeln;

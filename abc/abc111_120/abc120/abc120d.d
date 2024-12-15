@@ -23,7 +23,8 @@ void main() {
         }
     }
 
-    foreach (l; list) l.writeln;
+    foreach (l; list)
+        l.writeln;
 }
 
 /// Union-Find

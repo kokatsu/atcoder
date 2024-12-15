@@ -9,7 +9,7 @@ void main() {
     int M = A.countUntil(1).to!int;
 
     int L = (M + K - 2) / (K - 1);
-    M = max(M, (K-1)*L);
+    M = max(M, (K - 1) * L);
     int R = (N - M + K - 3) / (K - 1);
 
     int res = L + R;

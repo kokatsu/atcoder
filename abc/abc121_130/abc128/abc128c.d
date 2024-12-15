@@ -14,14 +14,15 @@ void main() {
     auto p = readln.chomp.split.to!(int[]);
 
     int res;
-    foreach (i; 0 .. 1<<N) {
+    foreach (i; 0 .. 1 << N) {
         bool isOK = true;
 
         foreach (j; 0 .. M) {
             int cnt;
 
             foreach (x; s[j]) {
-                if ((i >> x) & 1) ++cnt;
+                if ((i >> x) & 1)
+                    ++cnt;
             }
 
             cnt %= 2;
@@ -29,7 +30,8 @@ void main() {
             isOK &= (cnt == p[j]);
         }
 
-        if (isOK) ++res;
+        if (isOK)
+            ++res;
     }
 
     res.writeln;

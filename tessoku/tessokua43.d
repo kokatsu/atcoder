@@ -10,8 +10,10 @@ void main() {
         dchar B;
         readf("%d %c\n", A, B);
 
-        if (B == 'E') res = max(res, L-A);
-        else res = max(res, A);
+        if (B == 'E')
+            res = max(res, L - A);
+        else
+            res = max(res, A);
     }
 
     res.writeln;

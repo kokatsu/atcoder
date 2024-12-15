@@ -15,9 +15,12 @@ void main() {
     int[] counts = dict.values();
     counts.sort!"a > b";
 
-    int C = counts[K-1];
+    int C = counts[K - 1];
 
-    string[] words = dict.byPair.filter!(x => x.value == C).map!(x => x.key).array;
+    string[] words = dict.byPair
+        .filter!(x => x.value == C)
+        .map!(x => x.key)
+        .array;
 
     string res = words.length == 1 ? words[0] : "AMBIGUOUS";
     res.writeln;

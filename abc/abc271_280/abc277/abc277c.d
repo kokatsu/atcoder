@@ -10,10 +10,12 @@ void main() {
         int A, B;
         readf("%d %d\n", A, B);
 
-        if (!(A in ladders)) ladders[A] = [];
+        if (!(A in ladders))
+            ladders[A] = [];
         ladders[A] ~= B;
 
-        if (!(B in ladders)) ladders[B] = [];
+        if (!(B in ladders))
+            ladders[B] = [];
         ladders[B] ~= A;
     }
 
@@ -26,7 +28,8 @@ void main() {
 
         if (pos in ladders) {
             foreach (l; ladders[pos]) {
-                if (l in seen) continue;
+                if (l in seen)
+                    continue;
                 f(l);
             }
         }

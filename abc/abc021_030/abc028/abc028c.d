@@ -5,8 +5,8 @@ void main() {
 
     int[] list;
     foreach (i; 0 .. 3) {
-        foreach (j; i+1 .. 4) {
-            foreach (k; j+1 .. 5) {
+        foreach (j; i + 1 .. 4) {
+            foreach (k; j + 1 .. 5) {
                 list ~= A[i] + A[j] + A[k];
             }
         }

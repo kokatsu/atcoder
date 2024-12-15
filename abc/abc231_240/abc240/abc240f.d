@@ -17,9 +17,10 @@ void main() {
             long x, y;
             readf("%d %d\n", x, y);
 
-            if (cnt <= 0) continue;
+            if (cnt <= 0)
+                continue;
 
-            res = max(res, num+x);
+            res = max(res, num + x);
             long c = min(cnt, y);
 
             if (x < 0 && rem > 0 && rem + x * c < 0) {

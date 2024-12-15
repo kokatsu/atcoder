@@ -6,18 +6,20 @@ void main() {
 
     auto T = readln.chomp.to!(dchar[]);
 
-    auto L = T[0..N].dup, R = T[N..$].dup;
+    auto L = T[0 .. N].dup, R = T[N .. $].dup;
     R.reverse;
 
     auto X = L ~ R, Y = R ~ L;
     int[] zx = zAlgorithm(X), zy = zAlgorithm(Y);
     zx ~= 0, zy ~= 0;
 
-    foreach (i; 0 .. N+1) {
-        if (zx[N*2-i] < i) continue;
-        if (zy[N+i] < N - i) continue;
+    foreach (i; 0 .. N + 1) {
+        if (zx[N * 2 - i] < i)
+            continue;
+        if (zy[N + i] < N - i)
+            continue;
 
-        writeln(T[0..i], T[N+i..$]);
+        writeln(T[0 .. i], T[N + i .. $]);
         i.writeln;
         return;
     }
@@ -26,19 +28,19 @@ void main() {
 }
 
 /// Z algorithm
-int[] zAlgorithm(T)(T x)
-if (isArray!T) {
+int[] zAlgorithm(T)(T x) if (isArray!T) {
     int len = x.length.to!int, j;
 
     auto z = new int[](len);
     foreach (i; 1 .. len) {
-        z[i] = (i - j < z[j] ? min(j+z[j]-i, z[i-j]) : 0);
+        z[i] = (i - j < z[j] ? min(j + z[j] - i, z[i - j]) : 0);
 
-        while (i + z[i] < len && x[z[i]] == x[i+z[i]]) {
+        while (i + z[i] < len && x[z[i]] == x[i + z[i]]) {
             ++z[i];
         }
 
-        if (j + z[j] < i + z[i]) j = i;
+        if (j + z[j] < i + z[i])
+            j = i;
     }
 
     z[0] = len;

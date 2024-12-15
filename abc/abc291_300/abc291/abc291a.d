@@ -6,7 +6,7 @@ void main() {
 
     foreach (i, s; S) {
         if (std.uni.isUpper(s)) {
-            writeln(i+1);
+            writeln(i + 1);
         }
     }
 }

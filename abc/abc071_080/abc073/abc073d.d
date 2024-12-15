@@ -8,7 +8,8 @@ void main() {
     r[] -= 1;
 
     auto dist = new long[][](N, N);
-    foreach (i; 0 .. N) dist[i][] = long.max / 2;
+    foreach (i; 0 .. N)
+        dist[i][] = long.max / 2;
 
     foreach (_; 0 .. M) {
         long A, B, C;
@@ -32,8 +33,8 @@ void main() {
     long res = long.max;
     foreach (x; r.permutations) {
         long tmp;
-        foreach (i; 0 .. R-1) {
-            tmp += dist[x[i]][x[i+1]];
+        foreach (i; 0 .. R - 1) {
+            tmp += dist[x[i]][x[i + 1]];
         }
         res = min(res, tmp);
     }

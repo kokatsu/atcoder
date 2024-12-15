@@ -9,7 +9,8 @@ void main() {
     while (d * d <= N) {
         if (N % d == 0) {
             res ~= d;
-            if (d * d != N) res ~= N / d;
+            if (d * d != N)
+                res ~= N / d;
         }
 
         ++d;
@@ -17,5 +18,6 @@ void main() {
 
     res.sort;
 
-    foreach (r; res) r.writeln;
+    foreach (r; res)
+        r.writeln;
 }

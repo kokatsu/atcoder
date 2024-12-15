@@ -17,9 +17,9 @@ void main() {
     }
 
     long res, num;
-    foreach (i; 1 .. l+1) {
-        if (list[i%l]) {
-            res = max(res, i-num);
+    foreach (i; 1 .. l + 1) {
+        if (list[i % l]) {
+            res = max(res, i - num);
             num = i;
         }
     }

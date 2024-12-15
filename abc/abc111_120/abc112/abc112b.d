@@ -9,7 +9,8 @@ void main() {
         int c, t;
         readf("%d %d\n", c, t);
 
-        if (t <= T) cost = min(cost, c);
+        if (t <= T)
+            cost = min(cost, c);
     }
 
     string res = (cost == int.max ? "TLE" : cost.to!string);

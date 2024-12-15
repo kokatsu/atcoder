@@ -8,10 +8,11 @@ void main() {
 
     long res;
     long l, r;
-    foreach (i; 0 .. N+1) {
+    foreach (i; 0 .. N + 1) {
         l += i, r += N - i;
 
-        if (i >= K - 1) res = (res + r - l + 1) % M;
+        if (i >= K - 1)
+            res = (res + r - l + 1) % M;
     }
 
     res.writeln;

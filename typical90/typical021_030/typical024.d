@@ -8,7 +8,8 @@ void main() {
     auto B = readln.chomp.split.to!(long[]);
 
     long D;
-    foreach (i; 0 .. N) D += abs(A[i] - B[i]);
+    foreach (i; 0 .. N)
+        D += abs(A[i] - B[i]);
 
     bool isOK = K >= D;
     isOK &= (K - D) % 2 == 0;

@@ -9,7 +9,8 @@ void main() {
     v.sort;
 
     real res = v[0];
-    foreach (i; 1 .. N) res = (res + v[i]) / 2.0;
+    foreach (i; 1 .. N)
+        res = (res + v[i]) / 2.0;
 
     writefln("%.10f", res);
 }

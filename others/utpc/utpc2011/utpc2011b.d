@@ -7,19 +7,23 @@ void main() {
     auto l = S.length;
 
     int res;
-    foreach (i; 0 .. l/2) {
+    foreach (i; 0 .. l / 2) {
         if (S[i] == '(') {
-            if (S[l-i-1] != ')') ++res;
+            if (S[l - i - 1] != ')')
+                ++res;
         }
         else if (S[i] == ')') {
-            if (S[l-i-1] != '(') ++res;
+            if (S[l - i - 1] != '(')
+                ++res;
         }
         else {
-            if (S[i] != S[l-i-1]) ++res;
+            if (S[i] != S[l - i - 1])
+                ++res;
         }
     }
 
-    if (l % 2 == 1 && (S[l/2] == '(' || S[l/2] == ')')) ++res;
+    if (l % 2 == 1 && (S[l / 2] == '(' || S[l / 2] == ')'))
+        ++res;
 
     res.writeln;
 }

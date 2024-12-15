@@ -8,7 +8,8 @@ void main() {
     auto T = readln.chomp.split.to!(string[]);
 
     bool[string] list;
-    foreach (t; T) list[t] = true;
+    foreach (t; T)
+        list[t] = true;
 
     foreach (s; S) {
         writeln(s in list ? "Yes" : "No");

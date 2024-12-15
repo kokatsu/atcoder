@@ -12,7 +12,7 @@ void main() {
             res += i * d * P;
 
             if (r > i * P) {
-                res += i * min(P, r-i*P);
+                res += i * min(P, r - i * P);
             }
         }
 

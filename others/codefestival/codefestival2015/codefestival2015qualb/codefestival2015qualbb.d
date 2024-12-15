@@ -7,7 +7,8 @@ void main() {
     auto A = readln.chomp.split.to!(int[]);
 
     int[int] dict;
-    foreach (a; A) ++dict[a];
+    foreach (a; A)
+        ++dict[a];
 
     int K = dict.byPair.maxElement!(p => p.value).key;
 

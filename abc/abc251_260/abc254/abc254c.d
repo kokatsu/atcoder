@@ -8,7 +8,7 @@ void main() {
 
     auto list = new long[][](K);
     foreach (i, x; a) {
-        list[i%K] ~= x;
+        list[i % K] ~= x;
     }
 
     foreach (i; 0 .. K) {
@@ -17,7 +17,7 @@ void main() {
 
     auto b = new long[](N);
     foreach (i; 0 .. N) {
-        b[i] = list[i%K][i/K];
+        b[i] = list[i % K][i / K];
     }
 
     writeln(b.isSorted ? "Yes" : "No");

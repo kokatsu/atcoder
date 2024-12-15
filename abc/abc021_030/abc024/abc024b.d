@@ -10,7 +10,7 @@ void main() {
         readf("%d\n", A);
 
         if (i > 0) {
-            res += T.min(A-pre);
+            res += T.min(A - pre);
         }
 
         pre = A;

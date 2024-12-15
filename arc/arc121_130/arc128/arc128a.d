@@ -19,20 +19,20 @@ void main() {
     auto u = new int[][](N, 2);
     u[0][1] = 1;
     foreach (i; 1 .. N) {
-        gold[i] = gold[i-1];
-        long a = silver[i-1].num * gold[i].den;
-        long b = A[i] * gold[i].num * silver[i-1].den;
+        gold[i] = gold[i - 1];
+        long a = silver[i - 1].num * gold[i].den;
+        long b = A[i] * gold[i].num * silver[i - 1].den;
         if (a > b) {
-            gold[i] = silver[i-1];
+            gold[i] = silver[i - 1];
             gold[i].den *= A[i];
             ++u[i][0];
         }
 
-        silver[i] = silver[i-1];
-        a = A[i] * gold[i].num * silver[i-1].den;
-        b = silver[i-1].num * gold[i].den;
+        silver[i] = silver[i - 1];
+        a = A[i] * gold[i].num * silver[i - 1].den;
+        b = silver[i - 1].num * gold[i].den;
         if (a > b) {
-            silver[i] = gold[i-1];
+            silver[i] = gold[i - 1];
             silver[i].num *= A[i];
             ++u[i][1];
         }

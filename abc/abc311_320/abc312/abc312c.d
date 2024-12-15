@@ -9,12 +9,12 @@ void main() {
 
     auto C = A.sort, D = B.sort;
 
-    long ok = B[M-1] + 1, ng;
+    long ok = B[M - 1] + 1, ng;
     while (ok - ng > 1) {
         long mid = (ok + ng) / 2;
 
-        auto x = C.lowerBound(mid+1).length;
-        auto y = D.upperBound(mid-1).length;
+        auto x = C.lowerBound(mid + 1).length;
+        auto y = D.upperBound(mid - 1).length;
 
         (x >= y ? ok : ng) = mid;
     }

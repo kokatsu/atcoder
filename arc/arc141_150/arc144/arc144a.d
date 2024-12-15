@@ -10,7 +10,8 @@ void main() {
     M.writeln;
 
     string x;
-    if (R > 0) x ~= to!dchar(R+'0');
+    if (R > 0)
+        x ~= to!dchar(R + '0');
     x ~= "4".replicate(D).to!string;
     x.writeln;
 }

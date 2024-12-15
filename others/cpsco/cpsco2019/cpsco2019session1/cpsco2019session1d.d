@@ -6,19 +6,11 @@ void main() {
     long N;
     readf("%d\n", N);
 
-    long[][] mat1 = [
-        [0, 1, 1],
-        [1, 0, 1],
-        [1, 1, 0]
-    ];
+    long[][] mat1 = [[0, 1, 1], [1, 0, 1], [1, 1, 0]];
 
     mat1 = matPowMod(mat1, 2);
 
-    long[][] mat2 = [
-        [0, 1, 1],
-        [1, 0, 1],
-        [0, 0, 0]
-    ];
+    long[][] mat2 = [[0, 1, 1], [1, 0, 1], [0, 0, 0]];
 
     long[][] mat = matMulMod(mat1, mat2);
 

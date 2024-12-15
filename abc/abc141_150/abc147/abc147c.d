@@ -20,18 +20,21 @@ void main() {
     }
 
     long res;
-    foreach (i; 0 .. 1<<N) {
+    foreach (i; 0 .. 1 << N) {
         bool isOK = true;
 
         foreach (j, s; x) {
-            if (!((i >> j) & 1)) continue;
+            if (!((i >> j) & 1))
+                continue;
 
             foreach (k, t; s) {
-                if (((i >> t) & 1) ^ y[j][k]) isOK = false;
+                if (((i >> t) & 1) ^ y[j][k])
+                    isOK = false;
             }
         }
 
-        if (isOK) res = max(res, i.popcnt);
+        if (isOK)
+            res = max(res, i.popcnt);
     }
 
     res.writeln;

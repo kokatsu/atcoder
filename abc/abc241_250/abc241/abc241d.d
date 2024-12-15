@@ -13,7 +13,7 @@ void main() {
             rbt.insert(query[1]);
         }
         else if (query[0] == 2) {
-            auto lb = rbt.lowerBound(query[1]+1);
+            auto lb = rbt.lowerBound(query[1] + 1);
             long num = -1, cnt;
             while (!lb.empty) {
                 ++cnt;
@@ -26,7 +26,7 @@ void main() {
             num.writeln;
         }
         else {
-            auto ub = rbt.upperBound(query[1]-1);
+            auto ub = rbt.upperBound(query[1] - 1);
             long num = -1, cnt;
             while (!ub.empty) {
                 ++cnt;

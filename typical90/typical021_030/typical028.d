@@ -18,24 +18,24 @@ void main() {
 
     foreach (i; 0 .. limit) {
         foreach (j; 1 .. limit) {
-            plane[i][j] += plane[i][j-1];
+            plane[i][j] += plane[i][j - 1];
         }
     }
 
     foreach (i; 1 .. limit) {
         foreach (j; 0 .. limit) {
-            plane[i][j] += plane[i-1][j];
+            plane[i][j] += plane[i - 1][j];
         }
     }
 
-    auto cnts = new int[](N+1);
+    auto cnts = new int[](N + 1);
     foreach (i; 0 .. limit) {
         foreach (j; 0 .. limit) {
             ++cnts[plane[i][j]];
         }
     }
 
-    foreach (i; 1 .. N+1) {
+    foreach (i; 1 .. N + 1) {
         cnts[i].writeln;
     }
 }

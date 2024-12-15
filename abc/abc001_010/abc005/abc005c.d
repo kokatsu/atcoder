@@ -15,9 +15,11 @@ void main() {
     auto B = readln.chomp.split.to!(int[]);
 
     while (!B.empty) {
-        if (A.empty) break;
+        if (A.empty)
+            break;
 
-        if (A[0] <= B[0] && B[0] <= A[0] + T) B.popFront;
+        if (A[0] <= B[0] && B[0] <= A[0] + T)
+            B.popFront;
 
         A.popFront;
     }

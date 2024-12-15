@@ -6,7 +6,7 @@ void main() {
 
     auto P = readln.chomp.split.to!(int[]).assumeSorted;
 
-    auto lb = P.lowerBound(X-H);
+    auto lb = P.lowerBound(X - H);
 
     auto res = lb.length + 1;
     res.writeln;

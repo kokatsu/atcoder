@@ -5,7 +5,8 @@ void main() {
     readf("%d %d %d\n", N, A, B);
 
     auto h = new long[](N);
-    foreach (i; 0 ..N) readf("%d\n", h[i]);
+    foreach (i; 0 .. N)
+        readf("%d\n", h[i]);
 
     long D = A - B;
     long ok = h.maxElement, ng;
@@ -15,7 +16,8 @@ void main() {
         long cnt;
         foreach (x; h) {
             long rem = x - B * mid;
-            if (rem > 0) cnt += (rem + D - 1) / D;
+            if (rem > 0)
+                cnt += (rem + D - 1) / D;
         }
 
         (cnt <= mid ? ok : ng) = mid;

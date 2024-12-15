@@ -16,10 +16,12 @@ void main() {
 
     foreach (i, a; A) {
         foreach (j, b; B) {
-            if (i * j > K) break;
+            if (i * j > K)
+                break;
 
             foreach (k, c; C) {
-                if (i * j * k > K) break;
+                if (i * j * k > K)
+                    break;
 
                 long t = a + b + c;
                 if (t > heap.front) {
@@ -36,5 +38,6 @@ void main() {
         heap.popFront;
     }
 
-    foreach (r; res) r.writeln;
+    foreach (r; res)
+        r.writeln;
 }

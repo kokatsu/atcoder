@@ -6,13 +6,14 @@ void main() {
 
     auto A = readln.chomp.split.to!(int[]);
 
-    auto dp = new bool[](S+1);
+    auto dp = new bool[](S + 1);
     dp[0] = true;
     foreach (a; A) {
-        foreach_reverse (i; 0 .. S-a+1) {
-            if (!dp[i]) continue;
+        foreach_reverse (i; 0 .. S - a + 1) {
+            if (!dp[i])
+                continue;
 
-            dp[i+a] = true;
+            dp[i + a] = true;
         }
     }
 

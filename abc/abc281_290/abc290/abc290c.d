@@ -15,7 +15,8 @@ void main() {
             res = max(res, num);
         }
 
-        if (cnt == K) break;
+        if (cnt == K)
+            break;
     }
 
     res.writeln;

@@ -5,7 +5,7 @@ void main() {
     readf("%d %d\n", N, M);
 
     auto P = new int[](M), Q = new int[](M);
-    auto lists = new int[][](N+1);
+    auto lists = new int[][](N + 1);
     foreach (i; 0 .. M) {
         int Y;
         readf("%d %d\n", P[i], Y);
@@ -21,12 +21,14 @@ void main() {
         }
     }
 
-    foreach (i; 1 .. N+1) {
-        if (lists[i].empty) continue;
+    foreach (i; 1 .. N + 1) {
+        if (lists[i].empty)
+            continue;
 
         f(lists[i]);
         lists[i][] += 1;
     }
 
-    foreach (i; 0 .. M) writefln("%06d%06d", P[i], lists[P[i]][Q[i]]);
+    foreach (i; 0 .. M)
+        writefln("%06d%06d", P[i], lists[P[i]][Q[i]]);
 }

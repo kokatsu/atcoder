@@ -8,7 +8,7 @@ void main() {
 
     long res, cnt;
     foreach (i; 1 .. N) {
-        if (S[i] == S[i-1]) {
+        if (S[i] == S[i - 1]) {
             ++cnt;
             res += cnt;
         }

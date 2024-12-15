@@ -10,12 +10,12 @@ void main() {
     A[] -= 1, B[] -= 1;
 
     auto dp = new int[](N);
-    dp[1..$] = int.min;
-    foreach (i; 0 .. N-1) {
-        dp[A[i]] = max(dp[A[i]], dp[i]+100);
-        dp[B[i]] = max(dp[B[i]], dp[i]+150);
+    dp[1 .. $] = int.min;
+    foreach (i; 0 .. N - 1) {
+        dp[A[i]] = max(dp[A[i]], dp[i] + 100);
+        dp[B[i]] = max(dp[B[i]], dp[i] + 150);
     }
 
-    int res = dp[N-1];
+    int res = dp[N - 1];
     res.writeln;
 }

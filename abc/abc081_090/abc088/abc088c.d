@@ -8,7 +8,7 @@ void main() {
 
     bool isOk = true;
     foreach (i; 1 .. 3) {
-        isOk &= 3.iota.map!(j => c[i-1][j] - c[i][j]).uniq.walkLength == 1;
+        isOk &= 3.iota.map!(j => c[i - 1][j] - c[i][j]).uniq.walkLength == 1;
     }
 
     string res = isOk ? "Yes" : "No";

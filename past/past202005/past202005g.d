@@ -20,7 +20,7 @@ void main() {
         int x, y;
         readf("%d %d\n", x, y);
 
-        dists[x+M][y+M] = -1;
+        dists[x + M][y + M] = -1;
     }
 
     int[] dx = [1, 0, -1, 1, -1, 0], dy = [1, 1, 1, 0, 0, -1];
@@ -45,6 +45,6 @@ void main() {
         }
     }
 
-    int res = dists[X+M][Y+M] < int.max / 2 ? dists[X+M][Y+M] : -1;
+    int res = dists[X + M][Y + M] < int.max / 2 ? dists[X + M][Y + M] : -1;
     res.writeln;
 }

@@ -30,7 +30,7 @@ void main() {
                 cnt ~= t[1];
             }
             else {
-                res = max(res, len+K-chg);
+                res = max(res, len + K - chg);
 
                 while (!cnt.empty && K - chg < t[1]) {
                     chg -= cnt.front;

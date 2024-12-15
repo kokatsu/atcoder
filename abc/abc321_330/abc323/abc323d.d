@@ -18,7 +18,8 @@ void main() {
 
     long res;
     foreach (s; S) {
-        if (seen[s]) continue;
+        if (seen[s])
+            continue;
         seen[s] = true;
 
         long num = s, cnt = list[s];

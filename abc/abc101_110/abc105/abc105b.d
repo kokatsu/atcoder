@@ -5,7 +5,7 @@ void main() {
     readf("%d\n", N);
 
     bool isOK;
-    foreach (i; 0 .. N/4+1) {
+    foreach (i; 0 .. N / 4 + 1) {
         int rem = N - i * 4;
         isOK |= (rem % 7 == 0);
     }

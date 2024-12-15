@@ -5,8 +5,10 @@ void main() {
     readf("%d %d %d %d\n", A, B, C, D);
 
     bool isOK;
-    if (A < C) isOK = true;
-    if (A == C && B <= D) isOK = true;
+    if (A < C)
+        isOK = true;
+    if (A == C && B <= D)
+        isOK = true;
 
-    writeln(isOK ? "Takahashi": "Aoki");
+    writeln(isOK ? "Takahashi" : "Aoki");
 }

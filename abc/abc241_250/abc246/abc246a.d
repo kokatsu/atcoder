@@ -11,12 +11,14 @@ void main() {
 
     long x;
     foreach (key, val; xlist) {
-        if (val == 1) x = key;
+        if (val == 1)
+            x = key;
     }
 
     long y;
     foreach (key, val; ylist) {
-        if (val == 1) y = key;
+        if (val == 1)
+            y = key;
     }
 
     writeln(x, " ", y);

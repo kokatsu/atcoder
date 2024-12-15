@@ -8,8 +8,9 @@ void main() {
 
     H.sort;
 
-    long res, L = max(0, N-K);
-    foreach (i; 0 .. L) res += H[i];
+    long res, L = max(0, N - K);
+    foreach (i; 0 .. L)
+        res += H[i];
 
     res.writeln;
 }

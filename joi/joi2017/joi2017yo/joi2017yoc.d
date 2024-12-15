@@ -5,7 +5,8 @@ void main() {
     readf("%d %d %d\n", N, M, D);
 
     auto S = new dchar[][](N);
-    foreach (i; 0 .. N) readf("%s\n", S[i]);
+    foreach (i; 0 .. N)
+        readf("%s\n", S[i]);
 
     int res;
     foreach (_; 0 .. 2) {
@@ -16,9 +17,11 @@ void main() {
                     ++r;
                 }
 
-                if (r - l == D) ++res;
+                if (r - l == D)
+                    ++res;
 
-                if (l == r) ++r;
+                if (l == r)
+                    ++r;
             }
         }
 
@@ -33,7 +36,7 @@ T[][] rotate(T)(T[][] mat) {
     auto ret = new T[][](c, r);
     foreach (i; 0 .. r) {
         foreach (j; 0 .. c) {
-            ret[j][r-i-1] = mat[i][j];
+            ret[j][r - i - 1] = mat[i][j];
         }
     }
     return ret;

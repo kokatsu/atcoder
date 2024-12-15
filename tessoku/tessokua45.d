@@ -11,9 +11,10 @@ void main() {
     int num;
     foreach (a; A) {
         foreach (i, c; COLOR) {
-            if (a == c) num += i;
+            if (a == c)
+                num += i;
         }
     }
 
-    writeln(COLOR[num%3] == C ? "Yes" : "No");
+    writeln(COLOR[num % 3] == C ? "Yes" : "No");
 }

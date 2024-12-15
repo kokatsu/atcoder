@@ -11,8 +11,8 @@ void main() {
     auto points = new bool[](l);
     points[0] = true;
     foreach (x; p) {
-        foreach_reverse (i; 0 .. l-x) {
-            points[i+x] |= points[i];
+        foreach_reverse (i; 0 .. l - x) {
+            points[i + x] |= points[i];
         }
     }
 

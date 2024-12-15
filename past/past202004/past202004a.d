@@ -11,6 +11,6 @@ void main() {
         return str[0] - '1';
     }
 
-    int res = abs(floor(S)-floor(T));
+    int res = abs(floor(S) - floor(T));
     res.writeln;
 }

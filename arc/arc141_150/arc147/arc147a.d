@@ -17,7 +17,8 @@ void main() {
         rbt.removeBack;
 
         int r = mx % mn;
-        if (r > 0) rbt.insert(r);
+        if (r > 0)
+            rbt.insert(r);
     }
 
     res.writeln;

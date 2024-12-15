@@ -15,7 +15,8 @@ void main() {
         cnt += g[1] - 1;
     }
 
-    if (cnt % 2 == 1) ++cnt;
+    if (cnt % 2 == 1)
+        ++cnt;
 
     int res = N - cnt;
     res.writeln;

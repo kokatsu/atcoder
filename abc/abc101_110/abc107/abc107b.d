@@ -21,15 +21,18 @@ void main() {
     foreach (i; 0 .. W) {
         int cnt;
         foreach (j; 0 .. H) {
-            if (X[j][i] == '#') ++cnt;
+            if (X[j][i] == '#')
+                ++cnt;
         }
 
-        if (cnt == 0) continue;
+        if (cnt == 0)
+            continue;
 
         foreach (j; 0 .. H) {
             Y[j] ~= X[j][i];
         }
     }
 
-    foreach (y; Y) y.writeln;
+    foreach (y; Y)
+        y.writeln;
 }

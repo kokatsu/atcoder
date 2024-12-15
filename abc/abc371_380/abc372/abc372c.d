@@ -14,25 +14,25 @@ void main() {
 
         --X;
 
-        if (S[X] == 'A' && X < N - 2 && S[X..X+3] == "ABC") {
+        if (S[X] == 'A' && X < N - 2 && S[X .. X + 3] == "ABC") {
             --res;
         }
-        else if (S[X] == 'B' && X > 0 && X < N - 1 && S[X-1..X+2] == "ABC") {
+        else if (S[X] == 'B' && X > 0 && X < N - 1 && S[X - 1 .. X + 2] == "ABC") {
             --res;
         }
-        else if (S[X] == 'C' && X > 1 && S[X-2..X+1] == "ABC") {
+        else if (S[X] == 'C' && X > 1 && S[X - 2 .. X + 1] == "ABC") {
             --res;
         }
 
         S[X] = C;
 
-        if (S[X] == 'A' && X < N - 2 && S[X..X+3] == "ABC") {
+        if (S[X] == 'A' && X < N - 2 && S[X .. X + 3] == "ABC") {
             ++res;
         }
-        else if (S[X] == 'B' && X > 0 && X < N - 1 && S[X-1..X+2] == "ABC") {
+        else if (S[X] == 'B' && X > 0 && X < N - 1 && S[X - 1 .. X + 2] == "ABC") {
             ++res;
         }
-        else if (S[X] == 'C' && X > 1 && S[X-2..X+1] == "ABC") {
+        else if (S[X] == 'C' && X > 1 && S[X - 2 .. X + 1] == "ABC") {
             ++res;
         }
 

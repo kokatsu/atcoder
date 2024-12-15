@@ -12,7 +12,8 @@ void main() {
     --sy, --sx, --gy, --gx;
 
     auto dist = new int[][](R, C);
-    foreach (i; 0 .. R) dist[i][] = -1;
+    foreach (i; 0 .. R)
+        dist[i][] = -1;
 
     int[] dy = [-1, 0, 1, 0], dx = [0, 1, 0, -1];
 
@@ -24,8 +25,10 @@ void main() {
         queue.popFront;
         foreach (v, u; zip(dy, dx)) {
             int ny = f[0] + v, nx = f[1] + u;
-            if (c[ny][nx] == '#') continue;
-            if (dist[ny][nx] != -1) continue;
+            if (c[ny][nx] == '#')
+                continue;
+            if (dist[ny][nx] != -1)
+                continue;
             dist[ny][nx] = dist[f[0]][f[1]] + 1;
             queue ~= tuple(ny, nx);
         }

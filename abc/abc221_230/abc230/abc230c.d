@@ -13,8 +13,8 @@ void main() {
         res[i][] = '.';
     }
 
-    long l = max(1-A, 1-B), r = min(N-A, N-B);
-    foreach (i; P .. Q+1) {
+    long l = max(1 - A, 1 - B), r = min(N - A, N - B);
+    foreach (i; P .. Q + 1) {
         if (i < A + l || A + r < i) {
             continue;
         }
@@ -26,11 +26,11 @@ void main() {
             continue;
         }
 
-        res[i-P][j-R] = '#';
+        res[i - P][j - R] = '#';
     }
 
-    l = max(1-A, B-N), r = min(N-A, B-1);
-    foreach (i; P .. Q+1) {
+    l = max(1 - A, B - N), r = min(N - A, B - 1);
+    foreach (i; P .. Q + 1) {
         if (i < A + l || A + r < i) {
             continue;
         }
@@ -42,7 +42,7 @@ void main() {
             continue;
         }
 
-        res[i-P][j-R] = '#';
+        res[i - P][j - R] = '#';
     }
 
     foreach (i; 0 .. x) {

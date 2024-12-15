@@ -5,7 +5,7 @@ void main() {
     readf("%d %d\n", X, Y);
 
     bool isOK;
-    foreach (u; 0 .. X+1) {
+    foreach (u; 0 .. X + 1) {
         int v = X - u;
 
         isOK |= (u * 2 + v * 4 == Y);

@@ -13,19 +13,22 @@ void main() {
 
         a[] -= 1;
         int num;
-        foreach (x; a) num += (1 << x);
+        foreach (x; a)
+            num += (1 << x);
 
         list[i] = num;
     }
 
     int res;
-    foreach (i; 0 .. 1<<M) {
+    foreach (i; 0 .. 1 << M) {
         int num;
         foreach (j; 0 .. M) {
-            if ((i >> j) & 1) num |= list[j];
+            if ((i >> j) & 1)
+                num |= list[j];
         }
 
-        if (num == (1 << N) - 1) ++res;
+        if (num == (1 << N) - 1)
+            ++res;
     }
 
     res.writeln;

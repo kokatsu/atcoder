@@ -6,7 +6,7 @@ void main() {
 
     string S = readln.chomp;
 
-    if (S[N-1] == 'o') {
+    if (S[N - 1] == 'o') {
         writeln("Yes");
     }
     else {

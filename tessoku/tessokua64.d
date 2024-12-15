@@ -14,7 +14,7 @@ void main() {
     }
 
     auto dist = new long[](N);
-    dist[1..N] = long.max;
+    dist[1 .. N] = long.max;
 
     auto heap = new BinaryHeap!(Array!(Tuple!(long, long)), "a[1] > b[1]")();
     heap.insert(tuple(0L, 0L));
@@ -23,7 +23,8 @@ void main() {
         heap.popFront;
         foreach (e; edge[f[0]]) {
             long d = f[1] + e[1];
-            if (dist[e[0]] <= d) continue;
+            if (dist[e[0]] <= d)
+                continue;
 
             dist[e[0]] = d;
             heap.insert(tuple(e[0], d));

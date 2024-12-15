@@ -7,7 +7,8 @@ void main() {
     auto a = readln.chomp.split.to!(int[]);
 
     int cnt = a.count(-1).to!int;
-    int xor = a.filter!"a >= 0".fold!"a ^ b"(X);
+    int xor = a.filter!"a >= 0"
+        .fold!"a ^ b"(X);
 
     if (cnt == 0 && xor != 0) {
         writeln(-1);

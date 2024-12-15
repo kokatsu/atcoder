@@ -16,16 +16,20 @@ void main() {
     foreach (i; 0 .. N) {
         int res;
         foreach (j; 0 .. N) {
-            if (i == j || isFriend[i][j]) continue;
+            if (i == j || isFriend[i][j])
+                continue;
 
             bool isOK;
             foreach (k; 0 .. N) {
-                if (i == k || j == k) continue;
+                if (i == k || j == k)
+                    continue;
 
-                if (isFriend[i][k] && isFriend[k][j]) isOK = true;
+                if (isFriend[i][k] && isFriend[k][j])
+                    isOK = true;
             }
 
-            if (isOK) ++res;
+            if (isOK)
+                ++res;
         }
 
         res.writeln;

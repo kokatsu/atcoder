@@ -11,32 +11,29 @@ void main() {
     auto fact = new long[](N);
     fact[0] = 1;
     foreach (i; 1 .. N) {
-        fact[i] = fact[i-1] * i % MOD;
+        fact[i] = fact[i - 1] * i % MOD;
     }
 
     auto ft = new FenwickTree!long(N);
     long res = 1;
     foreach (i, x; a) {
-        res = (res + (x + MOD - 1 - ft.sum(x)) * fact[N-i-1] % MOD) % MOD;
+        res = (res + (x + MOD - 1 - ft.sum(x)) * fact[N - i - 1] % MOD) % MOD;
         ft.add(x, 1);
     }
 
     res.writeln;
 }
 
-struct FenwickTree(T)
-if (isIntegral!T) {
+struct FenwickTree(T) if (isIntegral!T) {
 
     /// Constructor
-    this(U)(U n)
-    if (isIntegral!U) {
+    this(U)(U n) if (isIntegral!U) {
         size = n.to!T + 1;
         data.length = size;
     }
 
     /// Adds val to data[idx].
-    void add(U)(U idx, T val)
-    if (isIntegral!U)
+    void add(U)(U idx, T val) if (isIntegral!U)
     in (0 < idx && idx < size) {
         U i = idx;
         while (i < size) {
@@ -46,8 +43,7 @@ if (isIntegral!T) {
     }
 
     /// Returns sum(data[1], ..., data[idx]).
-    T sum(U)(U idx)
-    if (isIntegral!U)
+    T sum(U)(U idx) if (isIntegral!U)
     in (0 <= idx && idx < size) {
         if (idx == 0) {
             return 0;

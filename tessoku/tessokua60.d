@@ -11,9 +11,10 @@ void main() {
     auto res = new int[](N);
     res[0] = -1;
     foreach (i; 1 .. N) {
-        S[++pos] = tuple(i, A[i-1]);
+        S[++pos] = tuple(i, A[i - 1]);
         while (pos > 0) {
-            if (S[pos][1] > A[i]) break;
+            if (S[pos][1] > A[i])
+                break;
             --pos;
         }
 

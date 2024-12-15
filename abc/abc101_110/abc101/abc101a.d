@@ -6,8 +6,10 @@ void main() {
 
     int res;
     foreach (s; S) {
-        if (s == '+') ++res;
-        else --res;
+        if (s == '+')
+            ++res;
+        else
+            --res;
     }
 
     res.writeln;

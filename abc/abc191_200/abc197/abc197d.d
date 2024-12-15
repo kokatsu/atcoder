@@ -7,11 +7,11 @@ void main() {
     real x0, y0;
     readf("%f %f\n", x0, y0);
 
-    real xh ,yh;
+    real xh, yh;
     readf("%f %f\n", xh, yh);
 
     real xo = (x0 + xh) / 2.0, yo = (y0 + yh) / 2.0;
-    real r = hypot(xh-x0, yh-y0) / 2.0;
+    real r = hypot(xh - x0, yh - y0) / 2.0;
     real theta = 2.0 * PI / N;
 
     real x = x0 - xo, y = y0 - yo;

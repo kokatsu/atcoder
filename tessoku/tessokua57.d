@@ -14,7 +14,7 @@ void main() {
     dp[0][] = A;
     foreach (i; 1 .. L) {
         foreach (j; 0 .. N) {
-            dp[i][j] = dp[i-1][dp[i-1][j]];
+            dp[i][j] = dp[i - 1][dp[i - 1][j]];
         }
     }
 
@@ -24,7 +24,8 @@ void main() {
 
         int res = X - 1;
         foreach_reverse (j; 0 .. L) {
-            if ((Y >> j) & 1) res = dp[j][res];
+            if ((Y >> j) & 1)
+                res = dp[j][res];
         }
 
         ++res;

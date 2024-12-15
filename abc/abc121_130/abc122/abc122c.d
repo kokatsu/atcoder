@@ -6,11 +6,12 @@ void main() {
 
     auto S = readln.chomp;
 
-    auto dp = new int[](N+1);
+    auto dp = new int[](N + 1);
     foreach (i; 1 .. N) {
-        dp[i+1] = dp[i];
+        dp[i + 1] = dp[i];
 
-        if (S[i-1..i+1] == "AC") ++dp[i+1];
+        if (S[i - 1 .. i + 1] == "AC")
+            ++dp[i + 1];
     }
 
     foreach (_; 0 .. Q) {

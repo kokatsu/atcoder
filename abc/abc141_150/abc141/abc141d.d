@@ -10,7 +10,7 @@ void main() {
     foreach (_; 0 .. M) {
         auto f = heap.front;
         heap.popFront;
-        heap.insert(f/2);
+        heap.insert(f / 2);
     }
 
     long res;

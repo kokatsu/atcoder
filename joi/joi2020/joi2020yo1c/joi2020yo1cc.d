@@ -8,8 +8,10 @@ void main() {
 
     int res, len, pre;
     foreach (a; A) {
-        if (pre <= a) ++len;
-        else len = 1;
+        if (pre <= a)
+            ++len;
+        else
+            len = 1;
 
         res = max(res, len), pre = a;
     }

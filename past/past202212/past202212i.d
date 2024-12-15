@@ -9,14 +9,16 @@ void main() {
         int A, B;
         readf("%d %d\n", A, B);
 
-        list[A-1][B-1] = true;
+        list[A - 1][B - 1] = true;
     }
 
     foreach (i; 0 .. N) {
         foreach (j; 0 .. N) {
             foreach (k; 0 .. N) {
-                if (list[j][k]) continue;
-                if (list[j][i] && list[i][k]) list[j][k] = true;
+                if (list[j][k])
+                    continue;
+                if (list[j][i] && list[i][k])
+                    list[j][k] = true;
             }
         }
     }
@@ -24,9 +26,11 @@ void main() {
     bool isOk = true;
     foreach (i; 0 .. N) {
         foreach (j; 0 .. N) {
-            if (i == j) continue;
+            if (i == j)
+                continue;
 
-            if (list[i][j] && list[j][i]) isOk = false;
+            if (list[i][j] && list[j][i])
+                isOk = false;
         }
     }
 

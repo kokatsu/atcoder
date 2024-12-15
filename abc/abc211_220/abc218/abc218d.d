@@ -17,8 +17,8 @@ void main() {
     }
 
     int res;
-    foreach (i; 0 .. N-1) {
-        foreach (j; i+1 .. N) {
+    foreach (i; 0 .. N - 1) {
+        foreach (j; i + 1 .. N) {
             if (x[i] == x[j] || y[i] == y[j]) {
                 continue;
             }

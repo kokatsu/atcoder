@@ -25,7 +25,8 @@ void main() {
                 }
                 else {
                     A[i] -= d + pre;
-                    if (r > 0) --A[i], --r;
+                    if (r > 0)
+                        --A[i], --r;
                 }
             }
 

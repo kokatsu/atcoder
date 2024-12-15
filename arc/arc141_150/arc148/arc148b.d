@@ -7,17 +7,18 @@ void main() {
     auto S = readln.chomp.to!(dchar[]);
 
     int l;
-    while (l < N && S[l] == 'd') ++l;
+    while (l < N && S[l] == 'd')
+        ++l;
 
     auto res = S.dup;
-    foreach (r; l+1 .. N+1) {
-        auto T = S[l..r].dup;
+    foreach (r; l + 1 .. N + 1) {
+        auto T = S[l .. r].dup;
         T.reverse;
         foreach (ref t; T) {
             t = (t == 'd' ? 'p' : 'd');
         }
 
-        dchar[] tmp = S[0..l] ~ T ~ S[r..N];
+        dchar[] tmp = S[0 .. l] ~ T ~ S[r .. N];
         res = min(res, tmp);
     }
 

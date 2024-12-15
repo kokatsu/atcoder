@@ -8,8 +8,10 @@ void main() {
 
     int res = X;
     foreach (s; S) {
-        if (s == 'o') ++res;
-        else if (res > 0) --res;
+        if (s == 'o')
+            ++res;
+        else if (res > 0)
+            --res;
     }
 
     res.writeln;

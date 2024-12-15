@@ -18,10 +18,12 @@ void main() {
     Pair[] F;
     foreach (i; 0 .. N) {
         int j = A[i][pos[i]];
-        if (i > j) continue;
+        if (i > j)
+            continue;
 
         int k = A[j][pos[j]];
-        if (i != k) continue;
+        if (i != k)
+            continue;
 
         F ~= Pair(i, j);
     }
@@ -37,13 +39,15 @@ void main() {
             if (pos[i] < N - 1) {
                 int k = A[i][pos[i]];
                 int l = A[k][pos[k]];
-                if (i == l) G ~= Pair(i, k);
+                if (i == l)
+                    G ~= Pair(i, k);
             }
 
             if (pos[j] < N - 1) {
                 int k = A[j][pos[j]];
                 int l = A[k][pos[k]];
-                if (j == l) G ~= Pair(j, k);
+                if (j == l)
+                    G ~= Pair(j, k);
             }
         }
 
@@ -51,7 +55,9 @@ void main() {
         ++res;
     }
 
-    foreach (p; pos) if (p < N - 1) res = -1;
+    foreach (p; pos)
+        if (p < N - 1)
+            res = -1;
 
     res.writeln;
 }

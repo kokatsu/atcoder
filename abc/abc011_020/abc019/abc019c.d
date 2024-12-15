@@ -9,7 +9,8 @@ void main() {
     int[int] list;
     foreach (x; a) {
         int num = x;
-        while (num % 2 == 0) num /= 2;
+        while (num % 2 == 0)
+            num /= 2;
 
         ++list[num];
     }

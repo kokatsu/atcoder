@@ -9,7 +9,7 @@ void main() {
         int A, B;
         readf("%d\n%d\n", A, B);
 
-        res = to!string(A+B);
+        res = to!string(A + B);
     }
 
     res.writeln;

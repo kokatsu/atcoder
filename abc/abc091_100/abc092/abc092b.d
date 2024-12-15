@@ -9,7 +9,7 @@ void main() {
         int A;
         readf("%d\n", A);
 
-        res += iota(1, D+1, A).length;
+        res += iota(1, D + 1, A).length;
     }
 
     res.writeln;

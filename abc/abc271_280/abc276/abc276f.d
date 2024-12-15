@@ -11,10 +11,12 @@ long powMod(long x, long y) {
     while (y > 0) {
         if (y % 2 == 1) {
             res *= x;
-            if (res > MOD) res %= MOD;
+            if (res > MOD)
+                res %= MOD;
         }
         x *= x;
-        if (x > MOD) x %= MOD;
+        if (x > MOD)
+            x %= MOD;
         y /= 2;
     }
     return res;
@@ -34,28 +36,25 @@ void main() {
         long l = ft1.sum(a) * a % MOD;
         long u = (ft2.sum(M) - ft2.sum(a) + MOD) % MOD;
 
-        addMod(num, (l+u)*2+a);
+        addMod(num, (l + u) * 2 + a);
 
         ft1.add(a, 1), ft2.add(a, a);
 
-        long res = num * powMod((to!long(i+1)^^2)%MOD, MOD-2) % MOD;
+        long res = num * powMod((to!long(i + 1) ^^ 2) % MOD, MOD - 2) % MOD;
         res.writeln;
     }
 }
 
-struct FenwickTree(T)
-if (isIntegral!T) {
+struct FenwickTree(T) if (isIntegral!T) {
 
     /// Constructor
-    this(U)(U n)
-    if (isIntegral!U) {
+    this(U)(U n) if (isIntegral!U) {
         size = n.to!T + 1;
         data.length = size;
     }
 
     /// Adds val to data[idx].
-    void add(U)(U idx, T val)
-    if (isIntegral!U)
+    void add(U)(U idx, T val) if (isIntegral!U)
     in (0 < idx && idx < size) {
         U i = idx;
         while (i < size) {
@@ -65,8 +64,7 @@ if (isIntegral!T) {
     }
 
     /// Returns sum(data[1], ..., data[idx]).
-    T sum(U)(U idx)
-    if (isIntegral!U)
+    T sum(U)(U idx) if (isIntegral!U)
     in (0 <= idx && idx < size) {
         if (idx == 0) {
             return 0;

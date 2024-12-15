@@ -8,6 +8,6 @@ void main() {
 
     p.sort;
 
-    int res = p[0..K].sum;
+    int res = p[0 .. K].sum;
     res.writeln;
 }

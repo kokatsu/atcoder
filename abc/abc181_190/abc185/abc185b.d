@@ -13,7 +13,7 @@ void main() {
         R -= (A - P);
         isOK &= (R > 0);
 
-        R = min(N, R+B-A);
+        R = min(N, R + B - A);
         P = B;
     }
 

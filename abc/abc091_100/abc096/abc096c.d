@@ -23,12 +23,14 @@ void main() {
         bool exist;
         foreach (i; 0 .. 4) {
             int nx = u + dx[i], ny = v + dy[i];
-            if (nx < 0 || H <= nx || ny < 0 || W <= ny) continue;
+            if (nx < 0 || H <= nx || ny < 0 || W <= ny)
+                continue;
 
             exist |= (s[nx][ny] == '#');
         }
 
-        if (exist) continue;
+        if (exist)
+            continue;
 
         isOK = false;
     }

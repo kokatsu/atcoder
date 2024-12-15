@@ -8,7 +8,7 @@ void main() {
 
     int res;
     foreach (a; x) {
-        res += min(a, K-a) * 2;
+        res += min(a, K - a) * 2;
     }
 
     res.writeln;

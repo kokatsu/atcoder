@@ -10,7 +10,7 @@ void main() {
         readf("%d %d\n", x, y);
 
         if (i > 0) {
-            res += abs(u-x) + abs(v-y);
+            res += abs(u - x) + abs(v - y);
         }
 
         u = x, v = y;

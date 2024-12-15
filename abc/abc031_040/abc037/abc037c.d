@@ -12,7 +12,7 @@ void main() {
 
         if (i >= K - 1) {
             res += S;
-            S -= a[i-K+1];
+            S -= a[i - K + 1];
         }
     }
 

@@ -8,7 +8,8 @@ void main() {
 
     long res, mx = P.front;
     foreach (p; P) {
-        if (p <= mx) ++res;
+        if (p <= mx)
+            ++res;
 
         mx = min(mx, p);
     }

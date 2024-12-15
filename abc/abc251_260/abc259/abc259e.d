@@ -29,8 +29,10 @@ void main() {
     foreach (i; 0 .. N) {
         long[long] tmp;
         foreach (key, val; a[i]) {
-            if (total[key] != val) continue;
-            if (factors[key].length > 1 && factors[key][1] == val) continue;
+            if (total[key] != val)
+                continue;
+            if (factors[key].length > 1 && factors[key][1] == val)
+                continue;
 
             ++tmp[key];
         }

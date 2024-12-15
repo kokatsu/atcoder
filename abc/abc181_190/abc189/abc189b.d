@@ -14,7 +14,7 @@ void main() {
         num += V * P;
 
         if (num > X) {
-            writeln(i+1);
+            writeln(i + 1);
             return;
         }
     }

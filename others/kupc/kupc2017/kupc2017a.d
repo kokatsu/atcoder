@@ -12,7 +12,7 @@ void main() {
     foreach (i, x; a) {
         num += x;
         if (num >= K) {
-            writeln(i+1);
+            writeln(i + 1);
             return;
         }
     }

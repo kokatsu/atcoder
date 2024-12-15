@@ -4,12 +4,12 @@ void main() {
     int N, M;
     readf("%d %d\n", N, M);
 
-    auto top = new int[][](N+1, 2);
-    auto cnt = new int[](N+1);
+    auto top = new int[][](N + 1, 2);
+    auto cnt = new int[](N + 1);
     int[] list;
 
-    auto cylinders = new int[][](M+1);
-    foreach (i; 1 .. M+1) {
+    auto cylinders = new int[][](M + 1);
+    foreach (i; 1 .. M + 1) {
         int k;
         readf("%d\n", k);
 

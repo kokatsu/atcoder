@@ -6,5 +6,5 @@ void main() {
 
     auto len = S.length;
 
-    writeln(S == T[0..len] ? "Yes" : "No");
+    writeln(S == T[0 .. len] ? "Yes" : "No");
 }

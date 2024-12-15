@@ -6,7 +6,7 @@ void main() {
 
     auto A = readln.chomp.split.to!(int[]);
 
-    auto res = iota(1, N+1).array;
+    auto res = iota(1, N + 1).array;
 
     zip(A, res).sort!"a[0] < b[0]";
 

@@ -9,7 +9,7 @@ void main() {
         int A, B;
         readf("%d %d\n", A, B);
 
-        T[A-1] ~= B;
+        T[A - 1] ~= B;
     }
 
     auto heap = new BinaryHeap!(Array!int, "a < b");
@@ -17,10 +17,11 @@ void main() {
     auto res = new int[](N);
     foreach (i; 0 .. N) {
         if (i > 0) {
-            res[i] += res[i-1];
+            res[i] += res[i - 1];
         }
 
-        foreach (x; T[i]) heap.insert(x);
+        foreach (x; T[i])
+            heap.insert(x);
 
         res[i] += heap.front;
         heap.popFront;

@@ -2,7 +2,7 @@ import std;
 
 void main() {
     int n;
-    readf("%d\n",n);
+    readf("%d\n", n);
 
     int A, B;
     foreach (_; 0 .. n) {

@@ -13,7 +13,7 @@ void main() {
 
         int a = u * d, b = u * (d + 1);
         if ((L <= a && a <= H) || (L <= b && b <= H)) {
-            writeln(i+1);
+            writeln(i + 1);
             return;
         }
     }

@@ -23,7 +23,7 @@ void main() {
     ulong l = 3, u = 16;
     string res = "-1";
     auto cnts = new int[](N);
-    cnts[0..N-1] = 1;
+    cnts[0 .. N - 1] = 1;
 
     void f(string[] arr, int[] nums, int idx = 0) {
         string str;
@@ -34,14 +34,16 @@ void main() {
             }
         }
 
-        if (str.length > u) return;
+        if (str.length > u)
+            return;
 
         if (str.length >= l && !(str in list)) {
             res = str;
             return;
         }
 
-        if (idx >= N - 1) return;
+        if (idx >= N - 1)
+            return;
 
         if (C + nums.sum < u) {
             ++nums[idx];
@@ -49,7 +51,7 @@ void main() {
             --nums[idx];
         }
 
-        f(arr, nums, idx+1);
+        f(arr, nums, idx + 1);
     }
 
     foreach (p; S.permutations) {

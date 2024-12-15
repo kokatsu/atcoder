@@ -10,7 +10,8 @@ void main() {
     foreach (i; 0 .. N) {
         long num = i * A;
         foreach (j; 0 .. h) {
-            if (S[j] != S[N-j-1]) num += B;
+            if (S[j] != S[N - j - 1])
+                num += B;
         }
 
         res = min(res, num);

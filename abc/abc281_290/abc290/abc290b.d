@@ -8,8 +8,10 @@ void main() {
     int cnt;
     auto res = new dchar[](N);
     foreach (i, s; S) {
-        if (s == 'o' && cnt < K) res[i] = 'o', ++cnt;
-        else res[i] = 'x';
+        if (s == 'o' && cnt < K)
+            res[i] = 'o', ++cnt;
+        else
+            res[i] = 'x';
     }
 
     res.writeln;

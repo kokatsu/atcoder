@@ -9,14 +9,17 @@ void main() {
     bool zero, minus;
     long res, mn = long.max;
     foreach (a; A) {
-        if (a == 0) zero = true;
-        if (a < 0) minus ^= true;
+        if (a == 0)
+            zero = true;
+        if (a < 0)
+            minus ^= true;
 
         res += a.abs;
         mn = min(mn, a.abs);
     }
 
-    if (!zero && minus) res -= mn * 2;
+    if (!zero && minus)
+        res -= mn * 2;
 
     res.writeln;
 }

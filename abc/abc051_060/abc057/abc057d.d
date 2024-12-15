@@ -10,12 +10,13 @@ void main() {
 
     auto G = v.group.array;
 
-    auto combTable = new long[][](N+1, N+1);
+    auto combTable = new long[][](N + 1, N + 1);
     combTable[0][0] = 1;
-    foreach (i; 1 .. N+1) {
-        foreach (j; 0 .. i+1) {
-            combTable[i][j] += combTable[i-1][j];
-            if (j > 0) combTable[i][j] += combTable[i-1][j-1];
+    foreach (i; 1 .. N + 1) {
+        foreach (j; 0 .. i + 1) {
+            combTable[i][j] += combTable[i - 1][j];
+            if (j > 0)
+                combTable[i][j] += combTable[i - 1][j - 1];
         }
     }
 
@@ -28,7 +29,7 @@ void main() {
             num += g[0] * diff;
 
             if (i == 0) {
-                foreach (j; diff .. mx+1) {
+                foreach (j; diff .. mx + 1) {
                     comb += combTable[g[1]][j];
                 }
             }

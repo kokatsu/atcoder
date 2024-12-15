@@ -5,7 +5,8 @@ void main() {
     readf("%d %d\n", N, Q);
 
     auto rbt1 = new RedBlackTree!(int, "a < b")();
-    foreach (i; 1 .. N+1) rbt1.insert(i);
+    foreach (i; 1 .. N + 1)
+        rbt1.insert(i);
 
     auto rbt2 = new RedBlackTree!(int, "a < b")();
 

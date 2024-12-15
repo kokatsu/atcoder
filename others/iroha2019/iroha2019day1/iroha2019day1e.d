@@ -5,9 +5,10 @@ void main() {
     readf("%d %d %d\n", N, A, B);
 
     long[] D;
-    if (B > 0) D = readln.chomp.split.to!(long[]);
+    if (B > 0)
+        D = readln.chomp.split.to!(long[]);
 
-    D ~= [0, N+1];
+    D ~= [0, N + 1];
     D.sort;
 
     auto F = D.slide(2).map!"a[1] - a[0] - 1".array;

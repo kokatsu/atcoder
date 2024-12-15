@@ -13,7 +13,7 @@ void main() {
 
     auto S = P.replicate(R);
     foreach (i; 0 .. L) {
-        int w = S[i..N+i].count('w').to!int, b = N - w;
+        int w = S[i .. N + i].count('w').to!int, b = N - w;
 
         if (w == W && b == B) {
             writeln("Yes");

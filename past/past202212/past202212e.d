@@ -7,8 +7,10 @@ void main() {
     int cnt;
     bool isOk = true;
     foreach (s; S) {
-        if (s == '(') ++cnt;
-        else --cnt;
+        if (s == '(')
+            ++cnt;
+        else
+            --cnt;
 
         isOk &= (cnt >= 0);
     }

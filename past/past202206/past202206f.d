@@ -21,7 +21,7 @@ void main() {
         foreach_reverse (i; 0 .. r) {
             S[i][c] = 0;
             if (i > 0) {
-                S[i][c] = S[i-1][c];
+                S[i][c] = S[i - 1][c];
             }
         }
     }

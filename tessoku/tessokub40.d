@@ -11,8 +11,8 @@ void main() {
     auto cnts = new long[](M);
     long res;
     foreach (a; A) {
-        res += cnts[(M-a%M)%M];
-        ++cnts[a%M];
+        res += cnts[(M - a % M) % M];
+        ++cnts[a % M];
     }
 
     res.writeln;

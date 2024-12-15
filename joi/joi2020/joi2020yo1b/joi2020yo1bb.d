@@ -5,7 +5,7 @@ void main() {
     dchar[] S;
     readf("%d %d %d\n%s\n", N, A, B, S);
 
-    S[A-1..B].reverse;
+    S[A - 1 .. B].reverse;
 
     S.writeln;
 }

@@ -12,10 +12,10 @@ void main() {
 
     zip(A, B).sort!((a, b) => a[0] < b[0]);
 
-    int[] days = new int[](N+1);
+    int[] days = new int[](N + 1);
     int first = A[0];
     auto last = BinaryHeap!(Array!int, "a > b")();
-    last.insert(A[0]+B[0]);
+    last.insert(A[0] + B[0]);
     int cnt = 1;
     foreach (i; 1 .. N) {
         while (!last.empty && last.front <= A[i]) {
@@ -31,7 +31,7 @@ void main() {
         }
 
         first = A[i];
-        last.insert(A[i]+B[i]);
+        last.insert(A[i] + B[i]);
         ++cnt;
     }
 
@@ -43,7 +43,7 @@ void main() {
         --cnt;
     }
 
-    foreach (i; 1 .. N+1) {
+    foreach (i; 1 .. N + 1) {
         if (i == N) {
             writeln(days[i]);
         }

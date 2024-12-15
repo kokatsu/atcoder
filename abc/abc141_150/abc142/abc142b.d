@@ -8,6 +8,6 @@ void main() {
 
     auto s = h.sort;
 
-    auto res = s.upperBound(K-1).length;
+    auto res = s.upperBound(K - 1).length;
     res.writeln;
 }

@@ -9,8 +9,9 @@ void main() {
         int w;
         readf("%d\n", w);
 
-        auto u = rbt.upperBound(w-1);
-        if (!u.empty) rbt.removeKey(u.front);
+        auto u = rbt.upperBound(w - 1);
+        if (!u.empty)
+            rbt.removeKey(u.front);
 
         rbt.insert(w);
     }

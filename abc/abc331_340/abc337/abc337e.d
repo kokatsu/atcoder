@@ -4,13 +4,16 @@ void main() {
     int N;
     readf("%d\n", N);
 
-    int M = N.to!real.log2.ceil.to!int;
+    int M = N.to!real
+        .log2
+        .ceil
+        .to!int;
     M.writeln;
     stdout.flush;
 
     foreach (i; 0 .. M) {
         int[] arr;
-        foreach (j; 1 .. N+1) {
+        foreach (j; 1 .. N + 1) {
             if (j & (1 << i)) {
                 arr ~= j;
             }
@@ -30,7 +33,8 @@ void main() {
         }
     }
 
-    if (res == 0) res = N;
+    if (res == 0)
+        res = N;
 
     res.writeln;
 }

@@ -13,6 +13,6 @@ void main() {
     real xa = A * t.cos, ya = A * t.sin;
     real xb = B * z.cos, yb = B * z.sin;
 
-    real res = hypot(xa-xb, ya-yb);
+    real res = hypot(xa - xb, ya - yb);
     writefln("%.10f", res);
 }

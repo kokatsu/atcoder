@@ -12,8 +12,8 @@ void main() {
     dchar[] res;
     long b = 1;
     while (N != 0) {
-        long d = abs(N%(-2*b)/b);
-        res ~= to!dchar(d+'0');
+        long d = abs(N % (-2 * b) / b);
+        res ~= to!dchar(d + '0');
 
         N -= b * d;
         b *= -2;

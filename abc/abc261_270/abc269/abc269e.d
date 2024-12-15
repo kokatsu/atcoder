@@ -11,7 +11,7 @@ void main() {
     while (B - A > 1) {
         int mid = (A + B) / 2;
 
-        writefln("? %d %d %d %d", A, mid-1, 1, N);
+        writefln("? %d %d %d %d", A, mid - 1, 1, N);
         stdout.flush;
 
         int ret;
@@ -23,7 +23,7 @@ void main() {
     while (D - C > 1) {
         int mid = (C + D) / 2;
 
-        writefln("? %d %d %d %d", 1, N, C, mid-1);
+        writefln("? %d %d %d %d", 1, N, C, mid - 1);
         stdout.flush;
 
         int ret;

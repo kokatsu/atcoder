@@ -11,7 +11,7 @@ void main() {
         auto query = readln.chomp.split.to!(long[]);
 
         if (query[0] == 1) {
-            bag.insert(query[1]-S);
+            bag.insert(query[1] - S);
         }
         else if (query[0] == 2) {
             S += query[1];
@@ -20,7 +20,7 @@ void main() {
             auto f = bag.front;
             bag.popFront;
 
-            writeln(f+S);
+            writeln(f + S);
         }
     }
 }

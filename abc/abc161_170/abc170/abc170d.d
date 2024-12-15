@@ -16,17 +16,20 @@ void main() {
     auto div = new bool[](lim);
 
     foreach (i; 1 .. lim) {
-        if (cnts[i] == 0) continue;
+        if (cnts[i] == 0)
+            continue;
 
-        if (cnts[i] > 1) div[i] = true;
-        foreach (j; iota(i*2, lim, i)) {
+        if (cnts[i] > 1)
+            div[i] = true;
+        foreach (j; iota(i * 2, lim, i)) {
             div[j] = true;
         }
     }
 
     int res;
     foreach (a; A) {
-        if (!div[a]) ++res;
+        if (!div[a])
+            ++res;
     }
 
     res.writeln;

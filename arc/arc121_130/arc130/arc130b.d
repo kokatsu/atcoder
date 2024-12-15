@@ -24,7 +24,7 @@ void main() {
         }
     }
 
-    auto color = new long[](C+1);
+    auto color = new long[](C + 1);
     bool[long] row, col;
     long rcnt, ccnt;
     foreach_reverse (l; list) {
@@ -48,7 +48,7 @@ void main() {
         }
     }
 
-    foreach (i; 1 .. C+1) {
+    foreach (i; 1 .. C + 1) {
         if (i == C) {
             writeln(color[i]);
         }

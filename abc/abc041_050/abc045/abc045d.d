@@ -20,24 +20,29 @@ void main() {
     foreach (i; 0 .. N) {
         foreach (j; -1 .. 2) {
             long x = coords[i].x + j;
-            if (x <= 1 || H <= x) continue;
+            if (x <= 1 || H <= x)
+                continue;
 
             foreach (k; -1 .. 2) {
                 long y = coords[i].y + k;
-                if (y <= 1 || W <= y) continue;
+                if (y <= 1 || W <= y)
+                    continue;
 
                 auto c = Coord(x, y);
-                if (c in seen) continue;
+                if (c in seen)
+                    continue;
 
                 int num;
                 foreach (l; -1 .. 2) {
                     foreach (m; -1 .. 2) {
-                        auto d = Coord(c.x+l, c.y+m);
-                        if (d in list) ++num;
+                        auto d = Coord(c.x + l, c.y + m);
+                        if (d in list)
+                            ++num;
                     }
                 }
 
-                if (num > 0) ++cnts[num];
+                if (num > 0)
+                    ++cnts[num];
 
                 seen[c] = true;
             }
@@ -47,5 +52,6 @@ void main() {
     long r = (H - 2) * (W - 2) - cnts.sum;
     cnts[0] = r;
 
-    foreach (c; cnts) c.writeln;
+    foreach (c; cnts)
+        c.writeln;
 }

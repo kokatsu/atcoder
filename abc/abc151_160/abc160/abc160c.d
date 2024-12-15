@@ -10,7 +10,7 @@ void main() {
 
     int res = int.max;
     foreach (i; 0 .. N) {
-        res = min(res, B[i+N-1]-B[i]);
+        res = min(res, B[i + N - 1] - B[i]);
     }
 
     res.writeln;

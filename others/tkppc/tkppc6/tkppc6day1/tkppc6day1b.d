@@ -8,6 +8,6 @@ void main() {
 
     int L = A.sort.uniq.array.length.to!int;
 
-    int res = min(N, L+M);
+    int res = min(N, L + M);
     res.writeln;
 }

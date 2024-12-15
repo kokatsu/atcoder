@@ -14,9 +14,9 @@ void main() {
     auto Bmod = new long[](M);
     auto Cmod = new long[](M);
     foreach (i; 0 .. N) {
-        ++Amod[A[i]%M];
-        ++Bmod[B[i]%M];
-        ++Cmod[C[i]%M];
+        ++Amod[A[i] % M];
+        ++Bmod[B[i] % M];
+        ++Cmod[C[i] % M];
     }
 
     long res;

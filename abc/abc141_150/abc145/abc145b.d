@@ -8,7 +8,7 @@ void main() {
     bool isOK;
     if (N % 2 == 0) {
         int H = N / 2;
-        isOK = (S[0..H] == S[H..N]);
+        isOK = (S[0 .. H] == S[H .. N]);
     }
 
     writeln(isOK ? "Yes" : "No");

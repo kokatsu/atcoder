@@ -16,7 +16,7 @@ void main() {
         if (g[0] == '0') {
             ++pos;
             if (pos > K) {
-                num -= list[pos-K-1];
+                num -= list[pos - K - 1];
             }
         }
 

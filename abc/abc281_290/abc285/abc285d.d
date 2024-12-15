@@ -17,8 +17,10 @@ void main() {
     int[] nouse;
     int[string] wait;
     foreach (i, t; T) {
-        if (t !in used) nouse ~= i.to!int;
-        else wait[S[nums[t]]] = i.to!int;
+        if (t !in used)
+            nouse ~= i.to!int;
+        else
+            wait[S[nums[t]]] = i.to!int;
     }
 
     int cnt;

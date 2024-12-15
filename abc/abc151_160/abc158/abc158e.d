@@ -12,7 +12,8 @@ void main() {
     long res, num, exp = 1;
     foreach_reverse (i, s; S) {
         if (P == 2 || P == 5) {
-            if ((s - '0') % P == 0) res += i + 1;
+            if ((s - '0') % P == 0)
+                res += i + 1;
         }
         else {
             num = (num + (s - '0') * exp) % P;

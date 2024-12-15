@@ -13,13 +13,16 @@ void main() {
         readf("%s\n", a);
 
         foreach (j, x; a) {
-            if (x == '#') continue;
+            if (x == '#')
+                continue;
 
-            if (i > 0) dp[i][j] = (dp[i][j] + dp[i-1][j]) % MOD;
-            if (j > 0) dp[i][j] = (dp[i][j] + dp[i][j-1]) % MOD;
+            if (i > 0)
+                dp[i][j] = (dp[i][j] + dp[i - 1][j]) % MOD;
+            if (j > 0)
+                dp[i][j] = (dp[i][j] + dp[i][j - 1]) % MOD;
         }
     }
 
-    long res = dp[H-1][W-1];
+    long res = dp[H - 1][W - 1];
     res.writeln;
 }

@@ -4,7 +4,7 @@ void main() {
     int N;
     readf("%d\n", N);
 
-    auto cnts = new int[](N+1);
+    auto cnts = new int[](N + 1);
     cnts[0] = 1;
 
     int T;

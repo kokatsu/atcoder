@@ -7,7 +7,8 @@ void main() {
     int res, coins;
     while (coins < C) {
         coins += A;
-        if (++res % 7 == 0) coins += B;
+        if (++res % 7 == 0)
+            coins += B;
     }
 
     res.writeln;

@@ -12,8 +12,8 @@ void main() {
     bool[int] X, Y;
     foreach (a, c; zip(A, C)) {
         foreach (b, d; zip(B, D)) {
-            X[a+b] = true;
-            Y[c+d] = true;
+            X[a + b] = true;
+            Y[c + d] = true;
         }
     }
 

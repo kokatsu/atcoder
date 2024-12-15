@@ -13,7 +13,7 @@ void main() {
     long rem = N, k;
     while (rem > 0) {
         long d = rem % 10;
-        ++cnts[d%3];
+        ++cnts[d % 3];
 
         rem /= 10, ++k;
     }

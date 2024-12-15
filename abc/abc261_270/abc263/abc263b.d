@@ -8,7 +8,7 @@ void main() {
 
     int res, pos = N;
     while (pos > 1) {
-        pos = P[pos-2];
+        pos = P[pos - 2];
         ++res;
     }
 

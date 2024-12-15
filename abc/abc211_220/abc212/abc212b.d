@@ -9,7 +9,8 @@ void main() {
 
     int cnt;
     foreach (i; 1 .. 4) {
-        if ((Y[i-1] + 1) % 10 == Y[i]) ++cnt;
+        if ((Y[i - 1] + 1) % 10 == Y[i])
+            ++cnt;
     }
 
     isWeak |= (cnt >= 3);

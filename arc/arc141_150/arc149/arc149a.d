@@ -6,7 +6,8 @@ void main() {
 
     auto pow10 = new long[](N);
     pow10[0] = 1;
-    foreach (i; 1 .. N) pow10[i] = (pow10[i-1] * 10) % M;
+    foreach (i; 1 .. N)
+        pow10[i] = (pow10[i - 1] * 10) % M;
 
     long b = -1, p = -1;
     foreach (i; 1uL .. 10uL) {
@@ -20,6 +21,6 @@ void main() {
         }
     }
 
-    string res = (b > 0 ? b.to!string.replicate(p+1) : "-1");
+    string res = (b > 0 ? b.to!string.replicate(p + 1) : "-1");
     res.writeln;
 }

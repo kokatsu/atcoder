@@ -7,8 +7,10 @@ void main() {
 
     bool isOK = true;
     foreach (i, s; S) {
-        if (i == A) isOK &= (s == '-');
-        else isOK &= std.uni.isNumber(s);
+        if (i == A)
+            isOK &= (s == '-');
+        else
+            isOK &= std.uni.isNumber(s);
     }
 
     writeln(isOK ? "Yes" : "No");

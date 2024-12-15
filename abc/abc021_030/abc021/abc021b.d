@@ -14,7 +14,8 @@ void main() {
 
     bool isOK = true;
     foreach (p; P) {
-        if (p in seen) isOK = false;
+        if (p in seen)
+            isOK = false;
         seen[p] = true;
     }
 

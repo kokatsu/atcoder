@@ -11,10 +11,10 @@ void main() {
         if (i == 0) {
             res += 500;
         }
-        else if (n == N[i-1]) {
+        else if (n == N[i - 1]) {
             res += 301;
         }
-        else if (L.canFind(n) == L.canFind(N[i-1])) {
+        else if (L.canFind(n) == L.canFind(N[i - 1])) {
             res += 210;
         }
         else {

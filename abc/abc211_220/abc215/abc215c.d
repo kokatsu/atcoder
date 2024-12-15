@@ -13,5 +13,5 @@ void main() {
     auto list = dict.keys;
 
     list.sort;
-    list[K-1].writeln;
+    list[K - 1].writeln;
 }

@@ -14,11 +14,11 @@ void main() {
         auto l = C.lowerBound(a).length;
 
         if (l > 0) {
-            res = min(res, a-B[l-1]);
+            res = min(res, a - B[l - 1]);
         }
 
         if (l < M) {
-            res = min(res, B[l]-a);
+            res = min(res, B[l] - a);
         }
     }
 

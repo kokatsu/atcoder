@@ -9,7 +9,7 @@ void main() {
         dchar a, b;
         readf("%c %c\n", a, b);
 
-        uf.unite(a-'a', b-'a');
+        uf.unite(a - 'a', b - 'a');
     }
 
     string S, T;
@@ -17,7 +17,7 @@ void main() {
 
     bool isOk = true;
     foreach (s, t; zip(S, T)) {
-        isOk &= uf.isSame(s-'a', t-'a');
+        isOk &= uf.isSame(s - 'a', t - 'a');
     }
 
     string res = isOk ? "Yes" : "No";
@@ -25,8 +25,7 @@ void main() {
 }
 
 /// Union-Find
-struct UnionFind(T)
-if (isIntegral!T) {
+struct UnionFind(T) if (isIntegral!T) {
 
     /// Constructor
     this(T n) nothrow @safe {

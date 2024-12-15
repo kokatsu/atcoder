@@ -7,7 +7,7 @@ void main() {
     readf("%d %d\n", A, B);
 
     bool isOK;
-    foreach (i; A .. B+1) {
+    foreach (i; A .. B + 1) {
         isOK |= (N % i == 0);
     }
 

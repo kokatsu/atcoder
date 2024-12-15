@@ -15,15 +15,15 @@ void main() {
 
     int res = -1;
     foreach (i; 0 .. N) {
-        if (uf.root(i) == i) ++res;
+        if (uf.root(i) == i)
+            ++res;
     }
 
     res.writeln;
 }
 
 /// Union-Find
-struct UnionFind(T)
-if (isIntegral!T) {
+struct UnionFind(T) if (isIntegral!T) {
 
     /// Constructor
     this(T n) nothrow @safe {

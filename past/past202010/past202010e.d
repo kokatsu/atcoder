@@ -8,11 +8,13 @@ void main() {
 
     foreach (P; S.permutations) {
         auto T = P.to!(dchar[]);
-        if (T == S) continue;
+        if (T == S)
+            continue;
 
         auto R = T.dup;
         R.reverse;
-        if (R == S) continue;
+        if (R == S)
+            continue;
 
         T.writeln;
         return;

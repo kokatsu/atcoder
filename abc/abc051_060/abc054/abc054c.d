@@ -24,7 +24,8 @@ void main() {
             x = y;
         }
 
-        if (isOK) ++res;
+        if (isOK)
+            ++res;
     }
 
     res.writeln;

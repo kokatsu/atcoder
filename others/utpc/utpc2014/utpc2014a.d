@@ -8,7 +8,8 @@ void main() {
     foreach_reverse (s; S) {
         if (s == "not") {
             if (existNot) {
-                if (!existOther) T ~= "not", T ~= "not";
+                if (!existOther)
+                    T ~= "not", T ~= "not";
             }
             existNot ^= true;
         }
@@ -22,7 +23,8 @@ void main() {
         }
     }
 
-    if (existNot) T ~= "not";
+    if (existNot)
+        T ~= "not";
 
     T.reverse;
 

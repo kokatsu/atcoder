@@ -17,7 +17,7 @@ void main() {
 
     bool isOk = false;
     foreach (i; 1 .. N) {
-        isOk |= L[i] < R[i-1];
+        isOk |= L[i] < R[i - 1];
     }
 
     string res = isOk ? "Yes" : "No";

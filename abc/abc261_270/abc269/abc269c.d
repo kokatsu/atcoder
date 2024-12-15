@@ -9,7 +9,8 @@ void main() {
 
     auto isBit = new bool[](len);
     foreach (i, b; bin) {
-        if (b == '1') isBit[i] = true;
+        if (b == '1')
+            isBit[i] = true;
     }
 
     long[] res;
@@ -19,8 +20,9 @@ void main() {
             res ~= num;
         }
         else {
-            if (isBit[pos-1]) f(num+(1L<<(len-pos)), pos-1);
-            f(num, pos-1);
+            if (isBit[pos - 1])
+                f(num + (1L << (len - pos)), pos - 1);
+            f(num, pos - 1);
         }
     }
 
@@ -28,5 +30,6 @@ void main() {
 
     res.sort;
 
-    foreach (r; res) r.writeln;
+    foreach (r; res)
+        r.writeln;
 }

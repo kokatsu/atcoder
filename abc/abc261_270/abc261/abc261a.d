@@ -7,7 +7,8 @@ void main() {
     int L = max(L1, L2), R = min(R1, R2);
 
     int res;
-    if (L <= R) res = R - L;
+    if (L <= R)
+        res = R - L;
 
     res.writeln;
 }

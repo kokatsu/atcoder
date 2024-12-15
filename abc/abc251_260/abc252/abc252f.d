@@ -7,7 +7,8 @@ void main() {
     auto A = readln.chomp.split.to!(long[]);
 
     auto heap = A.heapify!"a > b";
-    if (A.sum < L) heap.insert(L-A.sum);
+    if (A.sum < L)
+        heap.insert(L - A.sum);
 
     long res;
     while (heap.length > 1) {

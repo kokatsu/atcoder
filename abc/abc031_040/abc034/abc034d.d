@@ -5,7 +5,8 @@ void main() {
     readf("%d %d\n", N, K);
 
     auto w = new real[](N), p = new real[](N);
-    foreach (i; 0 .. N) readf("%f %f\n", w[i], p[i]);
+    foreach (i; 0 .. N)
+        readf("%f %f\n", w[i], p[i]);
 
     bool f(real x) {
         auto list = new real[](N);
@@ -14,7 +15,7 @@ void main() {
         }
 
         list.sort!"a > b";
-        return list[0..K].sum >= 0.0;
+        return list[0 .. K].sum >= 0.0;
     }
 
     real ok = 0.0, ng = 100.0, eps = 1e-9;

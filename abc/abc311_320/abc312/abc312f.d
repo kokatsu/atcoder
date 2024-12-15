@@ -19,10 +19,11 @@ void main() {
     }
 
     long p1, p2, openers;
-    auto X = new long[](N+1), Y = new long[](N+1);
+    auto X = new long[](N + 1), Y = new long[](N + 1);
     foreach (i; 0 .. N) {
-        if (i < C[0]) X[i+1] = S[0][i];
-        X[i+1] += X[i];
+        if (i < C[0])
+            X[i + 1] = S[0][i];
+        X[i + 1] += X[i];
 
         if (openers == 0) {
             if (p2 < C[2]) {
@@ -31,13 +32,14 @@ void main() {
         }
         else if (p1 < C[1]) {
             --openers;
-            Y[i+1] = S[1][p1++];
+            Y[i + 1] = S[1][p1++];
         }
-        Y[i+1] += Y[i];
+        Y[i + 1] += Y[i];
     }
 
     long res;
-    foreach (i; 0 .. M+1) res = max(res, X[i]+Y[M-i]);
+    foreach (i; 0 .. M + 1)
+        res = max(res, X[i] + Y[M - i]);
 
     res.writeln;
 }

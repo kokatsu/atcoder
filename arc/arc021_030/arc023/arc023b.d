@@ -9,9 +9,11 @@ void main() {
         auto A = readln.chomp.split.to!(int[]);
 
         foreach (j; 0 .. C) {
-            if (i + j > D) break;
+            if (i + j > D)
+                break;
 
-            if ((D - (i + j)) % 2 == 0) res = max(res, A[j]);
+            if ((D - (i + j)) % 2 == 0)
+                res = max(res, A[j]);
         }
     }
 

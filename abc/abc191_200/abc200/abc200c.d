@@ -10,14 +10,14 @@ void main() {
 
     auto list = new long[](M);
     foreach (a; A) {
-        ++list[a%M];
+        ++list[a % M];
     }
 
     long res;
     foreach (a; A) {
-        --list[a%M];
+        --list[a % M];
 
-        res += list[a%M];
+        res += list[a % M];
     }
 
     res.writeln;

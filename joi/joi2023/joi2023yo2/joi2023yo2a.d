@@ -10,7 +10,7 @@ void main() {
 
     auto res = new int[](N);
     foreach (i, a; A) {
-        res[i] = max(a-mn, mx-a);
+        res[i] = max(a - mn, mx - a);
     }
 
     writefln("%(%s\n%)", res);

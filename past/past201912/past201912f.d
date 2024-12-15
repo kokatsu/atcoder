@@ -5,8 +5,7 @@ void main() {
     readf("%s\n", S);
 
     auto words = S.splitter!(Yes.keepSeparators)(regex(r"[A-Z][a-z]*[A-Z]"))
-        .filter!(x => !x.empty)
-        .array;
+        .filter!(x => !x.empty).array;
 
     words.sort!((a, b) => a.toUpper < b.toUpper);
 

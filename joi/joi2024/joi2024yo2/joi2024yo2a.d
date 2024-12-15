@@ -7,10 +7,12 @@ void main() {
     auto A = readln.chomp.split.to!(int[]);
 
     bool[int] dict;
-    foreach (a; A) dict[a] = true;
+    foreach (a; A)
+        dict[a] = true;
 
     bool isOk;
-    foreach (a; A) isOk |= (a - 3 in dict) && (a + 3 in dict);
+    foreach (a; A)
+        isOk |= (a - 3 in dict) && (a + 3 in dict);
 
     string res = isOk ? "Yes" : "No";
     res.writeln;

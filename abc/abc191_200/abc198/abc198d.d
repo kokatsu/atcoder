@@ -31,10 +31,12 @@ void main() {
                 }
             }
 
-            if (!isOK) continue;
+            if (!isOK)
+                continue;
 
             if (N[0] + N[1] == N[2] && ((S[2].length == 1) || (N[2] > 0))) {
-                foreach (n; N) n.writeln;
+                foreach (n; N)
+                    n.writeln;
                 return;
             }
         }

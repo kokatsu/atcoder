@@ -11,7 +11,9 @@ void main() {
         long t, x;
         readf("%d %d\n", t, x);
 
-        if (t == 1) M = (M + x) % N;
-        else S[(x-1+N-M)%N].writeln;
+        if (t == 1)
+            M = (M + x) % N;
+        else
+            S[(x - 1 + N - M) % N].writeln;
     }
 }

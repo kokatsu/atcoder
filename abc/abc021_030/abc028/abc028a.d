@@ -2,9 +2,12 @@ import std;
 
 string check(int x)
 in (0 <= x && x <= 100) {
-    if (x < 60) return "Bad";
-    if (x < 90) return "Good";
-    if (x < 100) return "Great";
+    if (x < 60)
+        return "Bad";
+    if (x < 90)
+        return "Good";
+    if (x < 100)
+        return "Great";
     return "Perfect";
 }
 

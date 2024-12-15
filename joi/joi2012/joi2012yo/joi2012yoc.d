@@ -5,7 +5,8 @@ void main() {
     readf("%d\n%d %d\n%d\n", N, A, B, C);
 
     auto D = new int[](N);
-    foreach (i; 0 .. N) readf("%d\n", D[i]);
+    foreach (i; 0 .. N)
+        readf("%d\n", D[i]);
 
     D.sort!"a > b";
 

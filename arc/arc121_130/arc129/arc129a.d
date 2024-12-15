@@ -10,9 +10,9 @@ void main() {
 
         if ((N >> i) & 1) {
             long l = max(L, b);
-            long r = min(R, b*2-1);
+            long r = min(R, b * 2 - 1);
 
-            res += max(0, r-l+1);
+            res += max(0, r - l + 1);
         }
     }
 

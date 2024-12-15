@@ -16,13 +16,15 @@ void main() {
     long cnt, pos;
     while (true) {
         if (cnt % 2 == 0) {
-            auto uba = as.upperBound(pos-1);
-            if (uba.empty) break;
+            auto uba = as.upperBound(pos - 1);
+            if (uba.empty)
+                break;
             pos = uba.front + X;
         }
         else {
-            auto ubb = bs.upperBound(pos-1);
-            if (ubb.empty) break;
+            auto ubb = bs.upperBound(pos - 1);
+            if (ubb.empty)
+                break;
             pos = ubb.front + Y;
         }
 

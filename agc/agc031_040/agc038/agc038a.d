@@ -11,5 +11,6 @@ void main() {
         }
     }
 
-    foreach (r; res) writefln("%(%s%)", r);
+    foreach (r; res)
+        writefln("%(%s%)", r);
 }

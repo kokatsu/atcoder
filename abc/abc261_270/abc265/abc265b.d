@@ -11,14 +11,15 @@ void main() {
         long X, Y;
         readf("%d %d\n", X, Y);
 
-        bonus[X-1] = Y;
+        bonus[X - 1] = Y;
     }
 
     bool isOK = true;
-    foreach (i; 1 ..N) {
-        T -= A[i-1];
+    foreach (i; 1 .. N) {
+        T -= A[i - 1];
         isOK &= (T > 0);
-        if (!isOK) break;
+        if (!isOK)
+            break;
 
         T += bonus[i];
     }

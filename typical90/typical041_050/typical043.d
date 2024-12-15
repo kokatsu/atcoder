@@ -31,10 +31,7 @@ void main() {
     C[rs][cs] = 0;
 
     auto delta = [
-        Grid(-1, 0, 1, 0),
-        Grid(0, 1, 2, 0),
-        Grid(1, 0, 3, 0),
-        Grid(0, -1, 4, 0)
+        Grid(-1, 0, 1, 0), Grid(0, 1, 2, 0), Grid(1, 0, 3, 0), Grid(0, -1, 4, 0)
     ];
 
     auto heap = new BinaryHeap!(Array!Grid, "a.cnt > b.cnt")();

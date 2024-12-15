@@ -8,7 +8,7 @@ void main() {
 
     long now;
     while (now < N - 1) {
-        if (H[now] < H[now+1]) {
+        if (H[now] < H[now + 1]) {
             ++now;
         }
         else {

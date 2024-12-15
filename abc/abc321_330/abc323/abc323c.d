@@ -6,14 +6,16 @@ void main() {
 
     auto A = readln.chomp.split.to!(int[]);
 
-    auto P = iota(1, N+1).array, Q = new int[][](N);
+    auto P = iota(1, N + 1).array, Q = new int[][](N);
     foreach (i; 0 .. N) {
         string S;
         readf("%s\n", S);
 
         foreach (j, s; S) {
-            if (s == 'o') P[i] += A[j];
-            else Q[i] ~= A[j];
+            if (s == 'o')
+                P[i] += A[j];
+            else
+                Q[i] ~= A[j];
         }
 
         Q[i].sort!"a > b";
@@ -26,7 +28,8 @@ void main() {
         rbt.removeKey(p);
 
         foreach (q; Q[i]) {
-            if (num > rbt.front) break;
+            if (num > rbt.front)
+                break;
             ++res, num += q;
         }
 

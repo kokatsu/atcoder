@@ -6,11 +6,13 @@ void main() {
 
     auto A = readln.chomp.split.to!(long[]);
 
-    auto B = new long[][](N+1);
-    foreach (i, a; A) B[a] ~= i + 1;
+    auto B = new long[][](N + 1);
+    foreach (i, a; A)
+        B[a] ~= i + 1;
 
-    auto P = new SortedRange!(long[], "a < b")[](N+1);
-    foreach (i; 0 .. N+1) P[i] = B[i].assumeSorted;
+    auto P = new SortedRange!(long[], "a < b")[](N + 1);
+    foreach (i; 0 .. N + 1)
+        P[i] = B[i].assumeSorted;
 
     long Q;
     readf("%d\n", Q);
@@ -20,7 +22,7 @@ void main() {
         readf("%d %d %d\n", L, R, X);
 
         auto lbl = P[X].lowerBound(L);
-        auto lbr = P[X].lowerBound(R+1);
+        auto lbr = P[X].lowerBound(R + 1);
 
         auto res = lbr.length - lbl.length;
         res.writeln;

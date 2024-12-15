@@ -5,7 +5,8 @@ void main() {
     readf("%d\n", N);
 
     auto a = new long[](N);
-    foreach (i; 0 .. N) readf("%d\n", a[i]);
+    foreach (i; 0 .. N)
+        readf("%d\n", a[i]);
 
     void f(ref long[] arr) {
         auto tmp = arr.dup.sort.uniq.array.assumeSorted;
@@ -17,5 +18,6 @@ void main() {
     auto b = a.dup;
     f(b);
 
-    foreach (x; b) x.writeln;
+    foreach (x; b)
+        x.writeln;
 }

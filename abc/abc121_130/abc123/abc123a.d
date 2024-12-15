@@ -2,7 +2,8 @@ import std;
 
 void main() {
     auto a = new int[](5);
-    foreach (i; 0 .. 5) readf("%d\n", a[i]);
+    foreach (i; 0 .. 5)
+        readf("%d\n", a[i]);
 
     int k;
     readf("%d\n", k);

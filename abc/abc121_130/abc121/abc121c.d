@@ -5,7 +5,8 @@ void main() {
     readf("%d %d\n", N, M);
 
     auto A = new long[](N), B = new long[](N);
-    foreach (i; 0 .. N) readf("%d %d\n", A[i], B[i]);
+    foreach (i; 0 .. N)
+        readf("%d %d\n", A[i], B[i]);
 
     zip(A, B).sort!"a[0] < b[0]";
 

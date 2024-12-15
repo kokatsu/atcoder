@@ -8,9 +8,9 @@ void main() {
     int N, Q;
     readf("%d %d\n", N, Q);
 
-    auto P = new Coord[](N+Q);
+    auto P = new Coord[](N + Q);
     foreach (i; 0 .. N) {
-        P[i] = Coord(N-i, 0);
+        P[i] = Coord(N - i, 0);
     }
 
     int M = N - 1;
@@ -21,10 +21,14 @@ void main() {
 
         if (q == 1) {
             Coord next = P[M];
-            if (s == "R") ++next.x;
-            if (s == "L") --next.x;
-            if (s == "U") ++next.y;
-            if (s == "D") --next.y;
+            if (s == "R")
+                ++next.x;
+            if (s == "L")
+                --next.x;
+            if (s == "U")
+                ++next.y;
+            if (s == "D")
+                --next.y;
             P[++M] = next;
         }
         else {

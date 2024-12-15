@@ -8,6 +8,6 @@ void main() {
 
     l.sort!"a > b";
 
-    int res = l[0..K].sum;
+    int res = l[0 .. K].sum;
     res.writeln;
 }

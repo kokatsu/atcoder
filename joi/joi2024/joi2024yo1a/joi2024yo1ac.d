@@ -7,7 +7,8 @@ void main() {
 
     int res;
     foreach (i; 0 .. N) {
-        if (S[i] != T[i]) ++res;
+        if (S[i] != T[i])
+            ++res;
     }
 
     res.writeln;

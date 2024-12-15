@@ -5,7 +5,7 @@ void main() {
     readf("%d\n", N);
 
     auto roads = new int[][](N);
-    foreach (_; 0 .. N-1) {
+    foreach (_; 0 .. N - 1) {
         int a, b;
         readf("%d %d\n", a, b);
 
@@ -26,7 +26,8 @@ void main() {
 
             foreach (r; roads[f]) {
                 int t = res[f] + 1;
-                if (res[r] <= t) continue;
+                if (res[r] <= t)
+                    continue;
 
                 res[r] = t;
                 que ~= r;
@@ -36,7 +37,7 @@ void main() {
         return res;
     }
 
-    auto distF = f(0), distS = f(N-1);
+    auto distF = f(0), distS = f(N - 1);
 
     int cnt;
     foreach (F, S; zip(distF, distS)) {

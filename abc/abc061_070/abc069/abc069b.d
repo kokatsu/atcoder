@@ -6,6 +6,6 @@ void main() {
 
     auto l = s.length;
 
-    string res = s[0] ~ to!string(l-2) ~ s[l-1];
+    string res = s[0] ~ to!string(l - 2) ~ s[l - 1];
     res.writeln;
 }

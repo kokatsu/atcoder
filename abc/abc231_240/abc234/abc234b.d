@@ -10,9 +10,9 @@ void main() {
     }
 
     real res = 0.0;
-    foreach (i; 0 .. N-1) {
-        foreach (j; i+1 .. N) {
-            res = max(res, hypot(x[i]-x[j], y[i]-y[j]));
+    foreach (i; 0 .. N - 1) {
+        foreach (j; i + 1 .. N) {
+            res = max(res, hypot(x[i] - x[j], y[i] - y[j]));
         }
     }
 

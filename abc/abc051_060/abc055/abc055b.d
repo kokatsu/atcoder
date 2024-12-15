@@ -6,6 +6,6 @@ void main() {
     long N;
     readf("%d\n", N);
 
-    long res = iota(1, N+1).fold!((a, b) => a * b % MOD);
+    long res = iota(1, N + 1).fold!((a, b) => a * b % MOD);
     res.writeln;
 }

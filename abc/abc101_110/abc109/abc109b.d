@@ -11,8 +11,10 @@ void main() {
         string W;
         readf("%s\n", W);
 
-        if (i > 0) isOK &= (pre.back == W.front);
-        if (W in used) isOK = false;
+        if (i > 0)
+            isOK &= (pre.back == W.front);
+        if (W in used)
+            isOK = false;
 
         used[W] = true;
         pre = W;

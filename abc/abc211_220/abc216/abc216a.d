@@ -6,7 +6,10 @@ void main() {
 
     X.write;
 
-    if (Y <= 2) '-'.writeln;
-    else if (Y >= 7) '+'.writeln;
-    else writeln;
+    if (Y <= 2)
+        '-'.writeln;
+    else if (Y >= 7)
+        '+'.writeln;
+    else
+        writeln;
 }

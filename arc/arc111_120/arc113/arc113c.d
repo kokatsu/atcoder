@@ -14,7 +14,7 @@ void main() {
     long res, num = L;
     foreach_reverse (g; G) {
         if (g[1] == 1) {
-            ++cnts[g[0]-'a'];
+            ++cnts[g[0] - 'a'];
             --num;
         }
         else {

@@ -11,7 +11,9 @@ void main() {
     long res, base = 1;
     foreach_reverse (x; a) {
         res = (res + x * base) % MOD;
-        base = (base * (10 ^^ x.to!string.length.to!long)) % MOD;
+        base = (base * (10 ^^ x.to!string
+                .length
+                .to!long)) % MOD;
     }
 
     res.writeln;

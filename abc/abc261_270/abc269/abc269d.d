@@ -1,6 +1,5 @@
 import std;
 
-
 void main() {
     int N;
     readf("%d\n", N);
@@ -25,26 +24,29 @@ void main() {
     foreach (i; 0 .. N) {
         foreach (j; 0 .. 6) {
             int x = X[i] + dx[j], y = Y[i] + dy[j];
-            if (x.abs > lim || y.abs > lim) continue;
+            if (x.abs > lim || y.abs > lim)
+                continue;
 
             int idx = (x + lim) * lim * 2 + (y + lim);
-            if (black[idx]) uf.unite(list[i], idx);
+            if (black[idx])
+                uf.unite(list[i], idx);
         }
     }
 
     int res;
     foreach (i; 0 .. S) {
-        if (!black[i]) continue;
+        if (!black[i])
+            continue;
 
-        if (uf.root(i) == i) ++res;
+        if (uf.root(i) == i)
+            ++res;
     }
 
     res.writeln;
 }
 
 /// Union-Find
-struct UnionFind(T)
-if (isIntegral!T) {
+struct UnionFind(T) if (isIntegral!T) {
 
     /// Constructor
     this(T n) nothrow @safe {

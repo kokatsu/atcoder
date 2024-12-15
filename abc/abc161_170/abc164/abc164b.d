@@ -6,8 +6,10 @@ void main() {
 
     int cnt;
     while (A > 0 && C > 0) {
-        if (cnt % 2 == 0) C -= B;
-        else A -= D;
+        if (cnt % 2 == 0)
+            C -= B;
+        else
+            A -= D;
 
         ++cnt;
     }

@@ -8,11 +8,11 @@ void main() {
         long N;
         readf("%d\n", N);
 
-        long S = to!real(N-1).sqrt.floor.to!long;
+        long S = to!real(N - 1).sqrt.floor.to!long;
 
         long M = N - S * S;
 
-        long res = min(S^^2, (S-1)^^2+M*2);
+        long res = min(S ^^ 2, (S - 1) ^^ 2 + M * 2);
         res.writeln;
     }
 }

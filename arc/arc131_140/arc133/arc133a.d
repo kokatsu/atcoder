@@ -7,8 +7,8 @@ void main() {
     auto A = readln.chomp.split.to!(int[]);
 
     int x = A.back;
-    foreach (i; 0 .. N-1) {
-        if (A[i] > A[i+1]) {
+    foreach (i; 0 .. N - 1) {
+        if (A[i] > A[i + 1]) {
             x = A[i];
             break;
         }

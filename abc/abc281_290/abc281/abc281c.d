@@ -11,7 +11,7 @@ void main() {
 
     foreach (i, a; A) {
         if (T < a) {
-            writeln(i+1, " ", T);
+            writeln(i + 1, " ", T);
             return;
         }
 

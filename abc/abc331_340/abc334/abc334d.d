@@ -14,7 +14,7 @@ void main() {
         long X;
         readf("%d\n", X);
 
-        auto res = C.lowerBound(X+1).length;
+        auto res = C.lowerBound(X + 1).length;
         res.writeln;
     }
 }

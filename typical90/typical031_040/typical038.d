@@ -9,6 +9,8 @@ void main() {
 
     long L = 10L ^^ 18;
 
-    if (L / A < B) writeln("Large");
-    else writeln(A*B);
+    if (L / A < B)
+        writeln("Large");
+    else
+        writeln(A * B);
 }

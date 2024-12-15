@@ -6,13 +6,13 @@ void main() {
 
     auto A = readln.chomp.split.to!(int[]);
 
-    auto xMove = A[2..$].stride(2), yMove = A[1..$].stride(2);
+    auto xMove = A[2 .. $].stride(2), yMove = A[1 .. $].stride(2);
     bool[int] xList, yList;
-    xList[A[0]] = yList[0]= true;
+    xList[A[0]] = yList[0] = true;
     foreach (xm; xMove) {
         bool[int] nxt;
         foreach (key; xList.keys) {
-            nxt[key-xm] = nxt[key+xm] = true;
+            nxt[key - xm] = nxt[key + xm] = true;
         }
         xList = nxt;
     }
@@ -20,7 +20,7 @@ void main() {
     foreach (ym; yMove) {
         bool[int] nxt;
         foreach (key; yList.keys) {
-            nxt[key-ym] = nxt[key+ym] = true;
+            nxt[key - ym] = nxt[key + ym] = true;
         }
         yList = nxt;
     }

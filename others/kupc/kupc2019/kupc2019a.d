@@ -10,7 +10,8 @@ void main() {
 
     int res;
     foreach (u; a) {
-        if (u + X >= mx) ++res;
+        if (u + X >= mx)
+            ++res;
     }
 
     res.writeln;

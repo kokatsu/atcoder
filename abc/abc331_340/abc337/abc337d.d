@@ -5,7 +5,8 @@ void main() {
     readf("%d %d %d\n", H, W, K);
 
     auto S = new dchar[][](H, W);
-    foreach (i; 0 .. H) S[i] = readln.chomp.to!(dchar[]);
+    foreach (i; 0 .. H)
+        S[i] = readln.chomp.to!(dchar[]);
 
     int res = int.max;
     foreach (_; 0 .. 2) {
@@ -13,17 +14,20 @@ void main() {
             int num, r;
             foreach (l; 0 .. W) {
                 while (r < W && r - l < K && S[i][r] != 'x') {
-                    if (S[i][r] == '.') ++num;
+                    if (S[i][r] == '.')
+                        ++num;
                     ++r;
                 }
 
-                if (r - l == K) res = min(res, num);
+                if (r - l == K)
+                    res = min(res, num);
 
                 if (l == r) {
                     ++r;
                 }
                 else {
-                    if (S[i][l] == '.') --num;
+                    if (S[i][l] == '.')
+                        --num;
                 }
             }
         }
@@ -32,7 +36,8 @@ void main() {
         swap(H, W);
     }
 
-    if (res == int.max) res = -1;
+    if (res == int.max)
+        res = -1;
 
     res.writeln;
 }
@@ -42,7 +47,7 @@ T[][] rotate(T)(T[][] mat) {
     auto ret = new T[][](c, r);
     foreach (i; 0 .. r) {
         foreach (j; 0 .. c) {
-            ret[j][r-i-1] = mat[i][j];
+            ret[j][r - i - 1] = mat[i][j];
         }
     }
     return ret;

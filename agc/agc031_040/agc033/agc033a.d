@@ -32,9 +32,11 @@ void main() {
 
         foreach (i; 0 .. 4) {
             int x = f.x + dx[i], y = f.y + dy[i];
-            if (x < 0 || H <= x || y < 0 || W <= y) continue;
+            if (x < 0 || H <= x || y < 0 || W <= y)
+                continue;
 
-            if (dists[x][y] >= 0) continue;
+            if (dists[x][y] >= 0)
+                continue;
 
             dists[x][y] = dists[f.x][f.y] + 1;
             coord ~= Coord(x, y);

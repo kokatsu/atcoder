@@ -13,7 +13,8 @@ void main() {
     int dir = -1;
     foreach (g; G) {
         if (g[0] == 'T') {
-            if (dir == -1) dir = 0;
+            if (dir == -1)
+                dir = 0;
 
             dir = (dir + g[1].to!int) % 2;
         }
@@ -21,21 +22,21 @@ void main() {
             if (dir == -1) {
                 bool[int] nxt;
                 foreach (xl; xList.keys) {
-                    nxt[xl+g[1].to!int] = true;
+                    nxt[xl + g[1].to!int] = true;
                 }
                 xList = nxt;
             }
             else if (dir == 0) {
                 bool[int] nxt;
                 foreach (xl; xList.keys) {
-                    nxt[xl-g[1].to!int] = nxt[xl+g[1].to!int] = true;
+                    nxt[xl - g[1].to!int] = nxt[xl + g[1].to!int] = true;
                 }
                 xList = nxt;
             }
             else {
                 bool[int] nxt;
                 foreach (yl; yList.keys) {
-                    nxt[yl-g[1].to!int] = nxt[yl+g[1].to!int] = true;
+                    nxt[yl - g[1].to!int] = nxt[yl + g[1].to!int] = true;
                 }
                 yList = nxt;
             }

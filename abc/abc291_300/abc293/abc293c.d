@@ -5,7 +5,8 @@ void main() {
     readf("%d %d\n", H, W);
 
     auto A = new int[][](H, W);
-    foreach (i; 0 .. H) A[i] = readln.chomp.split.to!(int[]);
+    foreach (i; 0 .. H)
+        A[i] = readln.chomp.split.to!(int[]);
 
     int res;
     bool[int] used;
@@ -15,15 +16,15 @@ void main() {
             ++res;
         }
         else {
-            if (x < H - 1 && A[x+1][y] !in used) {
-                used[A[x+1][y]] = true;
-                f(x+1, y);
-                used.remove(A[x+1][y]);
+            if (x < H - 1 && A[x + 1][y]!in used) {
+                used[A[x + 1][y]] = true;
+                f(x + 1, y);
+                used.remove(A[x + 1][y]);
             }
-            if (y < W - 1 && A[x][y+1] !in used) {
-                used[A[x][y+1]] = true;
-                f(x, y+1);
-                used.remove(A[x][y+1]);
+            if (y < W - 1 && A[x][y + 1]!in used) {
+                used[A[x][y + 1]] = true;
+                f(x, y + 1);
+                used.remove(A[x][y + 1]);
             }
         }
     }

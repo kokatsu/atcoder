@@ -18,12 +18,12 @@ void main() {
 
         auto left = C.lowerBound(B).length;
 
-        int res= int.max;
+        int res = int.max;
         if (left > 0) {
-            res = min(res, B-A[left-1]);
+            res = min(res, B - A[left - 1]);
         }
         if (left < N) {
-            res = min(res, A[left]-B);
+            res = min(res, A[left] - B);
         }
 
         res.writeln;

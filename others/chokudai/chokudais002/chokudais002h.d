@@ -8,7 +8,7 @@ void main() {
         int A, B;
         readf("%d %d\n", A, B);
 
-        int res = A == B ? -1 : abs(A-B);
+        int res = A == B ? -1 : abs(A - B);
         res.writeln;
     }
 }

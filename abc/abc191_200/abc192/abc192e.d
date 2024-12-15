@@ -29,7 +29,8 @@ void main() {
         auto f = heap.front;
         heap.popFront;
 
-        if (f.to == Y) break;
+        if (f.to == Y)
+            break;
 
         foreach (r; R[f.to]) {
             long t = ((f.time + r.mul - 1) / r.mul) * r.mul + r.time;

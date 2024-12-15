@@ -5,14 +5,15 @@ void main() {
     readf("%d %d %d\n", n, m, W);
 
     auto w = new int[](n), v = new int[](n);
-    foreach (i; 0 .. n) readf("%d %d\n", w[i], v[i]);
+    foreach (i; 0 .. n)
+        readf("%d %d\n", w[i], v[i]);
 
     auto uf = new UnionFind!int(n);
     foreach (i; 0 .. m) {
         int a, b;
         readf("%d %d\n", a, b);
 
-        uf.unite(a-1, b-1);
+        uf.unite(a - 1, b - 1);
     }
 
     foreach (i; 0 .. n) {
@@ -25,10 +26,10 @@ void main() {
     w = w.filter!"a > 0".array;
     v = v.filter!"a > 0".array;
 
-    int[] dp = new int[](W+1);
+    int[] dp = new int[](W + 1);
     foreach (x, y; zip(w, v)) {
-        foreach_reverse (i; x .. W+1) {
-            dp[i] = max(dp[i], dp[i-x]+y);
+        foreach_reverse (i; x .. W + 1) {
+            dp[i] = max(dp[i], dp[i - x] + y);
         }
     }
 
@@ -37,8 +38,7 @@ void main() {
 }
 
 /// Union-Find
-struct UnionFind(T)
-if (isIntegral!T) {
+struct UnionFind(T) if (isIntegral!T) {
 
     /// Constructor
     this(T n) nothrow @safe {

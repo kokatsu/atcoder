@@ -9,7 +9,7 @@ void main() {
     auto Y = X.dup;
     Y.sort;
 
-    int L = Y[N/2-1], R = Y[N/2];
+    int L = Y[N / 2 - 1], R = Y[N / 2];
 
     foreach (x; X) {
         writeln(x > L ? L : R);

@@ -9,7 +9,8 @@ void main() {
 
     long[long] dict;
     foreach (x, y; zip(c, p)) {
-        if (x !in dict) dict[x] = long.max;
+        if (x !in dict)
+            dict[x] = long.max;
         dict[x] = dict[x].min(y);
     }
 
@@ -18,7 +19,7 @@ void main() {
     long res = -1;
     if (v.length >= K) {
         v.sort;
-        res = v[0..K].sum;
+        res = v[0 .. K].sum;
     }
 
     res.writeln;

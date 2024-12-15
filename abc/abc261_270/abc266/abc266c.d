@@ -3,7 +3,8 @@ import std;
 void main() {
     int cnt = 4;
     auto x = new real[](cnt), y = new real[](cnt);
-    foreach (i; 0 .. cnt) readf("%f %f\n", x[i], y[i]);
+    foreach (i; 0 .. cnt)
+        readf("%f %f\n", x[i], y[i]);
 
     bool isOK = true;
     foreach (i; 0 .. cnt) {

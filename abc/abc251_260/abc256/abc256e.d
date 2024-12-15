@@ -18,10 +18,8 @@ void main() {
         F[x] += C[i];
     }
 
-    auto rbt = new RedBlackTree!(
-            Person,
-            "a.frustration != b.frustration ? a.frustration < b.frustration : a.number < b.number"
-        )();
+    auto rbt = new RedBlackTree!(Person,
+            "a.frustration != b.frustration ? a.frustration < b.frustration : a.number < b.number")();
     foreach (i, f; F) {
         rbt.insert(Person(i.to!long, f));
     }
@@ -35,7 +33,8 @@ void main() {
         res += f.frustration;
 
         auto t = rbt.removeKey(Person(x, F[x]));
-        if (t == 0) continue;
+        if (t == 0)
+            continue;
 
         F[x] -= C[n];
         rbt.insert(Person(x, F[x]));

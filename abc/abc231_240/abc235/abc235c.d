@@ -19,7 +19,8 @@ void main() {
 
     long[long] num;
     foreach (i, A; a) {
-        if (A in num) continue;
+        if (A in num)
+            continue;
         num[A] = b[i];
     }
 
@@ -35,7 +36,7 @@ void main() {
         long res = -1;
         if (x in num) {
             if (list[num[x]].length >= k) {
-                res = list[num[x]][k-1];
+                res = list[num[x]][k - 1];
             }
         }
 

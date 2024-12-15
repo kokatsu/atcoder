@@ -7,7 +7,8 @@ void main() {
     auto C = readln.chomp.split.to!(long[]);
 
     auto D = new long[long][](N);
-    foreach (i, c; C) ++D[i][c-1];
+    foreach (i, c; C)
+        ++D[i][c - 1];
 
     auto uf = new UnionFind!long(N);
     foreach (_; 0 .. Q) {
@@ -17,18 +18,22 @@ void main() {
         --y, --z;
 
         if (x == 1) {
-            if (uf.isSame(y, z)) continue;
+            if (uf.isSame(y, z))
+                continue;
 
             long u = uf.root(y), v = uf.root(z);
             uf.unite(u, v);
 
-            if (uf.root(u) == u) swap(u, v);
+            if (uf.root(u) == u)
+                swap(u, v);
 
-            foreach (key, val; D[u]) D[v][key] += val;
+            foreach (key, val; D[u])
+                D[v][key] += val;
         }
         else {
             long res, r = uf.root(y);
-            if (z in D[r]) res = D[r][z];
+            if (z in D[r])
+                res = D[r][z];
 
             res.writeln;
         }

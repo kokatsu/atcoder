@@ -5,6 +5,7 @@ void main() {
 
     auto g = l.sort.group.array;
     foreach (x; g) {
-        if (x[1] % 2 == 1) x[0].writeln;
+        if (x[1] % 2 == 1)
+            x[0].writeln;
     }
 }

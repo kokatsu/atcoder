@@ -8,6 +8,6 @@ void main() {
 
     auto S = A.sum, T = N * M;
 
-    int res = (T - S <= K ? max(0, T-S) : -1);
+    int res = (T - S <= K ? max(0, T - S) : -1);
     res.writeln;
 }

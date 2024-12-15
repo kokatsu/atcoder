@@ -10,9 +10,9 @@ void main() {
 
     long res;
     foreach (i, r; R) {
-        auto l = S.lowerBound(r+D+1).length;
+        auto l = S.lowerBound(r + D + 1).length;
 
-        long d = to!long(l-i) - 1;
+        long d = to!long(l - i) - 1;
         res += d * (d - 1) / 2;
     }
 

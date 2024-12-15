@@ -4,8 +4,8 @@ void main() {
     int N;
     readf("%d\n", N);
 
-    auto path = new int[][](N+1);
-    foreach (i; 0 .. N-1) {
+    auto path = new int[][](N + 1);
+    foreach (i; 0 .. N - 1) {
         int A, B;
         readf("%d %d\n", A, B);
 
@@ -13,7 +13,7 @@ void main() {
         path[B] ~= A;
     }
 
-    foreach (i; 1 .. N+1) {
+    foreach (i; 1 .. N + 1) {
         path[i].sort;
     }
 

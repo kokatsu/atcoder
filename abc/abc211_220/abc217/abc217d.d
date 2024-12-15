@@ -26,7 +26,7 @@ void main() {
                 r = b.front;
             }
 
-            writeln(r-l);
+            writeln(r - l);
         }
     }
 }

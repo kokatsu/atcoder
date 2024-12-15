@@ -20,16 +20,20 @@ void main() {
 
     foreach (i; 0 .. H) {
         foreach (j; 0 .. W) {
-            if (res[i][j] != '#') continue;
+            if (res[i][j] != '#')
+                continue;
 
             foreach (u, v; zip(dx, dy)) {
                 int x = i + u, y = j + v;
-                if (x < 0 || H <= x || y < 0 || W <= y) continue;
-                if (res[x][y] == '#') continue;
+                if (x < 0 || H <= x || y < 0 || W <= y)
+                    continue;
+                if (res[x][y] == '#')
+                    continue;
                 ++res[x][y];
             }
         }
     }
 
-    foreach (r; res) r.writeln;
+    foreach (r; res)
+        r.writeln;
 }

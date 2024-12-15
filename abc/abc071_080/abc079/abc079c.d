@@ -10,13 +10,14 @@ void main() {
         string res = A[0].to!string;
         foreach (j; 0 .. 3) {
             if (i & (1 << j)) {
-                sum += A[j+1];
+                sum += A[j + 1];
                 res ~= "+";
-            } else {
-                sum -= A[j+1];
+            }
+            else {
+                sum -= A[j + 1];
                 res ~= "-";
             }
-            res ~= A[j+1].to!string;
+            res ~= A[j + 1].to!string;
         }
 
         if (sum == 7) {

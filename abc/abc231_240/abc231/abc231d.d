@@ -5,7 +5,7 @@ void main() {
     readf("%d %d\n", N, M);
 
     bool isOK = true;
-    auto list = new int[][](N+1);
+    auto list = new int[][](N + 1);
     foreach (_; 0 .. M) {
         int A, B;
         readf("%d %d\n", A, B);
@@ -18,7 +18,7 @@ void main() {
         }
     }
 
-    auto seen = new bool[](N+1);
+    auto seen = new bool[](N + 1);
     void dfs(int pos, int pre, ref bool flag) {
         seen[pos] = true;
 
@@ -36,7 +36,7 @@ void main() {
         }
     }
 
-    foreach (i; 1 .. N+1) {
+    foreach (i; 1 .. N + 1) {
         if (isOK && !seen[i]) {
             dfs(i, 0, isOK);
         }

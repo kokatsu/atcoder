@@ -4,7 +4,7 @@ void main() {
     int N, M;
     readf("%d %d\n", N, M);
 
-    auto graph = new int[][](N+1);
+    auto graph = new int[][](N + 1);
     foreach (i; 0 .. M) {
         int A, B;
         readf("%d %d\n", A, B);
@@ -13,9 +13,9 @@ void main() {
     }
 
     int cnt;
-    auto res = new int[](N+1);
-    auto uf = UnionFind!int(N+1);
-    foreach_reverse (i; 2 .. N+1) {
+    auto res = new int[](N + 1);
+    auto uf = UnionFind!int(N + 1);
+    foreach_reverse (i; 2 .. N + 1) {
         ++cnt;
 
         foreach (g; graph[i]) {
@@ -27,10 +27,10 @@ void main() {
             --cnt;
         }
 
-        res[i-1] = cnt;
+        res[i - 1] = cnt;
     }
 
-    foreach (r; res[1..N+1]) {
+    foreach (r; res[1 .. N + 1]) {
         r.writeln;
     }
 }

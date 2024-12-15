@@ -10,8 +10,10 @@ void main() {
     foreach (l; L) {
         D += l;
 
-        if (D <= X) ++res;
-        else break;
+        if (D <= X)
+            ++res;
+        else
+            break;
     }
 
     res.writeln;

@@ -8,7 +8,8 @@ void main() {
     auto a = readln.chomp.split.to!(int[]);
 
     int res;
-    foreach (x; a) res += x.bsf;
+    foreach (x; a)
+        res += x.bsf;
 
     res.writeln;
 }

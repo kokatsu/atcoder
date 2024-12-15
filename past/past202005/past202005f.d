@@ -10,7 +10,7 @@ void main() {
         readf("%s\n", a);
 
         foreach (x; a) {
-            A[i][x-'a'] = true;
+            A[i][x - 'a'] = true;
         }
     }
 
@@ -20,8 +20,8 @@ void main() {
         dchar d;
 
         foreach (j; 0 .. 26) {
-            if (A[i][j] && A[N-i-1][j]) {
-                d = (j+'a').to!dchar;
+            if (A[i][j] && A[N - i - 1][j]) {
+                d = (j + 'a').to!dchar;
                 break;
             }
         }

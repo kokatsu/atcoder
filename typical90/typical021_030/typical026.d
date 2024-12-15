@@ -4,8 +4,8 @@ void main() {
     int N;
     readf("%d\n", N);
 
-    auto tree = new int[][](N+1);
-    foreach (i; 0 .. N-1) {
+    auto tree = new int[][](N + 1);
+    foreach (i; 0 .. N - 1) {
         int A, B;
         readf("%d %d\n", A, B);
 
@@ -14,7 +14,7 @@ void main() {
     }
 
     auto cnts = [0, 1];
-    auto dp = new int[](N+1);
+    auto dp = new int[](N + 1);
     dp[1] = 1;
 
     void dfs(int node) {
@@ -24,7 +24,7 @@ void main() {
             }
 
             dp[t] = dp[node] + 1;
-            ++cnts[dp[t]%2];
+            ++cnts[dp[t] % 2];
             dfs(t);
         }
     }
@@ -33,7 +33,7 @@ void main() {
 
     void writeTree(int num) {
         int cnt;
-        foreach (i; 1 .. N+1) {
+        foreach (i; 1 .. N + 1) {
             if (dp[i] % 2 == num) {
                 ++cnt;
                 if (cnt == N / 2) {

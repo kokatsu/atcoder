@@ -9,7 +9,7 @@ void main() {
     foreach (i; 0 .. N) {
         readf("%d\n", A[i]);
 
-        if (A[i] !in pos) {
+        if (A[i]!in pos) {
             pos[A[i]] = [];
         }
 
@@ -19,8 +19,8 @@ void main() {
     int index;
     auto res = new int[](N);
     while (index < N) {
-        auto T = pos[A[index]][$-1] + 1;
-        res[index..T] = A[index];
+        auto T = pos[A[index]][$ - 1] + 1;
+        res[index .. T] = A[index];
 
         index = T;
     }

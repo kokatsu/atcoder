@@ -13,8 +13,10 @@ void main() {
     int U = X + T, V = Y + A.sum - T;
 
     string res = "Draw";
-    if (U > V) res = "Takahashi";
-    if (U < V) res = "Aoki";
+    if (U > V)
+        res = "Takahashi";
+    if (U < V)
+        res = "Aoki";
 
     res.writeln;
 }

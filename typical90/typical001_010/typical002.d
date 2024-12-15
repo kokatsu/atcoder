@@ -16,9 +16,9 @@ void main() {
             list ~= s ~ r.cycle.take(surplus).to!string;
         }
         else {
-            dfs(s~l, surplus+1);
+            dfs(s ~ l, surplus + 1);
             if (surplus > 0) {
-                dfs(s~r, surplus-1);
+                dfs(s ~ r, surplus - 1);
             }
         }
     }

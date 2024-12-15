@@ -15,7 +15,7 @@ void main() {
 
     auto nums = new long[](N);
 
-    auto res = new long[](N-M+1);
+    auto res = new long[](N - M + 1);
     long S;
     foreach (i, a; A) {
         if (rbt1.length < K) {
@@ -23,7 +23,7 @@ void main() {
             rbt1.insert(Number(a, i.to!long));
             nums[i] = 1;
         }
-        else{
+        else {
             auto b = rbt1.back;
             if (b.num > a) {
                 S += a - b.num;
@@ -39,12 +39,13 @@ void main() {
         }
 
         if (i >= M - 1) {
-            res[i-M+1] = S;
+            res[i - M + 1] = S;
 
-            if (nums[i-M+1] == 1) {
-                rbt1.removeKey(Number(A[i-M+1], i-M+1));
-                S -= A[i-M+1];
-                if (rbt2.empty) continue;
+            if (nums[i - M + 1] == 1) {
+                rbt1.removeKey(Number(A[i - M + 1], i - M + 1));
+                S -= A[i - M + 1];
+                if (rbt2.empty)
+                    continue;
 
                 auto f = rbt2.front;
                 S += f.num;
@@ -53,7 +54,7 @@ void main() {
                 rbt1.insert(f);
             }
             else {
-                rbt2.removeKey(Number(A[i-M+1], i-M+1));
+                rbt2.removeKey(Number(A[i - M + 1], i - M + 1));
             }
         }
     }

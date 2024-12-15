@@ -13,7 +13,7 @@ void main() {
     long diff = long.max;
     ulong res;
     foreach (i, h; H) {
-        long d = abs(A-(T-h*6));
+        long d = abs(A - (T - h * 6));
         if (d < diff) {
             diff = d;
             res = i + 1;

@@ -12,13 +12,13 @@ void main() {
     zip(X, Y).sort!"a[0] < b[0]";
 
     long res;
-    foreach (i; 0 .. N-2) {
-        foreach (j; i+1 .. N-1) {
+    foreach (i; 0 .. N - 2) {
+        foreach (j; i + 1 .. N - 1) {
             if (X[i] == X[j] && Y[i] == Y[j]) {
                 continue;
             }
 
-            foreach (k; j+1 .. N) {
+            foreach (k; j + 1 .. N) {
                 if ((X[i] == X[k] && Y[i] == Y[k]) || (X[j] == X[k] && Y[j] == Y[k])) {
                     continue;
                 }

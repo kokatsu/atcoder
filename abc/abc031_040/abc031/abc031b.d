@@ -12,8 +12,10 @@ void main() {
         readf("%d\n", A);
 
         int res;
-        if (A < L) res = L - A;
-        else if (A > H) res = -1;
+        if (A < L)
+            res = L - A;
+        else if (A > H)
+            res = -1;
 
         res.writeln;
     }

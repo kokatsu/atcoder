@@ -8,7 +8,7 @@ void main() {
 
     int res = T, pos;
     foreach (x; t) {
-        res += min(T, x-pos);
+        res += min(T, x - pos);
         pos = x;
     }
 

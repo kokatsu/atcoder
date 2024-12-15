@@ -7,7 +7,8 @@ void main() {
     long X = C * D - B;
 
     long res = -1;
-    if (X > 0) res = (A + X - 1) / X;
+    if (X > 0)
+        res = (A + X - 1) / X;
 
     res.writeln;
 }

@@ -8,8 +8,8 @@ void main() {
 
     --L;
 
-    dchar[] l = S[0..L], r = S[R..$];
-    dchar[] m = S[L..R];
+    dchar[] l = S[0 .. L], r = S[R .. $];
+    dchar[] m = S[L .. R];
     m.reverse;
 
     dchar[] res = l ~ m ~ r;

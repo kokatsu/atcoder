@@ -23,11 +23,15 @@ void main() {
         long X, Y;
         readf("%d %d\n", X, Y);
 
-        if (!(Y in A)) A[Y] = [X].redBlackTree;
-        else A[Y].insert(X);
+        if (!(Y in A))
+            A[Y] = [X].redBlackTree;
+        else
+            A[Y].insert(X);
 
-        if (!(X in B)) B[X] = [Y].redBlackTree;
-        else B[X].insert(Y);
+        if (!(X in B))
+            B[X] = [Y].redBlackTree;
+        else
+            B[X].insert(Y);
     }
 
     long res = -1;
@@ -52,7 +56,7 @@ void main() {
             if (!lb.empty) {
                 auto x = lb.back + 1;
                 if (!(Coord(x, f.y) in seen)) {
-                    heap ~= S(x, f.y, f.c+1);
+                    heap ~= S(x, f.y, f.c + 1);
                     seen[Coord(x, f.y)] = true;
                 }
             }
@@ -61,7 +65,7 @@ void main() {
             if (!ub.empty) {
                 auto x = ub.front - 1;
                 if (!(Coord(x, f.y) in seen)) {
-                    heap ~= S(x, f.y, f.c+1);
+                    heap ~= S(x, f.y, f.c + 1);
                     seen[Coord(x, f.y)] = true;
                 }
             }
@@ -72,7 +76,7 @@ void main() {
             if (!lb.empty) {
                 auto y = lb.back + 1;
                 if (!(Coord(f.x, y) in seen)) {
-                    heap ~= S(f.x, y, f.c+1);
+                    heap ~= S(f.x, y, f.c + 1);
                     seen[Coord(f.x, y)] = true;
                 }
             }
@@ -81,7 +85,7 @@ void main() {
             if (!ub.empty) {
                 auto y = ub.front - 1;
                 if (!(Coord(f.x, y) in seen)) {
-                    heap ~= S(f.x, y, f.c+1);
+                    heap ~= S(f.x, y, f.c + 1);
                     seen[Coord(f.x, y)] = true;
                 }
             }

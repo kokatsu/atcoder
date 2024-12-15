@@ -21,20 +21,24 @@ void main() {
 
     while (pos < N) {
         if (S1[pos] == S2[pos]) {
-            if (isVertical) res *= 2;
+            if (isVertical)
+                res *= 2;
 
             isVertical = true;
             ++pos;
         }
         else {
-            if (isVertical) res *= 2;
-            else res *= 3;
+            if (isVertical)
+                res *= 2;
+            else
+                res *= 3;
 
             isVertical = false;
             pos += 2;
         }
 
-        if (res > M) res %= M;
+        if (res > M)
+            res %= M;
     }
 
     res.writeln;

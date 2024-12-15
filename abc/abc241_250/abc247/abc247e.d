@@ -9,15 +9,17 @@ void main() {
     long[][] seq;
     long f, b;
     while (b < N) {
-        if (Y <= A[b] && A[b] <=X) {
+        if (Y <= A[b] && A[b] <= X) {
             ++b;
         }
         else {
-            if (b - f > 0) seq ~= A[f..b];
+            if (b - f > 0)
+                seq ~= A[f .. b];
             f = ++b;
         }
     }
-    if (b - f > 0) seq ~= A[f..b];
+    if (b - f > 0)
+        seq ~= A[f .. b];
 
     long res;
     foreach (s; seq) {
@@ -25,15 +27,20 @@ void main() {
         long cntX, cntY, r;
         foreach (l; 0 .. len) {
             while (r < len && cntX * cntY == 0) {
-                if (s[r] == X) ++cntX;
-                if (s[r] == Y) ++cntY;
+                if (s[r] == X)
+                    ++cntX;
+                if (s[r] == Y)
+                    ++cntY;
                 ++r;
             }
 
-            if (cntX * cntY > 0) res += len - r + 1;
+            if (cntX * cntY > 0)
+                res += len - r + 1;
 
-            if (s[l] == X) --cntX;
-            if (s[l] == Y) --cntY;
+            if (s[l] == X)
+                --cntX;
+            if (s[l] == Y)
+                --cntY;
         }
     }
 

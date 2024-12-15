@@ -7,11 +7,11 @@ void main() {
     readf("%f %f %f\n", A, B, C);
 
     real f(real x) {
-        return A * x + B * sin(C*x*PI);
+        return A * x + B * sin(C * x * PI);
     }
 
     real ok = 0.0, ng = 1e3, val = 100.0;
-    while (abs(f(ok)-val) > eps) {
+    while (abs(f(ok) - val) > eps) {
         real mid = (ok + ng) / 2.0;
         (f(mid) <= val ? ok : ng) = mid;
     }

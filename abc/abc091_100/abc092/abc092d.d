@@ -15,7 +15,8 @@ void main() {
     }
 
     --A;
-    foreach (i; 0 .. L) grid[i][] = w;
+    foreach (i; 0 .. L)
+        grid[i][] = w;
 
     int x, y;
     while (A > 0) {
@@ -24,12 +25,13 @@ void main() {
             grid[nx][ny] = b;
         }
 
-        grid[x+1][y+1] = w;
+        grid[x + 1][y + 1] = w;
 
         --A, --B;
 
         x += 4;
-        if (x >= L) x = 0, y += 4;
+        if (x >= L)
+            x = 0, y += 4;
     }
 
     while (B > 0) {
@@ -41,9 +43,11 @@ void main() {
         --B;
 
         x += 4;
-        if (x >= L) x = 0, y += 4;
+        if (x >= L)
+            x = 0, y += 4;
     }
 
     writeln(L, " ", L);
-    foreach (g; grid) g.writeln;
+    foreach (g; grid)
+        g.writeln;
 }

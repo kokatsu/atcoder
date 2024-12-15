@@ -31,13 +31,16 @@ void main() {
             auto f = heap.front;
             heap.popFront;
 
-            if (f.dist > dists[f.to]) continue;
+            if (f.dist > dists[f.to])
+                continue;
 
-            if (f.num != -1) used[f.num] = true;
+            if (f.num != -1)
+                used[f.num] = true;
 
             foreach (e; edges[f.to]) {
                 int tmp = dists[f.to] + e.dist;
-                if (tmp >= dists[e.to]) continue;
+                if (tmp >= dists[e.to])
+                    continue;
 
                 dists[e.to] = tmp;
                 heap.insert(Edge(e.to, dists[e.to], e.num));
@@ -45,11 +48,13 @@ void main() {
         }
     }
 
-    foreach (i; 0 .. N) f(i);
+    foreach (i; 0 .. N)
+        f(i);
 
     int res;
     foreach (i; 0 .. M) {
-        if (!used[i]) ++res;
+        if (!used[i])
+            ++res;
     }
 
     res.writeln;

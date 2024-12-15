@@ -14,11 +14,13 @@ void main() {
 
         foreach (ref x; s) {
             auto b = x.length;
-            if (b != a) continue;
+            if (b != a)
+                continue;
 
             bool isOK = true;
             foreach (u, v; zip(t, x)) {
-                if (u == '*' || u == v) continue;
+                if (u == '*' || u == v)
+                    continue;
 
                 isOK = false;
             }

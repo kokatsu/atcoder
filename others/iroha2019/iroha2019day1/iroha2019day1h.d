@@ -7,7 +7,7 @@ void main() {
     long R = N.fold!((a, b) => a + (b - '0'))(0);
 
     if (M < 10) {
-        writeln(1, M-1);
+        writeln(1, M - 1);
         return;
     }
 

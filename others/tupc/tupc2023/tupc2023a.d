@@ -22,7 +22,7 @@ void main() {
 
     long res;
     foreach (city; cities) {
-        res = max(res, xp[city.x]+yp[city.y]-city.p);
+        res = max(res, xp[city.x] + yp[city.y] - city.p);
     }
 
     res.writeln;

@@ -10,8 +10,10 @@ void main() {
     string two = "B";
 
     int f(dchar x) {
-        if (one.canFind(x)) return 1;
-        if (two.canFind(x)) return 2;
+        if (one.canFind(x))
+            return 1;
+        if (two.canFind(x))
+            return 2;
         return 0;
     }
 

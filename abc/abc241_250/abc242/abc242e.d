@@ -21,14 +21,16 @@ void main() {
 
         bool isOK = true;
         foreach (i; H .. N) {
-            if (S[i] == S[N-i-1]) continue;
+            if (S[i] == S[N - i - 1])
+                continue;
             else {
-                isOK = (S[i] > S[N-i-1]);
+                isOK = (S[i] > S[N - i - 1]);
                 break;
             }
         }
 
-        if (isOK) res = (res + 1) % MOD;
+        if (isOK)
+            res = (res + 1) % MOD;
         res.writeln;
     }
 }

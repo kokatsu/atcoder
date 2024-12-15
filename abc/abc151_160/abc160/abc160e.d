@@ -12,8 +12,10 @@ void main() {
     q.sort!"a > b";
 
     auto coloring = new BinaryHeap!(Array!long, "a > b")();
-    foreach (i; 0 .. X) coloring.insert(p[i]);
-    foreach (i; 0 .. Y) coloring.insert(q[i]);
+    foreach (i; 0 .. X)
+        coloring.insert(p[i]);
+    foreach (i; 0 .. Y)
+        coloring.insert(q[i]);
 
     auto colorless = heapify!"a < b"(r);
 

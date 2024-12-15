@@ -45,7 +45,7 @@ void main() {
     auto dist1 = dijkstra(s), dist2 = dijkstra(t);
     foreach (i; 0 .. n) {
         if (dist1[i] < int.max && dist1[i] == dist2[i]) {
-            writeln(i+1);
+            writeln(i + 1);
             return;
         }
     }

@@ -5,7 +5,8 @@ void main() {
     readf("%s\n", n);
 
     string res;
-    foreach (x; n) res ~= (x == '1' ? '9' : '1');
+    foreach (x; n)
+        res ~= (x == '1' ? '9' : '1');
 
     res.writeln;
 }

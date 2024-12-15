@@ -5,7 +5,7 @@ void main() {
     readf("%d %d %d\n", N, X, Y);
 
     auto edges = new int[][](N);
-    foreach (_; 0 .. N-1) {
+    foreach (_; 0 .. N - 1) {
         int U, V;
         readf("%d %d\n", U, V);
 
@@ -20,7 +20,8 @@ void main() {
 
     void f(int now, int pre = -1) {
         foreach (e; edges[now]) {
-            if (e == pre) continue;
+            if (e == pre)
+                continue;
 
             par[e] = now;
             f(e, now);

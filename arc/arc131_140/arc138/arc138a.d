@@ -9,7 +9,8 @@ void main() {
     auto rbt = new RedBlackTree!(int, "a < b")();
     int[int] pos;
     foreach (i; K .. N) {
-        if (A[i] in pos) continue;
+        if (A[i] in pos)
+            continue;
 
         rbt.insert(A[i]);
         pos[A[i]] = i;
@@ -21,19 +22,21 @@ void main() {
 
     auto len = list.length;
     foreach (i; 1 .. len) {
-        pos[list[i]] = min(pos[list[i]], pos[list[i-1]]);
+        pos[list[i]] = min(pos[list[i]], pos[list[i - 1]]);
     }
 
     int res = int.max;
     foreach (i; 0 .. K) {
         auto ub = rbt.upperBound(A[i]);
 
-        if (ub.empty) continue;
+        if (ub.empty)
+            continue;
 
-        res = min(res, pos[ub.front]-i);
+        res = min(res, pos[ub.front] - i);
     }
 
-    if (res == int.max) res = -1;
+    if (res == int.max)
+        res = -1;
 
     res.writeln;
 }

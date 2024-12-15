@@ -8,7 +8,7 @@ void main() {
 
     int[] arr = [];
     foreach (i, a; A) {
-        if (arr.empty || a > arr[$-1]) {
+        if (arr.empty || a > arr[$ - 1]) {
             arr ~= a;
         }
         else {

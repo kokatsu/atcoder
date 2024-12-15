@@ -10,8 +10,10 @@ void main() {
         int D1, D2;
         readf("%d %d\n", D1, D2);
 
-        if (D1 == D2) ++cnt;
-        else cnt = 0;
+        if (D1 == D2)
+            ++cnt;
+        else
+            cnt = 0;
 
         isOK |= (cnt >= 3);
     }

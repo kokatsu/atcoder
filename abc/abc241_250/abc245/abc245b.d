@@ -8,10 +8,12 @@ void main() {
 
     int lim = 3000;
     auto list = new bool[](lim);
-    foreach (a; A) list[a] = true;
+    foreach (a; A)
+        list[a] = true;
 
     foreach (i, l; list) {
-        if (l) continue;
+        if (l)
+            continue;
 
         i.writeln;
         break;

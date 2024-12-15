@@ -11,7 +11,8 @@ void main() {
         long A;
         readf("%d\n", A);
 
-        if (A in cnts) res += cnts[A];
+        if (A in cnts)
+            res += cnts[A];
 
         ++cnts[A];
     }

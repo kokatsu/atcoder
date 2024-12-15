@@ -9,7 +9,8 @@ void main() {
     readf("%d %d\n", H, W);
 
     auto S = new string[](H);
-    foreach (i; 0 .. H) S[i] = readln.chomp;
+    foreach (i; 0 .. H)
+        S[i] = readln.chomp;
 
     auto dh = [-1, 0, 1, 0], dw = [0, 1, 0, -1];
 
@@ -17,7 +18,8 @@ void main() {
         int res;
 
         auto dist = new int[][](H, W);
-        foreach (i; 0 .. H) dist[i][] = int.max;
+        foreach (i; 0 .. H)
+            dist[i][] = int.max;
         dist[x][y] = 0;
 
         Position[] pos;
@@ -26,16 +28,18 @@ void main() {
             auto f = pos.front;
             pos.popFront;
 
-            static foreach (i; 0 .. 4) {{
-                int nh = f.h + dh[i], nw = f.w + dw[i];
+            static foreach (i; 0 .. 4) {
+                {
+                    int nh = f.h + dh[i], nw = f.w + dw[i];
 
-                if (0 <= nh && nh < H && 0 <= nw && nw < W
-                && S[nh][nw] == '.' && dist[nh][nw] > dist[f.h][f.w] + 1) {
-                    pos ~= Position(nh, nw);
-                    dist[nh][nw] = dist[f.h][f.w] + 1;
-                    res = max(res, dist[nh][nw]);
+                    if (0 <= nh && nh < H && 0 <= nw && nw < W && S[nh][nw] == '.'
+                            && dist[nh][nw] > dist[f.h][f.w] + 1) {
+                        pos ~= Position(nh, nw);
+                        dist[nh][nw] = dist[f.h][f.w] + 1;
+                        res = max(res, dist[nh][nw]);
+                    }
                 }
-            }}
+            }
         }
 
         return res;
@@ -44,7 +48,8 @@ void main() {
     int res;
     foreach (i; 0 .. H) {
         foreach (j; 0 .. W) {
-            if (S[i][j] == '#') continue;
+            if (S[i][j] == '#')
+                continue;
 
             res = max(res, f(i, j));
         }

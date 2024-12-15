@@ -7,7 +7,7 @@ void main() {
     readf("%d\n", N);
 
     auto tree = new long[][](N);
-    foreach (_; 0 .. N-1) {
+    foreach (_; 0 .. N - 1) {
         long x, y;
         readf("%d %d\n", x, y);
 
@@ -21,7 +21,8 @@ void main() {
         long b = 1, w = 1;
 
         foreach (t; tree[now]) {
-            if (t == pre) continue;
+            if (t == pre)
+                continue;
 
             f(t, now);
 

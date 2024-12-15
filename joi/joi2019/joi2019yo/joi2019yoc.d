@@ -7,7 +7,7 @@ void main() {
 
     int res, idx;
     while (idx < N) {
-        if (idx < N - 1 && S[idx] != S[idx+1]) {
+        if (idx < N - 1 && S[idx] != S[idx + 1]) {
             ++res, idx += 2;
         }
         else {

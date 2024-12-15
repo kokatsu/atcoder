@@ -4,13 +4,18 @@ void main() {
     long N, M;
     readf("%d %d\n", N, M);
 
-    long S = M.to!real.sqrt.floor.to!long;
+    long S = M.to!real
+        .sqrt
+        .floor
+        .to!long;
     long[] factors;
-    foreach (i; 1 .. S+1) {
-        if (M % i != 0) continue;
+    foreach (i; 1 .. S + 1) {
+        if (M % i != 0)
+            continue;
 
         factors ~= i;
-        if (i * i != M) factors ~= M / i;
+        if (i * i != M)
+            factors ~= M / i;
     }
 
     factors.sort!"a > b";
@@ -18,7 +23,8 @@ void main() {
     long res;
     foreach (f; factors) {
         long num = f * N;
-        if (num > M) continue;
+        if (num > M)
+            continue;
 
         if ((M - num) % f == 0) {
             res = f;

@@ -8,7 +8,7 @@ void main() {
         int a, b;
         readf("%d %d\n", a, b);
 
-        int res = min(a-1, N-a, b-1, N-b) % 3 + 1;
+        int res = min(a - 1, N - a, b - 1, N - b) % 3 + 1;
         res.writeln;
     }
 }

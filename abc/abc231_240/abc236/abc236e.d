@@ -8,13 +8,14 @@ void main() {
 
     bool checkAverage(real x) {
         auto B = new real[](N);
-        foreach (i; 0 .. N) B[i] = A[i] - x;
+        foreach (i; 0 .. N)
+            B[i] = A[i] - x;
 
-        auto dp = new real[][](N+1, 2);
+        auto dp = new real[][](N + 1, 2);
         dp[0][] = 0.0;
         foreach (i, b; B) {
-            dp[i+1][0] = dp[i].maxElement + b;
-            dp[i+1][1] = dp[i][0];
+            dp[i + 1][0] = dp[i].maxElement + b;
+            dp[i + 1][1] = dp[i][0];
         }
 
         return dp[N].maxElement >= 0.0;
@@ -22,12 +23,13 @@ void main() {
 
     bool checkMedian(long x) {
         auto B = new long[](N);
-        foreach (i; 0 .. N) B[i] = A[i] >= x ? 1 : -1;
+        foreach (i; 0 .. N)
+            B[i] = A[i] >= x ? 1 : -1;
 
-        auto dp = new long[][](N+1, 2);
+        auto dp = new long[][](N + 1, 2);
         foreach (i, b; B) {
-            dp[i+1][0] = dp[i].maxElement + b;
-            dp[i+1][1] = dp[i][0];
+            dp[i + 1][0] = dp[i].maxElement + b;
+            dp[i + 1][1] = dp[i][0];
         }
 
         return dp[N].maxElement > 0;

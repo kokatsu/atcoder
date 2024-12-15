@@ -9,7 +9,7 @@ void main() {
     readf("%d\n", N);
 
     auto edge = new Edge[][](N);
-    foreach (_; 0 .. N-1) {
+    foreach (_; 0 .. N - 1) {
         long a, b, c;
         readf("%d %d %d\n", a, b, c);
 
@@ -28,9 +28,10 @@ void main() {
         dist[now] = cost;
 
         foreach (e; edge[now]) {
-            if (e.to == pre) continue;
+            if (e.to == pre)
+                continue;
 
-            f(e.to, now, cost+e.cost);
+            f(e.to, now, cost + e.cost);
         }
     }
 

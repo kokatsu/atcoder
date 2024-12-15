@@ -12,7 +12,7 @@ void main() {
     foreach (w; W) {
         S1 += w, S2 -= w;
 
-        res = min(res, abs(S1-S2));
+        res = min(res, abs(S1 - S2));
     }
 
     res.writeln;

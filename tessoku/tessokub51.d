@@ -11,7 +11,7 @@ void main() {
             L[++p] = i + 1;
         }
         else {
-            writeln(L[p--], " ", i+1);
+            writeln(L[p--], " ", i + 1);
         }
     }
 }

@@ -5,7 +5,8 @@ void main() {
     readf("%d %d %d\n", N, C, K);
 
     auto T = new int[](N);
-    foreach (i; 0 .. N) readf("%d\n", T[i]);
+    foreach (i; 0 .. N)
+        readf("%d\n", T[i]);
 
     T.sort;
 

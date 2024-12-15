@@ -13,8 +13,10 @@ void main() {
     }
 
     string res = "Draw";
-    if (M > 0) res = "Takahashi";
-    if (M < 0) res = "Aoki";
+    if (M > 0)
+        res = "Takahashi";
+    if (M < 0)
+        res = "Aoki";
 
     res.writeln;
 }

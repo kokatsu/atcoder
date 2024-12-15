@@ -5,19 +5,22 @@ void main() {
     readf("%d %d\n", N, M);
 
     auto a = new int[](M), b = new int[](M);
-    foreach (i; 0 .. M) readf("%d %d\n", a[i], b[i]);
+    foreach (i; 0 .. M)
+        readf("%d %d\n", a[i], b[i]);
 
     long res;
     foreach (i; 0 .. M) {
-        auto uf = UnionFind!int(N+1);
+        auto uf = UnionFind!int(N + 1);
 
         foreach (j; 0 .. M) {
-            if (i == j) continue;
+            if (i == j)
+                continue;
 
             uf.unite(a[j], b[j]);
         }
 
-        if (!uf.same(a[i], b[i])) ++res;
+        if (!uf.same(a[i], b[i]))
+            ++res;
     }
 
     res.writeln;

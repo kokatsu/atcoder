@@ -6,9 +6,9 @@ void main() {
 
     long res;
     if (K > 0) {
-        foreach (i; K+1 .. N+1) {
+        foreach (i; K + 1 .. N + 1) {
             long d = N / i, r = N % i;
-            res += d * (i - K) + max(0, r-K+1);
+            res += d * (i - K) + max(0, r - K + 1);
         }
     }
     else {

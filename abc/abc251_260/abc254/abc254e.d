@@ -29,23 +29,24 @@ void main() {
             auto f = que.front;
             que.popFront;
 
-
             dists[i][f.len] += f.to + 1;
 
-            if (f.len >= 3) continue;
+            if (f.len >= 3)
+                continue;
 
             foreach (e; edge[f.to]) {
-                if (e in seen) continue;
+                if (e in seen)
+                    continue;
 
                 seen[e] = true;
-                que ~= Node(e, f.len+1);
+                que ~= Node(e, f.len + 1);
             }
         }
     }
 
     foreach (i; 0 .. N) {
         foreach (j; 0 .. 3) {
-            dists[i][j+1] += dists[i][j];
+            dists[i][j + 1] += dists[i][j];
         }
     }
 
@@ -56,7 +57,7 @@ void main() {
         long x, k;
         readf("%d %d\n", x, k);
 
-        long res = dists[x-1][k];
+        long res = dists[x - 1][k];
         res.writeln;
     }
 }

@@ -6,8 +6,12 @@ void main() {
 
     int X = A + B, Y = A - B;
 
-    if (X == C && Y == C) writeln("?");
-    else if (X == C) writeln("+");
-    else if (Y == C) writeln("-");
-    else writeln("!");
+    if (X == C && Y == C)
+        writeln("?");
+    else if (X == C)
+        writeln("+");
+    else if (Y == C)
+        writeln("-");
+    else
+        writeln("!");
 }

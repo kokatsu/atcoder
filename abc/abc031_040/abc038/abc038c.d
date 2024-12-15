@@ -8,13 +8,14 @@ void main() {
 
     long res, r;
     foreach (l; 0 .. N) {
-        while (r < N - 1 && A[r] < A[r+1]) {
+        while (r < N - 1 && A[r] < A[r + 1]) {
             ++r;
         }
 
         res += r - l + 1;
 
-        if (l == r) ++r;
+        if (l == r)
+            ++r;
     }
 
     res.writeln;

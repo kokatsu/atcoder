@@ -4,7 +4,7 @@ void main() {
     int N, M;
     readf("%d %d\n", N, M);
 
-    auto path = new int[][](N+1);
+    auto path = new int[][](N + 1);
     foreach (i; 0 .. M) {
         int A, B;
         readf("%d %d\n", A, B);
@@ -24,9 +24,9 @@ void main() {
     }
 
     int res;
-    foreach (i; 1 .. N+1) {
+    foreach (i; 1 .. N + 1) {
         int cnt;
-        auto seen = new bool[](N+1);
+        auto seen = new bool[](N + 1);
         dfs(i, cnt, seen);
 
         res += cnt;

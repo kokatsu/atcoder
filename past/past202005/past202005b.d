@@ -13,15 +13,15 @@ void main() {
         if (P[0] == 1) {
             int score;
             foreach (i; 0 .. M) {
-                if (S[P[1]-1][i]) {
+                if (S[P[1] - 1][i]) {
                     score += C[i];
                 }
             }
             score.writeln;
         }
         else {
-            --C[P[2]-1];
-            S[P[1]-1][P[2]-1] = true;
+            --C[P[2] - 1];
+            S[P[1] - 1][P[2] - 1] = true;
         }
     }
 }

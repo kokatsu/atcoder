@@ -23,8 +23,9 @@ string solve() {
             ++index;
         }
         else {
-            if (index < N - 3 && S[index..index+4] == "TIOT" && (T[index..index+4] == "ISCT" || T[index..index+4] == "ISCI")) {
-                S[index..index+4] = "ISCT";
+            if (index < N - 3 && S[index .. index + 4] == "TIOT"
+                    && (T[index .. index + 4] == "ISCT" || T[index .. index + 4] == "ISCI")) {
+                S[index .. index + 4] = "ISCT";
             }
             else {
                 break;

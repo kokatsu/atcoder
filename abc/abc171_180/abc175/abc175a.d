@@ -6,8 +6,10 @@ void main() {
 
     int res, cnt;
     foreach (s; S) {
-        if (s == 'S') cnt = 0;
-        else ++cnt;
+        if (s == 'S')
+            cnt = 0;
+        else
+            ++cnt;
 
         res = max(res, cnt);
     }

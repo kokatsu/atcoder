@@ -1,7 +1,7 @@
 import std;
 
 void main() {
-    auto A =  readln.chomp.split.to!(int[]);
+    auto A = readln.chomp.split.to!(int[]);
 
     A.sort!"a > b";
 

@@ -14,18 +14,18 @@ void main() {
         long num = a;
 
         foreach (i; 0 .. lim) {
-            ++cnts[i][num%2];
+            ++cnts[i][num % 2];
             num /= 2;
         }
     }
 
     long res;
-    foreach (i; 0 .. N-1) {
+    foreach (i; 0 .. N - 1) {
         long num = A[i], base = 1;
 
         foreach (j; 0 .. lim) {
-            --cnts[j][num%2];
-            res = (res + cnts[j][(num+1)%2] * base) % M;
+            --cnts[j][num % 2];
+            res = (res + cnts[j][(num + 1) % 2] * base) % M;
             num /= 2;
             base = base * 2 % M;
         }

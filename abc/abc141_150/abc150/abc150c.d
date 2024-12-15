@@ -14,11 +14,15 @@ void main() {
     int res, cnt;
     do {
         ++cnt;
-        if (D == P) res += cnt;
-        if (D == Q) res -= cnt;
-    } while (D.nextPermutation);
+        if (D == P)
+            res += cnt;
+        if (D == Q)
+            res -= cnt;
+    }
+    while (D.nextPermutation);
 
-    if (res < 0) res *= -1;
+    if (res < 0)
+        res *= -1;
 
     res.writeln;
 }

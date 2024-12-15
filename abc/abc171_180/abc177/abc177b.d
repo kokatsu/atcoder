@@ -8,11 +8,12 @@ void main() {
     ulong diff = slen - tlen;
 
     int res = int.max;
-    foreach (i; 0 .. diff+1) {
+    foreach (i; 0 .. diff + 1) {
         int cnt;
 
         foreach (j, t; T) {
-            if (S[i+j] != t) ++cnt;
+            if (S[i + j] != t)
+                ++cnt;
         }
 
         res = min(res, cnt);

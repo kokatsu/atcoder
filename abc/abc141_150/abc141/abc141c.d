@@ -9,7 +9,7 @@ void main() {
         int A;
         readf("%d\n", A);
 
-        ++cnts[A-1];
+        ++cnts[A - 1];
     }
 
     auto P = new int[](N);

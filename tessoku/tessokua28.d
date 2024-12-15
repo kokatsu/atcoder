@@ -12,9 +12,12 @@ void main() {
         int A;
         readf("%c %d\n", T, A);
 
-        if (T == '+') res += A;
-        if (T == '-') res -= A;
-        if (T == '*') res *= A;
+        if (T == '+')
+            res += A;
+        if (T == '-')
+            res -= A;
+        if (T == '*')
+            res *= A;
 
         res = (res + MOD) % MOD;
 

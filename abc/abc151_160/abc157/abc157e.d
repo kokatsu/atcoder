@@ -9,10 +9,11 @@ void main() {
     int L = 26;
 
     auto rbts = new RedBlackTree!int[](L);
-    foreach (i; 0 .. L) rbts[i] = redBlackTree!int;
+    foreach (i; 0 .. L)
+        rbts[i] = redBlackTree!int;
 
     foreach (i, s; S) {
-        rbts[s-'a'].insert(i.to!int);
+        rbts[s - 'a'].insert(i.to!int);
     }
 
     int Q;
@@ -26,8 +27,8 @@ void main() {
             auto i = input[1].to!int - 1;
             auto c = input[2].to!dchar;
 
-            rbts[S[i]-'a'].removeKey(i);
-            rbts[c-'a'].insert(i);
+            rbts[S[i] - 'a'].removeKey(i);
+            rbts[c - 'a'].insert(i);
             S[i] = c;
         }
         else {
@@ -36,8 +37,9 @@ void main() {
 
             int res;
             foreach (i; 0 .. L) {
-                auto ub = rbts[i].upperBound(l-1);
-                if (!ub.empty && ub.front <= r) ++res;
+                auto ub = rbts[i].upperBound(l - 1);
+                if (!ub.empty && ub.front <= r)
+                    ++res;
             }
 
             res.writeln;

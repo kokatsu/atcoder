@@ -8,7 +8,8 @@ void main() {
 
     int res;
     foreach (i; 0 .. h) {
-        if (S[i] != S[len-i-1]) ++res;
+        if (S[i] != S[len - i - 1])
+            ++res;
     }
 
     res.writeln;

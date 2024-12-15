@@ -8,7 +8,7 @@ void main() {
     dp[0][0] = 1;
     foreach (i; 1 .. 31) {
         foreach (j; 0 .. i) {
-            dp[j][i] = dp[j][i-1] * 3;
+            dp[j][i] = dp[j][i - 1] * 3;
         }
         dp[i][i] = dp[0][i] + 1;
     }

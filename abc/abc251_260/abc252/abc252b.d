@@ -9,12 +9,14 @@ void main() {
 
     B[] -= 1;
     auto list = new bool[](N);
-    foreach (b; B) list[b] = true;
+    foreach (b; B)
+        list[b] = true;
 
-    int M =  A.maxElement;
+    int M = A.maxElement;
     bool isOK;
     foreach (i, a; A) {
-        if (a == M && list[i]) isOK = true;
+        if (a == M && list[i])
+            isOK = true;
     }
 
     writeln(isOK ? "Yes" : "No");

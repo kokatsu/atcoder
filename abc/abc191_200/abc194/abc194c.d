@@ -11,7 +11,7 @@ void main() {
 
     long res;
     foreach (i; 1 .. N) {
-        res += A[i] * (A[i] * i - B[i-1] * 2) + C[i-1];
+        res += A[i] * (A[i] * i - B[i - 1] * 2) + C[i - 1];
     }
 
     res.writeln;

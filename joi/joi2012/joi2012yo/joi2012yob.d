@@ -12,8 +12,10 @@ void main() {
 
         --A, --B;
 
-        if (C == D) ++res[A], ++res[B];
-        else res[C>D?A:B] += 3;
+        if (C == D)
+            ++res[A], ++res[B];
+        else
+            res[C > D ? A : B] += 3;
     }
 
     auto S = res.dup.sort;

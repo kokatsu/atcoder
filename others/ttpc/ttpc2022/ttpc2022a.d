@@ -11,7 +11,8 @@ void main() {
     long d = 1;
     bool[long] list1;
     while (d * d <= X) {
-        if (X % d == 0) list1[d] = list1[X/d] = true;
+        if (X % d == 0)
+            list1[d] = list1[X / d] = true;
         ++d;
     }
 
@@ -20,8 +21,10 @@ void main() {
     bool[long] list2;
     while (d * d <= Z) {
         if (Z % d == 0) {
-            if (d in list1) list2[d] = true;
-            if (Z / d in list1) list2[Z/d] = true;
+            if (d in list1)
+                list2[d] = true;
+            if (Z / d in list1)
+                list2[Z / d] = true;
         }
         ++d;
     }

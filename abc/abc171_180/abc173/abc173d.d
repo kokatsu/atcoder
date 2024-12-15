@@ -10,7 +10,7 @@ void main() {
 
     long res;
     foreach (i; 1 .. N) {
-        res += A[N-i/2-1];
+        res += A[N - i / 2 - 1];
     }
 
     res.writeln;

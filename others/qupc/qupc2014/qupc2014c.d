@@ -10,9 +10,10 @@ void main() {
         readf("%s\n", s);
 
         foreach (j, x; s) {
-            if (x == '*') continue;
+            if (x == '*')
+                continue;
 
-            pos[x] = tuple(i+1, j+1);
+            pos[x] = tuple(i + 1, j + 1);
         }
     }
 

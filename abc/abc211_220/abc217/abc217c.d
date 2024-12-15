@@ -8,7 +8,7 @@ void main() {
 
     auto q = new int[](N);
     foreach (i; 0 .. N) {
-        q[p[i]-1] = i + 1;
+        q[p[i] - 1] = i + 1;
     }
 
     foreach (i; 0 .. N) {

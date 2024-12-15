@@ -25,7 +25,8 @@ void main() {
             auto f = heap.front;
             heap.popFront;
 
-            if (seen[f.to]) continue;
+            if (seen[f.to])
+                continue;
             seen[f.to] = true;
 
             foreach (r; roads[f.to]) {
@@ -39,12 +40,13 @@ void main() {
     }
 
     auto dists1 = new long[](N), distsN = new long[](N);
-    dists1[1..N] = distsN[0..N-1] = long.max / 2;
-    dijkstra(0, dists1), dijkstra(N-1, distsN);
+    dists1[1 .. N] = distsN[0 .. N - 1] = long.max / 2;
+    dijkstra(0, dists1), dijkstra(N - 1, distsN);
 
     long res;
     foreach (i; 0 .. N) {
-        if (dists1[i] + distsN[i] == dists1[N-1]) ++res;
+        if (dists1[i] + distsN[i] == dists1[N - 1])
+            ++res;
     }
 
     res.writeln;

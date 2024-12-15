@@ -19,10 +19,11 @@ void main() {
             return;
         }
 
-        if (idx >= N) return;
+        if (idx >= N)
+            return;
 
         foreach (i; idx .. N) {
-            f(num+A[i], i+1, sel+1);
+            f(num + A[i], i + 1, sel + 1);
         }
     }
 

@@ -8,6 +8,6 @@ void main() {
     int A, B;
     readf("%d %d\n", A, B);
 
-    int res = getCountLeapYears(B) - getCountLeapYears(A-1);
+    int res = getCountLeapYears(B) - getCountLeapYears(A - 1);
     res.writeln;
 }

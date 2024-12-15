@@ -8,7 +8,7 @@ void main() {
 
     --M;
 
-    auto rbt = iota(0, N+1).array.redBlackTree;
+    auto rbt = iota(0, N + 1).array.redBlackTree;
     auto cnts = new int[](N);
     int res = N;
     foreach (i, a; A) {
@@ -20,9 +20,9 @@ void main() {
         if (i >= M) {
             res = min(res, rbt.front);
 
-            --cnts[A[i-M]];
-            if (cnts[A[i-M]] == 0) {
-                rbt.insert(A[i-M]);
+            --cnts[A[i - M]];
+            if (cnts[A[i - M]] == 0) {
+                rbt.insert(A[i - M]);
             }
         }
     }

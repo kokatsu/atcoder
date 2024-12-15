@@ -12,13 +12,14 @@ void main() {
         return;
     }
 
-    int len = max(0, N-pos-R), res = len + 1;
+    int len = max(0, N - pos - R), res = len + 1;
     foreach_reverse (i; 0 .. len) {
         if (S[i] == '.') {
             foreach (j; 0 .. R) {
-                if (i - j < 0) continue;
+                if (i - j < 0)
+                    continue;
 
-                S[i-j] = 'o';
+                S[i - j] = 'o';
             }
 
             ++res;

@@ -4,8 +4,8 @@ void main() {
     int N, M;
     readf("%d %d\n", N, M);
 
-    auto cnts = new int[](N+1);
-    auto edges = new int[][](N+1);
+    auto cnts = new int[](N + 1);
+    auto edges = new int[][](N + 1);
     foreach (_; 0 .. M) {
         int X, Y;
         readf("%d %d\n", X, Y);
@@ -15,7 +15,7 @@ void main() {
     }
 
     int[] heap;
-    foreach (i; 1 .. N+1) {
+    foreach (i; 1 .. N + 1) {
         if (cnts[i] == 0) {
             heap ~= i;
         }
@@ -35,11 +35,12 @@ void main() {
 
         foreach (e; edges[f]) {
             --cnts[e];
-            if (cnts[e] == 0) heap ~= e;
+            if (cnts[e] == 0)
+                heap ~= e;
         }
     }
 
-    auto res = iota(1, N+1).array;
+    auto res = iota(1, N + 1).array;
     zip(A, res).sort!"a[0] < b[0]";
 
     writeln("Yes");

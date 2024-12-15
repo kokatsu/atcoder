@@ -9,13 +9,14 @@ void main() {
     auto arr = iota(N).array;
 
     bool flag = K * 2 <= N;
-    auto comb = flag ? combinations(arr, K) : combinations(arr, N-K);
+    auto comb = flag ? combinations(arr, K) : combinations(arr, N - K);
 
     long res = long.max;
     foreach (c; comb) {
         auto choices = new bool[N];
         choices[] = !flag;
-        foreach (i; c) choices[i] = flag;
+        foreach (i; c)
+            choices[i] = flag;
 
         long num, pre;
         foreach (i, x; choices) {
@@ -44,7 +45,7 @@ long[][] combinations(long[] x, long y) {
         }
         else {
             foreach (i; a .. len) {
-                f(i+1, b~x[i]);
+                f(i + 1, b ~ x[i]);
             }
         }
     }

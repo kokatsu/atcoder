@@ -5,7 +5,8 @@ void main() {
     readf("%s\n", S);
 
     int[char] dict;
-    foreach (s; S) ++dict[s];
+    foreach (s; S)
+        ++dict[s];
 
     int[] vals = dict.values;
 

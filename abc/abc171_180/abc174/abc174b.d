@@ -9,7 +9,8 @@ void main() {
         long X, Y;
         readf("%d %d\n", X, Y);
 
-        if (X * X + Y * Y <= S) ++res;
+        if (X * X + Y * Y <= S)
+            ++res;
     }
 
     res.writeln;

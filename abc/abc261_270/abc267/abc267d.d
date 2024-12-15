@@ -10,13 +10,13 @@ void main() {
         x = max(x, y);
     }
 
-    auto dp = new long[](M+2);
-    dp[1..$] = long.min;
+    auto dp = new long[](M + 2);
+    dp[1 .. $] = long.min;
     foreach (i, a; A) {
         long lim = min(i, M);
 
-        foreach_reverse (j; 0 .. lim+1) {
-            f(dp[j+1], dp[j]+(j+1)*a);
+        foreach_reverse (j; 0 .. lim + 1) {
+            f(dp[j + 1], dp[j] + (j + 1) * a);
         }
     }
 

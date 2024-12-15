@@ -10,7 +10,8 @@ void main() {
 
     long cnt, num;
     foreach (i, a; A) {
-        if (num * 2 < a) cnt = i;
+        if (num * 2 < a)
+            cnt = i;
         num += a;
     }
 

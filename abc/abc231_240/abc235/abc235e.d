@@ -22,16 +22,16 @@ void main() {
             uf.unite(a[i], b[i]);
         }
         else {
-            res[d[i]-M] = (uf.isSame(a[i], b[i]) ? "No" : "Yes");
+            res[d[i] - M] = (uf.isSame(a[i], b[i]) ? "No" : "Yes");
         }
     }
 
-    foreach (r; res) r.writeln;
+    foreach (r; res)
+        r.writeln;
 }
 
 /// Union-Find
-struct UnionFind(T)
-if (isIntegral!T) {
+struct UnionFind(T) if (isIntegral!T) {
 
     /// Constructor
     this(T n) nothrow @safe {

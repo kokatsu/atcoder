@@ -26,8 +26,10 @@ void main() {
     int u = f(X), v = f(Y);
 
     string res = "Z";
-    if (u > v) res = "X";
-    if (u < v) res = "Y";
+    if (u > v)
+        res = "X";
+    if (u < v)
+        res = "Y";
 
     res.writeln;
 }

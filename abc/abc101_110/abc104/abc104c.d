@@ -5,7 +5,8 @@ void main() {
     readf("%d %d\n", D, G);
 
     auto p = new long[](D), c = new long[](D);
-    foreach (i; 0 .. D) readf("%d %d\n", p[i], c[i]);
+    foreach (i; 0 .. D)
+        readf("%d %d\n", p[i], c[i]);
 
     long res = long.max, lim = 1 << D, h = 100;
     foreach (i; 0 .. lim) {
@@ -18,16 +19,19 @@ void main() {
         }
 
         foreach_reverse (j; 0 .. D) {
-            if (num >= G) break;
+            if (num >= G)
+                break;
 
-            if ((i >> j) & 1) continue;
+            if ((i >> j) & 1)
+                continue;
 
             long diff = G - num, s = h * (j + 1);
-            long tmp = min(p[j]-1, (diff+s-1)/s);
+            long tmp = min(p[j] - 1, (diff + s - 1) / s);
             num += s * tmp, cnt += tmp;
         }
 
-        if (num >= G) res = min(res, cnt);
+        if (num >= G)
+            res = min(res, cnt);
     }
 
     res.writeln;

@@ -5,7 +5,7 @@ void main() {
 
     int[] digits = new int[](10);
     foreach (s; S) {
-        ++digits[s-'0'];
+        ++digits[s - '0'];
     }
 
     bool isYes;
@@ -22,7 +22,7 @@ void main() {
                 }
                 auto next = used.dup;
                 ++next[i];
-                dfs(next, num+i*(10^^cnt), cnt+1);
+                dfs(next, num + i * (10 ^^ cnt), cnt + 1);
             }
         }
     }

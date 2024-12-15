@@ -21,7 +21,7 @@ void main() {
         res += lenL * X - C[lenL];
 
         long lenU = T[2].length.to!long;
-        res += C[N] - C[N-lenU] - lenU * X;
+        res += C[N] - C[N - lenU] - lenU * X;
 
         res.writeln;
     }

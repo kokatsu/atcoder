@@ -13,14 +13,14 @@ void main() {
         int A;
         readf("%d\n", A);
 
-        if (!votes.empty && votes[$-1].cost <= A) {
+        if (!votes.empty && votes[$ - 1].cost <= A) {
             continue;
         }
 
-        votes ~= Vote(i+1, A);
+        votes ~= Vote(i + 1, A);
     }
 
-    auto counts = new int[](M+1);
+    auto counts = new int[](M + 1);
     foreach (_; 0 .. M) {
         int B;
         readf("%d\n", B);

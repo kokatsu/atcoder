@@ -9,7 +9,8 @@ void main() {
 
     int L = max(A.maxElement, B.maxElement) + 1;
     auto C = new int[](L);
-    foreach (a; A) ++C[a];
+    foreach (a; A)
+        ++C[a];
 
     int res;
     foreach (b; B) {

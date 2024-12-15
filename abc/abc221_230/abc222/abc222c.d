@@ -9,8 +9,8 @@ void main() {
     int N, M;
     readf("%d %d\n", N, M);
 
-    auto A = new string[](2*N);
-    foreach (i; 0 .. 2*N) {
+    auto A = new string[](2 * N);
+    foreach (i; 0 .. 2 * N) {
         A[i] = readln.chomp;
     }
 
@@ -47,7 +47,7 @@ void main() {
     }
 
     auto heap = BinaryHeap!(Array!S, "a.win == b.win ? a.number > b.number : a.win < b.win")();
-    foreach (i; 0 .. 2*N) {
+    foreach (i; 0 .. 2 * N) {
         heap.insert(S(i, 0));
     }
 
@@ -64,18 +64,18 @@ void main() {
                 next.insert(b);
             }
             else if (GCP(A[a.number][i], A[b.number][i]) == 1) {
-                next.insert(S(a.number, a.win+1));
+                next.insert(S(a.number, a.win + 1));
                 next.insert(b);
             }
             else {
                 next.insert(a);
-                next.insert(S(b.number, b.win+1));
+                next.insert(S(b.number, b.win + 1));
             }
         }
         heap = next;
     }
 
     foreach (h; heap) {
-        writeln(h.number+1);
+        writeln(h.number + 1);
     }
 }

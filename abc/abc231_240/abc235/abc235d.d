@@ -16,21 +16,23 @@ void main() {
             seen[num] = true;
 
             if (num % a == 0) {
-                f(num/a, cnt+1);
+                f(num / a, cnt + 1);
             }
 
             string s = num.to!string;
             if (s.length > 1) {
-                string t = s[1..$] ~ s[0];
+                string t = s[1 .. $] ~ s[0];
                 long nxt = t.to!long;
-                if (!seen[nxt]) f(t.to!long, cnt+1);
+                if (!seen[nxt])
+                    f(t.to!long, cnt + 1);
             }
         }
     }
 
     f(N, 0);
 
-    if (res == long.max) res = -1;
+    if (res == long.max)
+        res = -1;
 
     res.writeln;
 }

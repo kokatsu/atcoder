@@ -8,7 +8,7 @@ void main() {
     int res, l = -1;
     foreach (r, s; S) {
         if (T.canFind(s)) {
-            res = max(res, r.to!int-l);
+            res = max(res, r.to!int - l);
         }
         else {
             l = r.to!int;

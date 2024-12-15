@@ -17,5 +17,6 @@ void main() {
     }
 
     x.length.writeln;
-    foreach_reverse (u, v; zip(x, y)) writeln(u, " ", v);
+    foreach_reverse (u, v; zip(x, y))
+        writeln(u, " ", v);
 }

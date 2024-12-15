@@ -35,7 +35,8 @@ void main() {
             queue.popFront;
 
             foreach (e; edges[f]) {
-                if (dists[e] <= dists[f] + 1) continue;
+                if (dists[e] <= dists[f] + 1)
+                    continue;
 
                 dists[e] = dists[f] + 1;
                 queue ~= e;
@@ -59,7 +60,7 @@ void main() {
         mn2 = min(mn2, dists2[i]), mx2 = max(mx2, dists2[i]);
     }
 
-    int mn = max(mx1, mx2, mn1+mn2+1);
+    int mn = max(mx1, mx2, mn1 + mn2 + 1);
     int mx = mx1 + mx2 + 1;
     writefln("%d %d", mn, mx);
 }

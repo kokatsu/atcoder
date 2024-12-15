@@ -19,9 +19,12 @@ void main() {
         s[i] = readln.chomp.to!(dchar[]);
 
         foreach (j, ref x; s[i]) {
-            if (x == 'S') sx = i, sy = j.to!int;
-            if (x == 'G') gx = i, gy = j.to!int;
-            if (x == '@') boars ~= Boar(i, j.to!int, 0), x = '#';
+            if (x == 'S')
+                sx = i, sy = j.to!int;
+            if (x == 'G')
+                gx = i, gy = j.to!int;
+            if (x == '@')
+                boars ~= Boar(i, j.to!int, 0), x = '#';
         }
     }
 
@@ -31,19 +34,22 @@ void main() {
         auto f = boars.front;
         boars.popFront;
 
-        if (f.dist >= X) continue;
+        if (f.dist >= X)
+            continue;
 
         foreach (i; 0 .. 4) {
             int x = f.x + dx[i], y = f.y + dy[i];
-            if (x < 0 || H <= x || y < 0 || W <= y || s[x][y] == '#') continue;
+            if (x < 0 || H <= x || y < 0 || W <= y || s[x][y] == '#')
+                continue;
 
-            boars ~= Boar(x, y, f.dist+1);
+            boars ~= Boar(x, y, f.dist + 1);
             s[x][y] = '#';
         }
     }
 
     auto dists = new int[][](H, W);
-    foreach (i; 0 .. H) dists[i][] = 10 ^^ 9;
+    foreach (i; 0 .. H)
+        dists[i][] = 10 ^^ 9;
     dists[sx][sy] = 0;
 
     Coord[] coords = [Coord(sx, sy)];
@@ -53,7 +59,8 @@ void main() {
 
         foreach (i; 0 .. 4) {
             int x = f.x + dx[i], y = f.y + dy[i];
-            if (x < 0 || H <= x || y < 0 || W <= y || s[x][y] == '#') continue;
+            if (x < 0 || H <= x || y < 0 || W <= y || s[x][y] == '#')
+                continue;
 
             if (dists[x][y] > dists[f.x][f.y] + 1) {
                 dists[x][y] = dists[f.x][f.y] + 1;
@@ -62,6 +69,6 @@ void main() {
         }
     }
 
-    int res = dists[gx][gy] < 10 ^^ 9 ? dists[gx][gy]: -1;
+    int res = dists[gx][gy] < 10 ^^ 9 ? dists[gx][gy] : -1;
     res.writeln;
 }

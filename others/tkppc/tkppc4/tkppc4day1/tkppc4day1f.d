@@ -5,10 +5,12 @@ void main() {
     readf("%d %d\n", N, M);
 
     auto A = new long[][](N);
-    foreach (i; 0 .. N) A[i] = readln.chomp.split.to!(long[]);
+    foreach (i; 0 .. N)
+        A[i] = readln.chomp.split.to!(long[]);
 
     auto B = new long[][](N);
-    foreach (i; 0 .. N) B[i] = readln.chomp.split.to!(long[]);
+    foreach (i; 0 .. N)
+        B[i] = readln.chomp.split.to!(long[]);
 
     long res;
     foreach (i; 0 .. N) {

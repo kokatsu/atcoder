@@ -5,7 +5,8 @@ void main() {
     readf("%d %d\n", N, K);
 
     auto D = new long[](N);
-    foreach (i; 0 .. N) readf("%d\n", D[i]);
+    foreach (i; 0 .. N)
+        readf("%d\n", D[i]);
 
     auto roads = new long[][](N);
     foreach (_; 0 .. K) {
@@ -28,7 +29,8 @@ void main() {
             res = max(res, num);
 
             foreach (r; roads[pos]) {
-                if (seen[r]) continue;
+                if (seen[r])
+                    continue;
 
                 g(r, num);
             }
@@ -39,7 +41,8 @@ void main() {
         g(x);
     }
 
-    foreach (i; 0 .. N) f(i);
+    foreach (i; 0 .. N)
+        f(i);
 
     res.writeln;
 }
