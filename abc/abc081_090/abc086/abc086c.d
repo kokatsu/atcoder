@@ -14,7 +14,7 @@ void main() {
             continue;
         }
 
-        int l = abs(x-u) + abs(y-v);
+        int l = abs(x - u) + abs(y - v);
         int d = t - s;
         if (d < l || d % 2 != l % 2) {
             res = "No";
