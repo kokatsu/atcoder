@@ -7,7 +7,10 @@ void main() {
     string c = a ~ b;
 
     long n = c.to!long;
-    long s = n.to!real.sqrt.floor.to!long;
+    long s = n.to!real
+        .sqrt
+        .floor
+        .to!long;
 
     string res = s * s == n ? "Yes" : "No";
     res.writeln;
