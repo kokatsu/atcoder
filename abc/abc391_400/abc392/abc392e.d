@@ -50,7 +50,7 @@ void main() {
     res.writeln;
 }
 
-// Union-Find
+/// Union-Find
 struct UnionFind(T) if (isIntegral!T) {
 
     /// Constructor
