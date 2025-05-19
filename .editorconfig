@@ -13,3 +13,4 @@ trim_trailing_whitespace = true
 
 # dfmt-specific properties
 dfmt_brace_style = stroustrup
+dfmt_keep_line_breaks = true
