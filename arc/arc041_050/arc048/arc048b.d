@@ -22,7 +22,7 @@ void main() {
 
     foreach (r, h; zip(R, H)) {
         int win = wins[r] + cnts[r][(h + 1) % 3],
-            lose = N - wins[r + 1] + cnts[r][(h + 2) % 3], draw = cnts[r][h] - 1;
+        lose = N - wins[r + 1] + cnts[r][(h + 2) % 3], draw = cnts[r][h] - 1;
         writeln(win, " ", lose, " ", draw);
     }
 }
