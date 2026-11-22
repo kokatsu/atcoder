@@ -8,7 +8,8 @@ void main() {
     readfln("%s", S);
     readfln("%s", T);
 
-    int C = zip(S, T).count!(z => z[0] != z[1]).to!int;
+    int C = zip(S, T).count!(z => z[0] != z[1])
+        .to!int;
 
     int res = max(0, C - K);
     res.writeln;
